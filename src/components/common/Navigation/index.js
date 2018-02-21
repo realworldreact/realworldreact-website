@@ -13,7 +13,7 @@ const Navigation = ({ classes }) => (
     <li><Link to='/consulting'>Consulting</Link></li>
     <li><Link to='/instructors'>Instructors</Link></li>
     <li><Link to='/talks'>Talks</Link></li>
-    <li><Link to='/podcasts'>Podcasts</Link></li>
+    <li><Link to='/podcast'>Podcast</Link></li>
     <li><Link to='/events'>Talks</Link></li>
     <li><Link to='/contact'>Contact</Link></li>
   </ul>
