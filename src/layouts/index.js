@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { ThemeProvider } from 'react-jss';
 
-import './index.css';
-
-const theme = {
-  colorPrimary: '#36a7ee',
-};
+import './styles/normalize.css';
+import './styles/fonts.css';
+import './styles/global.css';
+import favicon from '../assets/favicon.ico';
+import createTheme from './createTheme';
+import ThemedStyles from './ThemedStyles';
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet
-      title='Real World React'
-    />
-    <ThemeProvider theme={theme}>
-      <div>
+    <Helmet>
+      <link rel='shortcut icon' href={favicon} />
+    </Helmet>
+    <ThemeProvider theme={createTheme()}>
+      <ThemedStyles>
         {children()}
-      </div>
+      </ThemedStyles>
     </ThemeProvider>
   </div>
 );

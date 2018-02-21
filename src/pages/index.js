@@ -1,13 +1,34 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
+import withStyles from 'react-jss';
 
-import { Header, Navigation } from '../components';
+import logo from '../assets/images/logo.png';
 
-const HomePage = () => (
-  <div>
-    <Header>Home</Header>
-    <Navigation />
+const styles = () => ({
+  root: {
+    display: 'flex',
+    overflow: 'hidden',
+    widht: '100wh',
+    height: '100vh',
+  },
+  logo: {
+    display: 'block',
+    margin: 'auto',
+    textAlign: 'center',
+    fontSize: 30,
+  },
+});
+
+const HomePage = ({ classes }) => (
+  <div className={classes.root}>
+    <Helmet>
+      <title>Real World React</title>
+    </Helmet>
+    <div className={classes.logo}>
+      <img src={logo} />
+      <div>Coming Soon</div>
+    </div>
   </div>
 );
 
-export default HomePage;
+export default withStyles(styles)(HomePage);

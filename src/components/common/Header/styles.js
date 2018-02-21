@@ -1,12 +1,9 @@
-export default theme => ({
+export default () => ({
   root: {
     padding: 20,
-    backgroundColor: theme.colorPrimary,
   },
-  content: {
-    color: '#ffffff',
-    '& h1': {
-      margin: 0,
-    },
+  logo: {
+    display: 'inline-block',
+    height: 40,
   },
 });
