@@ -4,6 +4,10 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-jss'
+    'gatsby-plugin-jss',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: { trackingId: 'UX-00000' }
+    }
   ],
 };
