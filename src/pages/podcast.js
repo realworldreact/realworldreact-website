@@ -3,13 +3,13 @@ import Helmet from 'react-helmet';
 
 import { Header } from '../components';
 
-const ConsultingPage = () => (
+const PodcastPage = () => (
   <div>
     <Helmet>
-      <title>Consulting | Real World React</title>
+      <title>Podcast | Real World React</title>
     </Helmet>
-    <Header>Consulting</Header>
+    <Header>Podcast</Header>
   </div>
 );
 
-export default ConsultingPage;
+export default PodcastPage;

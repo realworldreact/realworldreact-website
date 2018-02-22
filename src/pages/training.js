@@ -1,12 +1,14 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
-import { Header, Navigation } from '../components';
+import { Header } from '../components';
 
 const TrainingPage = () => (
   <div>
+    <Helmet>
+      <title>Training | Real World React</title>
+    </Helmet>
     <Header>Training</Header>
-    <Navigation />
   </div>
 );
 

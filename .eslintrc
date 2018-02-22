@@ -20,7 +20,8 @@
   },
 
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ],
 
   "ecmaFeatures": {
