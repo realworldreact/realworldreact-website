@@ -5,6 +5,7 @@ const styles = (theme) => ({
   '@global': {
     'body': {
       color: theme.palette.text.base,
+      fontFamily: theme.typography.primary,
     },
     'a': {
       color: theme.palette.primary.base,
@@ -12,6 +13,14 @@ const styles = (theme) => ({
       '&:hover': {
         color: theme.palette.primary.dark,
       }
+    },
+    '::selection': {
+      backgroundColor: theme.palette.inverted.base,
+      color: theme.palette.primary.base,
+    },
+    '::-moz-selection': {
+      backgroundColor: theme.palette.inverted.base,
+      color: theme.palette.primary.base,
     },
   },
 });

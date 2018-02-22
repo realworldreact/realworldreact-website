@@ -12,7 +12,6 @@ body {
 }
 
 html, body {
-  font-family: "GT Walsheim", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -26,4 +25,10 @@ h6 { font-size: 16px; }
 
 a {
   text-decoration: none;
+}
+
+/* flexbox grid width */
+.container {
+  width: 100%;
+  max-width: 1024px;
 }

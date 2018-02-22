@@ -2,31 +2,72 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 
-import logo from '../assets/images/logo.png';
+import imagePatternDots from '../assets/images/patterns/dots.png';
+import { Header } from '../components';
 
-const styles = () => ({
-  root: {
-    display: 'flex',
-    overflow: 'hidden',
-    widht: '100wh',
-    height: '100vh',
+const styles = (theme) => ({
+  hero: {
+    backgroundColor: theme.palette.inverted.base,
+    backgroundImage: `url(${imagePatternDots})`,
   },
-  logo: {
-    display: 'block',
+  heading: {
     margin: 'auto',
+    padding: [0, 20, 20],
+    fontWeight: 'bold',
     textAlign: 'center',
-    fontSize: 30,
+    color: '#fff',
+    '& h1': {
+      fontSize: 24,
+    },
+  },
+  continueLabel: {
+    padding: [0, 20, 40],
+    fontFamily: theme.typography.secondary,
+    fontStyle: 'italic',
+    textAlign: 'center',
+    color: '#fff',
+  },
+  ink: {
+    backgroundColor: theme.palette.secondary.base,
+    color: theme.palette.inverted.base,
+  },
+
+  // small +
+  '@media screen and (min-width: 48em)': {
+    heading: {
+      padding: [80, 20],
+      width: '76%',
+      '& h1': {
+        fontSize: 32,
+      },
+    },
   },
 });
 
 const HomePage = ({ classes }) => (
-  <div className={classes.root}>
+  <div>
     <Helmet>
       <title>Real World React</title>
     </Helmet>
-    <div className={classes.logo}>
-      <img src={logo} />
-      <div>Coming Soon</div>
+    <div>
+
+      {/* HERO */}
+      <div className={classes.hero}>
+        <Header inverted />
+        <div className='container'>
+          <div className={classes.heading}>
+            <h1>
+              We are a professional services and consulting firm specializing
+              in <span className={classes.ink}>&nbsp;modern front-end tools&nbsp;</span> and
+              serverless architecture.
+            </h1>
+          </div>
+        </div>
+        <div className={classes.continueLabel}>
+          Fig. 1 - Our fields of speciality
+        </div>
+      </div>
+
     </div>
   </div>
 );

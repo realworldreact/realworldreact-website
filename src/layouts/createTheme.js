@@ -18,4 +18,8 @@ export default () => ({
       base: '#242424',
     },
   },
+  typography: {
+    primary: '"GT Walsheim", sans-serif',
+    secondary: '"Georgia", "Neuton", sans-serif',
+  },
 });
