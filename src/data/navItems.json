@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Services",
+    "items": [
+      {
+        "name": "Training",
+        "route": "/training"
+      },
+      {
+        "name": "Consulting",
+        "route": "/consulting"
+      },
+      {
+        "name": "Remote Placement",
+        "route": "/remote-placement"
+      },
+      {
+        "name": "Engineering Retreats",
+        "route": "/engineering-retreats"
+      }
+    ]
+  },
+  {
+    "name": "Resources",
+    "items": [
+      {
+        "name": "Talks",
+        "route": "/talks"
+      },
+      {
+        "name": "Podcasts",
+        "route": "/podcasts"
+      },
+      {
+        "name": "Events",
+        "route": "/events"
+      },
+      {
+        "name": "Blog",
+        "route": "/"
+      }
+    ]
+  }
+]
