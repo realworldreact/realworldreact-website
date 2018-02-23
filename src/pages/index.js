@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import { Header, Footer } from '../components';
+import { Header, Footer, TopDrops } from '../components';
 
 const styles = (theme) => ({
   root: {
@@ -19,7 +19,7 @@ const styles = (theme) => ({
   },
   heading: {
     margin: 'auto',
-    padding: [0, 20, 20],
+    padding: [0, 20],
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#fff',
@@ -53,7 +53,7 @@ const styles = (theme) => ({
   // small +
   '@media screen and (min-width: 48em)': {
     heading: {
-      padding: [80, 20],
+      padding: [80, 20, 0],
       width: '76%',
       '& h1': {
         fontSize: 32,
@@ -81,9 +81,7 @@ const HomePage = ({ classes }) => (
             </h1>
           </div>
         </div>
-        <div className={classes.continueLabel}>
-          Fig. 1 - Our fields of speciality
-        </div>
+        <TopDrops/>
       </div>
 
       {/* MAIN */}
