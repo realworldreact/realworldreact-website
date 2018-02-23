@@ -3,9 +3,16 @@ import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import { Header } from '../components';
+import { Header, Footer } from '../components';
 
 const styles = (theme) => ({
+  root: {
+    display: 'flex',
+    minHeight: '100vh',
+    flexDirection: 'column',
+  },
+
+  // HERO
   hero: {
     backgroundColor: theme.palette.inverted.base,
     backgroundImage: `url(${imagePatternDots})`,
@@ -32,6 +39,17 @@ const styles = (theme) => ({
     color: theme.palette.inverted.base,
   },
 
+  // MAIN
+  main: {
+    flex: '1',
+  },
+
+  // FOOTER
+  footer: {
+    backgroundColor: theme.palette.inverted.base,
+    backgroundImage: `url(${imagePatternDots})`,
+  },
+
   // small +
   '@media screen and (min-width: 48em)': {
     heading: {
@@ -49,7 +67,7 @@ const HomePage = ({ classes }) => (
     <Helmet>
       <title>Real World React</title>
     </Helmet>
-    <div>
+    <div className={classes.root}>
 
       {/* HERO */}
       <div className={classes.hero}>
@@ -66,6 +84,14 @@ const HomePage = ({ classes }) => (
         <div className={classes.continueLabel}>
           Fig. 1 - Our fields of speciality
         </div>
+      </div>
+
+      {/* MAIN */}
+      <div className={classes.main}></div>
+
+      {/* FOOTER */}
+      <div className={classes.footer}>
+        <Footer></Footer>
       </div>
 
     </div>
