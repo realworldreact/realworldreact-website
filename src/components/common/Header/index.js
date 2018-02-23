@@ -5,13 +5,13 @@ import withStyles from 'react-jss';
 import cx from 'classnames';
 
 import logoAuto from '../../../assets/images/rwr/logo-mini.png';
-import logoInverted from '../../../assets/images/rwr/logo-mini-inverted.png';
+import logoReversed from '../../../assets/images/rwr/logo-mini-reversed.png';
 import MenuDesktop from '../../navigation/MenuDesktop';
 import MenuMobile from '../../navigation/MenuMobile';
 import styles from './styles';
 
 const Header = props => {
-  const { classes, className, inverted } = props;
+  const { classes, className, reversed } = props;
   return (
     <header className={cx(classes.root, 'container', className)}>
       <div className='row'>
@@ -19,14 +19,14 @@ const Header = props => {
           <Link to='/'>
             <img
               className={classes.logo}
-              src={inverted ? logoInverted : logoAuto}
+              src={reversed ? logoReversed : logoAuto}
               alt='Real World React'
             />
           </Link>
         </div>
         <div className={cx(classes.menu, 'col-xs-9')}>
-          <MenuMobile className={classes.mobile} inverted={inverted} />
-          <MenuDesktop className={classes.desktop} inverted={inverted} />
+          <MenuMobile className={classes.mobile} reversed={reversed} />
+          <MenuDesktop className={classes.desktop} reversed={reversed} />
         </div>
       </div>
     </header>
@@ -35,9 +35,9 @@ const Header = props => {
 
 Header.propTypes = {
   /**
-   * Set theme with inverted colors.
+   * Set theme with reversed colors.
    */
-  inverted: PropTypes.bool,
+  reversed: PropTypes.bool,
 };
 
 export default withStyles(styles)(Header);

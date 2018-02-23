@@ -1,21 +1,32 @@
+import { lighten, darken } from 'polished';
+
 export default () => ({
   palette: {
     primary: {
       base: '#36a7ee',
-      dark: '#1e74ab',
-      light: '#5bb5ee',
+      dark: darken(0.10, '#36a7ee'),
+      light: lighten(0.10, '#36a7ee'),
+      contrastText: '#fff',
     },
     secondary: {
       base: '#fffd41',
+      contrastText: '#242424',
     },
     text: {
       base: '#2b3642',
+      contrastText: '#fff',
     },
     alert: {
       base: '#e85c3b',
+      contrastText: '#fff',
     },
     inverted: {
       base: '#242424',
+      contrastText: '#fff',
+    },
+    black: {
+      base: '#fff',
+      contrastText: '#242424',
     },
   },
   typography: {

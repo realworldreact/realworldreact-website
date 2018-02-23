@@ -7,6 +7,15 @@ export default theme => ({
   },
   link: {
     fontWeight: 'bold',
-    color: props => props.inverted ? '#fff' : theme.palette.inverted.base,
+    color: props => props.reversed ? '#fff' : theme.palette.inverted.base,
+  },
+  button: {
+    minWidth: 160,
+  },
+  option: {
+    marginLeft: 40,
+    '&:first-child': {
+      marginLeft: 0,
+    },
   },
 });

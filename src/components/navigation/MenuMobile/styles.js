@@ -1,6 +1,17 @@
 import imagePatternDots from '../../../assets/images/patterns/dots.png';
 
+// The height of the page header.
+export const MENU_MOBILE_HEADER_HEIGHT = 100;
+
+// The class to add/remove to the body element on menu shown/hidden.
+export const MENU_MOBILE_BODY_ACTIVE = 'menu-mobile-body-active';
+
 export default theme => ({
+  '@global': {
+    ['.' + MENU_MOBILE_BODY_ACTIVE]: {
+      overflow: 'hidden',
+    },
+  },
   root: {
     display: 'flex',
     flex: '1',
@@ -8,64 +19,75 @@ export default theme => ({
     justifyContent: 'flex-end',
   },
   trigger: {
-    cursor: 'pointer',
-    width: 36,
-    height: 36,
     position: 'relative',
     padding: 2,
-    '& .line': {
-      position: 'relative',
-      height: 3,
-      margin: [6, 0],
-      display: 'block',
-      top: 0,
-      transition: 'all .5s',
-      background: props => props.inverted ? '#fff' : theme.palette.inverted.base,
-    },
-    '&.active': {
-      '& .line:first-child': {
+    width: 36,
+    height: 36,
+    cursor: 'pointer',
+  },
+  triggerLine: {
+    position: 'relative',
+    height: 3,
+    margin: [6, 0],
+    display: 'block',
+    top: 0,
+    transition: 'all 500ms ease-out',
+    backgroundColor: props => props.reversed ? '#fff' : theme.palette.inverted.base,
+
+    '$active &': {
+      '&:first-child': {
         transform: 'rotate(45deg)',
         top: 9
       },
-      '& .line:last-child': {
+      '&:last-child': {
         transform: 'rotate(-45deg)',
         top: -9
       },
-      '& .line:nth-child(2)': {
+      '&:nth-child(2)': {
         opacity: 0
       }
-    }
-  },
-  menuItemsContainer: {
-    position: 'fixed',
-    width: '100%',
-    top: '6rem',
-    height: 0,
-    left: 0,
-    zIndex: 0,
-    overflow: 'hidden',
-    transition: 'all .5s',
-    background: theme.palette.inverted.base,
-    backgroundImage: `url(${imagePatternDots})`,
-    '&.active': {
-      height: 'calc(100% - 6rem)',
     },
-    '& .navItems': {
-      textAlign: 'left',
+  },
+  // By default, the menu is hidden with height 0. On shown, it is fixated
+  // on the page with the header top height.
+  menuContainer: {
+    zIndex: 1000,
+    position: 'fixed',
+    top: MENU_MOBILE_HEADER_HEIGHT,
+    left: 0,
+    bottom: 'auto',
+    right: 0,
+    overflow: 'hidden',
+    '$active &': {
+      bottom: 0,
+    },
+  },
+  menu: {
+    overflowY: 'auto',
+    padding: 20,
+    width: '100%',
+    height: 0,
+    opacity: 0,
+    textAlign: 'left',
+    backgroundColor: props => props.reversed ? theme.palette.inverted.base : '#fff',
+    backgroundImage: props => props.reversed && `url(${imagePatternDots})`,
+    transition: 'all 500ms ease-out',
+
+    '$active &': {
       height: '100%',
-      overflow: 'auto',
-      padding: 20,
-    }
+      opacity: 1,
+    },
   },
   navTitle: {
-    color: '#ffffff',
-    fontFamily: theme.typography.primary,
-    fontWeight: 500,
+    margin: [20, 0],
     fontSize: 20,
-    marginTop: 20,
-    marginBottom: 20
+    fontWeight: 'bold',
+    color: props => props.reversed ? '#fff' : theme.palette.inverted.base,
   },
   navItem: {
-    marginBottom: 10
-  }
+    marginBottom: 10,
+  },
+
+  // When menu is being shown.
+  active: {},
 });

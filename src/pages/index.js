@@ -53,7 +53,7 @@ const HomePage = ({ classes }) => (
 
       {/* HERO */}
       <div className={classes.hero}>
-        <Header inverted />
+        <Header reversed />
         <div className='container'>
           <div className={classes.heading}>
             <h1>

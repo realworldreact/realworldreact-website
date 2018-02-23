@@ -28,8 +28,8 @@
         "route": "/talks"
       },
       {
-        "name": "Podcasts",
-        "route": "/podcasts"
+        "name": "Podcast",
+        "route": "/podcast"
       },
       {
         "name": "Events",

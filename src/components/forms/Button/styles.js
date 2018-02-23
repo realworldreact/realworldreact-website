@@ -1,50 +1,44 @@
-import {BUTTON_CLASSES} from './index';
-export default theme => ({
+export default (theme) => ({
   root: {
-    padding: [0, 20],
-    lineHeight: '3rem',
-    textAlign: 'center',
-    position: 'relative',
+    display: props => props.fullWidth ? 'block' : 'inline-block',
     overflow: 'hidden',
+    verticalAlign: 'middle',
+  },
+  ripples: {
+    width: '100%',
+    height: '100%',
+  },
+  button: {
+    display: 'inline-block',
+    margin: 0,
+    padding: [8, 20],
+    width: '100%',
+    height: '100%',
+    textAlign: 'center',
+    verticalAlign: 'middle',
+    outline: 'none',
+    cursor: 'pointer',
     fontFamily: theme.typography.primary,
     fontWeight: 'bold',
-    fontSize: 20,
-    '&:after': {
-      content: '""',
-      position: 'absolute',
-      right: 0,
-      bottom: 0,
-      backgroundColor: 'rgba(0,0,0,.2)',
-      borderRadius: '50%',
-      width: 0,
-      transition: 'all .5s',
-      height: 0,
-      marginBottom: '-50%',
-      marginRight: '-50%',
+    lineHeight: '1',
+    userSelect: 'none',
+    transition: 'all 200ms ease-out',
+
+    color: props => theme.palette[props.palette].contrastText,
+    border: props => '2px solid '
+      + theme.palette[props.palette][props.outline ? 'contrastText' : 'base'],
+    backgroundColor: props => props.outline
+      ? 'transparent'
+      : theme.palette[props.palette].base,
+
+    '&:hover': {
+      color: props => props.outline && theme.palette[props.palette].light,
+      borderColor: props => theme.palette[props.palette].light,
+      backgroundColor: props => !props.outline && theme.palette[props.palette].light,
     },
-    '&.active:after': {
-      width: '35rem',
-      height: '35rem',
-    }
+
+    '&::-moz-focus-inner': {
+      border: 'none',
+    },
   },
-  juystifyButton: {
-    display: (props => props.fullWidthButton ? 'block' : 'inline-block')
-  },
-  [BUTTON_CLASSES.PRIMARY_BUTTON]: {
-    extend: 'root',
-    backgroundColor: theme.palette.primary.base,
-    color: theme.palette.text.base,
-  },
-  [BUTTON_CLASSES.OUTLINE_BUTTON]: {
-    extend: 'root',
-    backgroundColor: 'transparent',
-    border: [2, 'solid', theme.palette.inverted.base],
-    color: theme.palette.inverted.base
-  },
-  [BUTTON_CLASSES.OUTLINE_BUTTON_INVERSE]: {
-    extend: 'root',
-    backgroundColor: 'transparent',
-    border: [2, 'solid', '#ffffff'],
-    color: '#ffffff'
-  }
 });
