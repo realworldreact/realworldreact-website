@@ -22,6 +22,14 @@ const styles = (theme) => ({
       backgroundColor: theme.palette.inverted.base,
       color: theme.palette.primary.base,
     },
+    '.underscore-title': {
+      position: 'relative',
+      '&:before': {
+        content: '"_"',
+        paddingRight: 5,
+        color: theme.palette.primary.base
+      }
+    }
   },
 });
 
