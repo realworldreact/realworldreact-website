@@ -11,9 +11,9 @@ import MenuMobile from '../../navigation/MenuMobile';
 import styles from './styles';
 
 const Header = props => {
-  const { classes, className, reversed } = props;
+  const { theme, sheet, classes, className, reversed, ...etc } = props;
   return (
-    <header className={cx(classes.root, 'container', className)}>
+    <header className={cx(classes.root, 'container', className)} {...etc}>
       <div className='row'>
         <div className='col-xs-3'>
           <Link to='/'>

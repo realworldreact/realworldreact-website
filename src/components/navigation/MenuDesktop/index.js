@@ -4,7 +4,9 @@ import Link from 'gatsby-link';
 import withStyles from 'react-jss';
 import cx from 'classnames';
 
+import navigation from '../../../data/navigation.json';
 import Button from '../../forms/Button';
+import Dropdown from '../Dropdown';
 import styles from './styles';
 
 const MenuDesktop = props => {
@@ -12,8 +14,18 @@ const MenuDesktop = props => {
   return (
     <div className={cx(classes.root, className)} {...etc}>
       <Link className={cx(classes.option, classes.link)} to='/'>Home</Link>
-      <Link className={cx(classes.option, classes.link)} to='/'>Services</Link>
-      <Link className={cx(classes.option, classes.link)} to='/'>Resources</Link>
+
+      {navigation.map((nav, index) => (
+        <Dropdown
+          key={index}
+          className={classes.option}
+          trigger={(
+            <span className={classes.link}>{nav.name} <i className='mdi mdi-chevron-down' /></span>
+          )}
+          items={nav.items}
+        />
+      ))}
+
       <Button
         className={cx(classes.option, classes.button)}
         href='/contact'
