@@ -8,22 +8,21 @@ import dropRightB from '../../../assets/images/drops/drop_top_right_b.png';
 import styles from './styles';
 
 const TopDrops = props => {
-  const { classes } = props;
+  const { theme, sheet, classes, className, ...etc } = props;
   return (
     <div className={classes.root}>
       <div className={classes.content}>
-        Fig. 1 - Our fields of speciality
-        <div className={classes.segment}></div>
+        <div className={classes.segment}/>
       </div>
-      <div className={classes.line}></div>
+      <div className={classes.line}/>
       <div className={classes.dropsContainer}>
         <div className="container">
           <div className={classes.drops}>
             <img src={dropLeftA} alt=""/>
-            <img className={classes.hideOnSmall} src={dropLeftB} alt=""/>
+            <img className={classes.hideOnSmall} src={dropLeftB}/>
           </div>
           <div className={classes.drops}>
-            <img className={classes.hideOnSmall} src={dropRightA} alt=""/>
+            <img className={classes.hideOnSmall} src={dropRightA}/>
             <img src={dropRightB} alt=""/>
           </div>
         </div>

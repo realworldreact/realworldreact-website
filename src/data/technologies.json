@@ -1,0 +1,72 @@
+[
+  {
+    "name": "React Native",
+    "logo": "/images/technologies/react_native.jpg",
+    "route": ""
+  },
+  {
+    "name": "Redux",
+    "logo": "/images/technologies/redux.jpg",
+    "route": ""
+  },
+  {
+    "name": "RxJS",
+    "logo": "/images/technologies/rxjs.jpg",
+    "route": ""
+  },
+  {
+    "name": "React",
+    "logo": "/images/technologies/react.jpg",
+    "route": ""
+  },
+  {
+    "name": "GraphQL",
+    "logo": "/images/technologies/graph_ql.jpg",
+    "route": ""
+  },
+  {
+    "name": "JSX",
+    "logo": "/images/technologies/jsx.jpg",
+    "route": ""
+  },
+  {
+    "name": "Functional Programming",
+    "logo": "/images/technologies/functional.jpg",
+    "route": ""
+  },
+  {
+    "name": "Webpack",
+    "logo": "/images/technologies/webpack.jpg",
+    "route": ""
+  },
+  {
+    "name": "Immutable.js",
+    "logo": "/images/technologies/immutable.jpg",
+    "route": ""
+  },
+  {
+    "name": "JAMstack",
+    "logo": "/images/technologies/jam_stack.jpg",
+    "route": ""
+  },
+  {
+    "name": "AWS Lambda",
+    "logo": "/images/technologies/aws_lambda.jpg",
+    "route": ""
+  },
+  {
+    "name": "Microsoft Azure",
+    "logo": "/images/technologies/microsoft_azure.jpg",
+    "route": ""
+  },
+  {
+    "name": "Serverless Framework",
+    "logo": "/images/technologies/serverless.jpg",
+    "route": ""
+  },
+  {
+    "name": "and more",
+    "logo": "/images/technologies/and_more.jpg",
+    "route": ""
+  }
+]

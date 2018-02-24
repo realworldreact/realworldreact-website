@@ -1,23 +1,18 @@
 export default theme => ({
   root: {
     padding: [20, 0, 0],
-    fontFamily: theme.typography.secondary,
-    fontStyle: 'italic',
-    textAlign: 'center',
-    color: '#fff',
     position: 'relative',
     height: 150
   },
 
-  //CONTENT AREA
+  // CONTENT AREA
   content: {
     overflow: 'hidden',
-    position: 'relative',
     height: '100%',
     width: '100%',
   },
 
-  //SEMI SPHERE
+  // SEMI SPHERE
   segment: {
     left: '-10%',
     width: '120%',
@@ -28,7 +23,7 @@ export default theme => ({
     borderRadius: '50%',
   },
 
-  //CENTER LINE
+  // CENTER LINE
   line: {
     width: 1,
     position: 'absolute',
@@ -47,7 +42,7 @@ export default theme => ({
     }
   },
 
-  //DROPS CONTAINER
+  // DROPS CONTAINER
   dropsContainer: {
     width: '100%',
     position: 'absolute',
@@ -84,7 +79,7 @@ export default theme => ({
       padding: [60, 0, 0]
     },
 
-    //SEMI SPHERE
+    // SEMI SPHERE
     segment: {
       height: 140,
       bottom: -105
@@ -98,13 +93,13 @@ export default theme => ({
       height: 215
     },
 
-    //SEMI SPHERE
+    // SEMI SPHERE
     segment: {
       height: 100,
       bottom: -55
     },
 
-    //CENTER LINE
+    // CENTER LINE
     line: {
       height: 160,
       '&:after': {
@@ -112,7 +107,7 @@ export default theme => ({
       }
     },
 
-    //DROPS CONTAINER
+    // DROPS CONTAINER
     drops: {
       width: 180,
       height: 180,

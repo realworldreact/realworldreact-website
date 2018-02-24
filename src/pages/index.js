@@ -1,9 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
+import cx from 'classnames';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import { Header, Footer, TopDrops, TechnologyLogos } from '../components';
+import { Header, Footer, TopDrops, TechnologyLogo } from '../components';
+import technologies from '../data/technologies.json';
 
 const styles = (theme) => ({
   root: {
@@ -22,10 +24,22 @@ const styles = (theme) => ({
     padding: [0, 20],
     fontWeight: 'bold',
     textAlign: 'center',
+    position: 'relative',
     color: '#fff',
     '& h1': {
       fontSize: 24,
     },
+  },
+  headingDescription: {
+    fontFamily: theme.typography.secondary,
+    fontStyle: 'italic',
+    textAlign: 'center',
+    color: '#fff',
+    position: 'absolute',
+    bottom: -70,
+    fontWeight: 300,
+    left: 0,
+    width: '100%'
   },
   continueLabel: {
     padding: [0, 20, 40],
@@ -44,6 +58,14 @@ const styles = (theme) => ({
     flex: '1',
   },
 
+  // LOGOS
+  logos: {
+    marginTop: 40,
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
+
   // FOOTER
   footer: {
     backgroundColor: theme.palette.inverted.base,
@@ -59,6 +81,9 @@ const styles = (theme) => ({
         fontSize: 32,
       },
     },
+    headingDescription: {
+      bottom: -100,
+    }
   },
 });
 
@@ -79,6 +104,7 @@ const HomePage = ({ classes }) => (
               in <span className={classes.ink}>&nbsp;modern front-end tools&nbsp;</span> and
               serverless architecture.
             </h1>
+            <div className={classes.headingDescription}>Fig. 1 - Our fields of speciality</div>
           </div>
         </div>
         <TopDrops/>
@@ -86,7 +112,11 @@ const HomePage = ({ classes }) => (
 
       {/* MAIN */}
       <div className={classes.main}>
-        <TechnologyLogos/>
+        <div className={cx(classes.logos, 'container')}>
+          {technologies.map((item, key) => (
+            <TechnologyLogo name={item.name} logo={item.logo} route={item.route} key={key}/>
+          ))}
+        </div>
       </div>
 
       {/* FOOTER */}
