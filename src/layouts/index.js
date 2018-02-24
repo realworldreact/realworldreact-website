@@ -15,20 +15,24 @@ import ThemedStyles from './ThemedStyles';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
-      <link rel='shortcut icon' href={favicon} />
-      <link rel='stylesheet' href='//cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css' />
-      <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Neuton:400,400i' />
+      <link rel="shortcut icon" href={favicon} />
+      <link
+        rel="stylesheet"
+        href="//cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="//fonts.googleapis.com/css?family=Neuton:400,400i"
+      />
     </Helmet>
     <ThemeProvider theme={createTheme()}>
-      <ThemedStyles>
-        {children()}
-      </ThemedStyles>
+      <ThemedStyles>{children()}</ThemedStyles>
     </ThemeProvider>
   </div>
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.func
 };
 
 export default TemplateWrapper;

@@ -14,13 +14,13 @@ const Header = props => {
   const { theme, sheet, classes, className, reversed, ...etc } = props;
   return (
     <header className={cx(classes.root, 'container', className)} {...etc}>
-      <div className='row'>
-        <div className='col-xs-3'>
-          <Link to='/'>
+      <div className="row">
+        <div className="col-xs-3">
+          <Link to="/">
             <img
               className={classes.logo}
               src={reversed ? logoReversed : logoAuto}
-              alt='Real World React'
+              alt="Real World React"
             />
           </Link>
         </div>
@@ -37,7 +37,7 @@ Header.propTypes = {
   /**
    * Set theme with reversed colors.
    */
-  reversed: PropTypes.bool,
+  reversed: PropTypes.bool
 };
 
 export default withStyles(styles)(Header);

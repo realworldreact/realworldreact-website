@@ -1,26 +1,26 @@
 export default () => ({
   root: {
-    padding: 20,
+    padding: 20
   },
   logo: {
     display: 'inline-block',
-    height: 60,
+    height: 60
   },
   menu: {
     display: 'flex',
-    textAlign: 'right',
+    textAlign: 'right'
   },
   desktop: {
-    display: 'none',
+    display: 'none'
   },
 
   // small +
   '@media screen and (min-width: 48em)': {
     mobile: {
-      display: 'none',
+      display: 'none'
     },
     desktop: {
-      display: 'flex',
-    },
-  },
+      display: 'flex'
+    }
+  }
 });

@@ -1,18 +1,18 @@
 export default theme => ({
   '@global': {
     '.dropdown': {
-      display: 'inline-block',
+      display: 'inline-block'
     },
     '.dropdown__content': {
       display: 'none',
-      position: 'absolute',
+      position: 'absolute'
     },
     '.dropdown--active .dropdown__content': {
-      display: 'block',
-    },
+      display: 'block'
+    }
   },
   root: {
-    userSelect: 'none',
+    userSelect: 'none'
   },
   content: {
     marginTop: 10,
@@ -20,7 +20,7 @@ export default theme => ({
     minWidth: 180,
     boxShadow: '0 0 6px #eaeaea',
     backgroundColor: '#fff',
-    animation: 'dropdown-show 200ms ease-out',
+    animation: 'dropdown-show 200ms ease-out'
   },
   item: {
     display: 'block',
@@ -32,23 +32,23 @@ export default theme => ({
     transition: 'all 200ms ease-out',
 
     '& + &': {
-      marginTop: 10,
+      marginTop: 10
     },
     '&:hover': {
       borderColor: theme.palette.primary.base,
       color: '#fff',
-      backgroundColor: theme.palette.primary.base,
-    },
+      backgroundColor: theme.palette.primary.base
+    }
   },
 
   '@keyframes dropdown-show': {
     '0%': {
       marginTop: -10,
-      opacity: 0,
+      opacity: 0
     },
     '100%': {
       marginTop: 10,
-      opacity: 1,
-    },
-  },
+      opacity: 1
+    }
+  }
 });

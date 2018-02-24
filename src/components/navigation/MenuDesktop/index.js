@@ -13,22 +13,26 @@ const MenuDesktop = props => {
   const { theme, sheet, classes, className, reversed, ...etc } = props;
   return (
     <div className={cx(classes.root, className)} {...etc}>
-      <Link className={cx(classes.option, classes.link)} to='/'>Home</Link>
+      <Link className={cx(classes.option, classes.link)} to="/">
+        Home
+      </Link>
 
       {navigation.map((nav, index) => (
         <Dropdown
           key={index}
           className={classes.option}
-          trigger={(
-            <span className={classes.link}>{nav.name} <i className='mdi mdi-chevron-down' /></span>
-          )}
+          trigger={
+            <span className={classes.link}>
+              {nav.name} <i className="mdi mdi-chevron-down" />
+            </span>
+          }
           items={nav.items}
         />
       ))}
 
       <Button
         className={cx(classes.option, classes.button)}
-        href='/contact'
+        href="/contact"
         outline={reversed}
       >
         Let's Talk
@@ -41,7 +45,7 @@ MenuDesktop.propTypes = {
   /**
    * Set theme with reversed colors.
    */
-  reversed: PropTypes.bool,
+  reversed: PropTypes.bool
 };
 
 export default withStyles(styles)(MenuDesktop);

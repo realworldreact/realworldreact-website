@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import withStyles from 'react-jss';
 import cx from 'classnames';
-import SimpleDropdown, { DropdownTrigger, DropdownContent } from 'react-simple-dropdown';
+import SimpleDropdown, {
+  DropdownTrigger,
+  DropdownContent
+} from 'react-simple-dropdown';
 
 import styles from './styles';
 
@@ -30,9 +33,9 @@ Dropdown.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      route: PropTypes.string,
+      route: PropTypes.string
     })
-  ).isRequired,
+  ).isRequired
 };
 
 export default withStyles(styles)(Dropdown);

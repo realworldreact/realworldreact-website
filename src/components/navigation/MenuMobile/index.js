@@ -8,13 +8,12 @@ import Button from '../../forms/Button';
 import styles, { MENU_MOBILE_BODY_ACTIVE } from './styles';
 
 class MenuMobile extends React.Component {
-
-  constructor () {
+  constructor() {
     super(...arguments);
     this.state = { active: false };
   }
 
-  render () {
+  render() {
     const { theme, sheet, classes, className, reversed, ...etc } = this.props;
     const { active } = this.state;
     const cls = cx(classes.root, active && classes.active, className);
@@ -22,19 +21,22 @@ class MenuMobile extends React.Component {
     return (
       <div className={cls} {...etc}>
         <a className={classes.trigger} onClick={this.onTrigger}>
-          <i className={classes.triggerLine}/>
-          <i className={classes.triggerLine}/>
-          <i className={classes.triggerLine}/>
+          <i className={classes.triggerLine} />
+          <i className={classes.triggerLine} />
+          <i className={classes.triggerLine} />
         </a>
         <div className={classes.menuContainer}>
           <div className={classes.menu}>
-            <Button href='/contact' fullWidth>Let's Talk</Button>
+            <Button href="/contact" fullWidth>
+              Let's Talk
+            </Button>
 
             {/* Navigations */}
             {navigation.map((nav, index) => (
               <div key={index}>
                 <div className={classes.navTitle}>
-                  <span className='text-primary'>_</span>{nav.name}
+                  <span className="text-primary">_</span>
+                  {nav.name}
                 </div>
 
                 {/* List of links */}
@@ -63,7 +65,8 @@ class MenuMobile extends React.Component {
     this.setState({ active });
 
     // Add/remove body class to remove scrolls according to the state.
-    const baseClass = document.querySelector('body').getAttribute('class') || '';
+    const baseClass =
+      document.querySelector('body').getAttribute('class') || '';
     let updateClass = active
       ? `${baseClass} ${MENU_MOBILE_BODY_ACTIVE}`
       : baseClass.replace(MENU_MOBILE_BODY_ACTIVE, '').trim();
@@ -73,14 +76,14 @@ class MenuMobile extends React.Component {
     const body = document.body;
     const html = document.documentElement;
     body.scrollTop = html.scrollTop = 0;
-  }
+  };
 }
 
 MenuMobile.propTypes = {
   /**
    * Set theme with reversed colors.
    */
-  reversed: PropTypes.bool,
+  reversed: PropTypes.bool
 };
 
 export default withStyles(styles)(MenuMobile);
