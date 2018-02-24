@@ -1,6 +1,8 @@
 {
   "parser": "babel-eslint",
 
+  "extends": ["prettier"],
+
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module"
@@ -51,6 +53,7 @@
   },
 
   "rules": {
+    "prettier/prettier": "error",
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 2,
@@ -176,14 +179,14 @@
     "no-extra-parens": [0],
     "one-var": [0],
     "operator-assignment": [0, "always"],
-    "operator-linebreak": [2, "before"],
+    "operator-linebreak": [0],
     "padded-blocks": [0],
     "quote-props": [0],
     "radix": [0],
     "semi": [2],
     "semi-spacing": [2, {"before": false, "after": true}],
     "sort-vars": [0],
-    "space-before-function-paren": [2, {"anonymous": "always", "named": "always"}],
+    "space-before-function-paren": [0],
     "space-before-blocks": [0, "always"],
     "space-in-brackets": [
       0, "never", {
