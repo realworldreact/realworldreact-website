@@ -11,12 +11,9 @@ const Footer = props => {
   const { theme, sheet, classes, className, ...etc } = props;
   return (
     <footer className={cx(classes.root, 'container', className)} {...etc}>
-      <div className='row'>
-        <div className='col-xs-12'>
-          <img
-            className={classes.logo}
-            src={logoReversed}
-          />
+      <div className="row">
+        <div className="col-xs-12">
+          <img className={classes.logo} src={logoReversed} />
         </div>
       </div>
     </footer>

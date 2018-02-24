@@ -48,10 +48,6 @@ const styles = (theme) => ({
     textAlign: 'center',
     color: '#fff',
   },
-  ink: {
-    backgroundColor: theme.palette.secondary.base,
-    color: theme.palette.inverted.base,
-  },
 
   // MAIN
   main: {
@@ -101,7 +97,7 @@ const HomePage = ({ classes }) => (
           <div className={classes.heading}>
             <h1>
               We are a professional services and consulting firm specializing
-              in <span className={classes.ink}>&nbsp;modern front-end tools&nbsp;</span> and
+              in <span className='text-inverted background-secondary'>&nbsp;modern front-end tools&nbsp;</span> and
               serverless architecture.
             </h1>
             <div className={classes.headingDescription}>Fig. 1 - Our fields of speciality</div>

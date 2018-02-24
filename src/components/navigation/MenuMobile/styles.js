@@ -9,21 +9,21 @@ export const MENU_MOBILE_BODY_ACTIVE = 'menu-mobile-body-active';
 export default theme => ({
   '@global': {
     ['.' + MENU_MOBILE_BODY_ACTIVE]: {
-      overflow: 'hidden',
-    },
+      overflow: 'hidden'
+    }
   },
   root: {
     display: 'flex',
     flex: '1',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   trigger: {
     position: 'relative',
     padding: 2,
     width: 36,
     height: 36,
-    cursor: 'pointer',
+    cursor: 'pointer'
   },
   triggerLine: {
     position: 'relative',
@@ -32,7 +32,8 @@ export default theme => ({
     display: 'block',
     top: 0,
     transition: 'all 500ms ease-out',
-    backgroundColor: props => props.reversed ? '#fff' : theme.palette.inverted.base,
+    backgroundColor: props =>
+      props.reversed ? '#fff' : theme.palette.inverted.base,
 
     '$active &': {
       '&:first-child': {
@@ -46,7 +47,7 @@ export default theme => ({
       '&:nth-child(2)': {
         opacity: 0
       }
-    },
+    }
   },
   // By default, the menu is hidden with height 0. On shown, it is fixated
   // on the page with the header top height.
@@ -59,8 +60,8 @@ export default theme => ({
     right: 0,
     overflow: 'hidden',
     '$active &': {
-      bottom: 0,
-    },
+      bottom: 0
+    }
   },
   menu: {
     overflowY: 'auto',
@@ -69,25 +70,26 @@ export default theme => ({
     height: 0,
     opacity: 0,
     textAlign: 'left',
-    backgroundColor: props => props.reversed ? theme.palette.inverted.base : '#fff',
+    backgroundColor: props =>
+      props.reversed ? theme.palette.inverted.base : '#fff',
     backgroundImage: props => props.reversed && `url(${imagePatternDots})`,
     transition: 'all 500ms ease-out',
 
     '$active &': {
       height: '100%',
-      opacity: 1,
-    },
+      opacity: 1
+    }
   },
   navTitle: {
     margin: [20, 0],
     fontSize: 20,
     fontWeight: 'bold',
-    color: props => props.reversed ? '#fff' : theme.palette.inverted.base,
+    color: props => (props.reversed ? '#fff' : theme.palette.inverted.base)
   },
   navItem: {
-    marginBottom: 10,
+    marginBottom: 10
   },
 
   // When menu is being shown.
-  active: {},
+  active: {}
 });

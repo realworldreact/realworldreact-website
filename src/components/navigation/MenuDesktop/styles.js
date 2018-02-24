@@ -3,7 +3,7 @@ export default theme => ({
     display: 'flex',
     flex: '1',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   link: {
     padding: [5, 10],
@@ -11,18 +11,18 @@ export default theme => ({
     cursor: 'pointer',
     userSelect: 'none',
     transition: 'color 200ms ease-out',
-    color: props => props.reversed ? '#fff' : theme.palette.inverted.base,
+    color: props => (props.reversed ? '#fff' : theme.palette.inverted.base),
     '&:hover': {
-      color: theme.palette.primary.light,
-    },
+      color: theme.palette.primary.light
+    }
   },
   button: {
-    minWidth: 160,
+    minWidth: 160
   },
   option: {
     marginLeft: 20,
     '&:first-child': {
-      marginLeft: 0,
-    },
-  },
+      marginLeft: 0
+    }
+  }
 });

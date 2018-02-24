@@ -9,7 +9,6 @@ const TalksPage = () => (
       <title>Talks | Real World React</title>
     </Helmet>
     <Header>Talks</Header>
-    
   </div>
 );
 

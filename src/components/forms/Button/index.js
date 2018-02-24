@@ -8,12 +8,11 @@ import cx from 'classnames';
 import styles from './styles';
 
 class Button extends React.Component {
-
-  constructor () {
+  constructor() {
     super(...arguments);
   }
 
-  render () {
+  render() {
     const {
       theme,
       sheet,
@@ -37,10 +36,10 @@ class Button extends React.Component {
     );
   }
 
-  onClick = (ev) => {
+  onClick = ev => {
     ev.preventDefault();
     if (this.props.href) navigateTo(this.props.href);
-  }
+  };
 }
 
 Button.propTypes = {
@@ -57,7 +56,14 @@ Button.propTypes = {
   /**
    * Color palette for styles.
    */
-  palette: PropTypes.oneOf(['primary', 'secondary', 'inverted', 'text', 'alert', 'black']),
+  palette: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'inverted',
+    'text',
+    'alert',
+    'black'
+  ]),
 
   /**
    * Button would be outlined.
@@ -72,11 +78,11 @@ Button.propTypes = {
   /**
    * Button content.
    */
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any.isRequired
 };
 
 Button.defaultProps = {
-  palette: 'primary',
+  palette: 'primary'
 };
 
 export default withStyles(styles)(Button);
