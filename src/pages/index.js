@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import { Header, Footer, TopDrops } from '../components';
+import { Header, Footer, TopDrops, TechnologyLogos } from '../components';
 
 const styles = (theme) => ({
   root: {
@@ -85,7 +85,9 @@ const HomePage = ({ classes }) => (
       </div>
 
       {/* MAIN */}
-      <div className={classes.main}></div>
+      <div className={classes.main}>
+        <TechnologyLogos/>
+      </div>
 
       {/* FOOTER */}
       <div className={classes.footer}>

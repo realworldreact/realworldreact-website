@@ -1,7 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import withStyles from 'react-jss';
-import cx from 'classnames';
 
 import dropLeftA from '../../../assets/images/drops/drop_top_left_a.png';
 import dropLeftB from '../../../assets/images/drops/drop_top_left_b.png';
@@ -32,9 +30,6 @@ const TopDrops = props => {
       </div>
     </div>
   );
-};
-
-TopDrops.propTypes = {
 };
 
 export default withStyles(styles)(TopDrops);
