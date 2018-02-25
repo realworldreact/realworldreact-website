@@ -12,7 +12,7 @@ export default theme => ({
     fontStyle: 'italic',
     fontSize: 16,
     lineHeight: '20px',
-    padding: [0, 10],
+    padding: [0, 10]
   },
   logo: {
     width: 60,
@@ -23,10 +23,10 @@ export default theme => ({
   '@media screen and (min-width: 48em)': {
     root: {
       width: '14.28%',
-      marginBottom: 45,
+      marginBottom: 45
     },
     name: {
       padding: 0
     }
-  },
+  }
 });

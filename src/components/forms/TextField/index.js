@@ -33,7 +33,7 @@ const TextField = props => {
         onChange,
         placeholder,
         ...fieldProps,
-        className: cx(classes.field, fieldProps.className),
+        className: cx(classes.field, fieldProps.className)
       })}
       {!!errorText && <div className={classes.errorText}>{errorText}</div>}
     </div>
@@ -84,13 +84,13 @@ TextField.propTypes = {
   /**
    * Extra fields to pass to the encapsulated field element.
    */
-  fieldProps: PropTypes.object,
+  fieldProps: PropTypes.object
 };
 
 TextField.defaultProps = {
   type: 'text',
   palette: 'primary',
-  fieldProps: {},
+  fieldProps: {}
 };
 
 export default withStyles(styles)(TextField);

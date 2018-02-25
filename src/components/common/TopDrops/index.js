@@ -12,18 +12,18 @@ const TopDrops = props => {
   return (
     <div className={classes.root}>
       <div className={classes.content}>
-        <div className={classes.segment}/>
+        <div className={classes.segment} />
       </div>
-      <div className={classes.line}/>
+      <div className={classes.line} />
       <div className={classes.dropsContainer}>
         <div className="container">
           <div className={classes.drops}>
-            <img src={dropLeftA} alt=""/>
-            <img className={classes.hideOnSmall} src={dropLeftB}/>
+            <img src={dropLeftA} alt="" />
+            <img className={classes.hideOnSmall} src={dropLeftB} />
           </div>
           <div className={classes.drops}>
-            <img className={classes.hideOnSmall} src={dropRightA}/>
-            <img src={dropRightB} alt=""/>
+            <img className={classes.hideOnSmall} src={dropRightA} />
+            <img src={dropRightB} alt="" />
           </div>
         </div>
       </div>

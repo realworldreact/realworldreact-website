@@ -11,9 +11,7 @@ const TechnologyLogo = props => {
   return (
     <div className={cls}>
       <img className={classes.logo} src={logo} alt={name} />
-      <div className={classes.name}>
-        {name}
-      </div>
+      <div className={classes.name}>{name}</div>
     </div>
   );
 };
@@ -31,7 +29,7 @@ TechnologyLogo.propTypes = {
   /**
    * Technology route to website.
    */
-  route: PropTypes.string,
+  route: PropTypes.string
 };
 
 export default withStyles(styles)(TechnologyLogo);

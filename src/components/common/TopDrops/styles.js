@@ -8,8 +8,9 @@ export default theme => ({
   // CONTENT AREA
   content: {
     overflow: 'hidden',
+    position: 'relative',
     height: '100%',
-    width: '100%',
+    width: '100%'
   },
 
   // SEMI SPHERE
@@ -20,7 +21,7 @@ export default theme => ({
     bottom: -15,
     backgroundColor: '#fff',
     position: 'absolute',
-    borderRadius: '50%',
+    borderRadius: '50%'
   },
 
   // CENTER LINE
@@ -49,7 +50,7 @@ export default theme => ({
     bottom: 0,
     left: 0,
     '& .container': {
-      height: 215,
+      height: 215
     }
   },
   drops: {
@@ -103,7 +104,7 @@ export default theme => ({
     line: {
       height: 160,
       '&:after': {
-        height: 80,
+        height: 80
       }
     },
 
@@ -111,10 +112,10 @@ export default theme => ({
     drops: {
       width: 180,
       height: 180,
-      marginTop: 10,
+      marginTop: 10
     },
     hideOnSmall: {
       display: 'inline-block'
-    },
-  },
+    }
+  }
 });

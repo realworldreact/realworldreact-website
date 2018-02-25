@@ -7,17 +7,17 @@ import imagePatternDots from '../assets/images/patterns/dots.png';
 import { Header, Footer, TopDrops, TechnologyLogo } from '../components';
 import technologies from '../data/technologies.json';
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     display: 'flex',
     minHeight: '100vh',
-    flexDirection: 'column',
+    flexDirection: 'column'
   },
 
   // HERO
   hero: {
     backgroundColor: theme.palette.inverted.base,
-    backgroundImage: `url(${imagePatternDots})`,
+    backgroundImage: `url(${imagePatternDots})`
   },
   heading: {
     margin: 'auto',
@@ -27,8 +27,8 @@ const styles = (theme) => ({
     position: 'relative',
     color: '#fff',
     '& h1': {
-      fontSize: 24,
-    },
+      fontSize: 24
+    }
   },
   headingDescription: {
     fontFamily: theme.typography.secondary,
@@ -46,12 +46,12 @@ const styles = (theme) => ({
     fontFamily: theme.typography.secondary,
     fontStyle: 'italic',
     textAlign: 'center',
-    color: '#fff',
+    color: '#fff'
   },
 
   // MAIN
   main: {
-    flex: '1',
+    flex: '1'
   },
 
   // LOGOS
@@ -65,7 +65,7 @@ const styles = (theme) => ({
   // FOOTER
   footer: {
     backgroundColor: theme.palette.inverted.base,
-    backgroundImage: `url(${imagePatternDots})`,
+    backgroundImage: `url(${imagePatternDots})`
   },
 
   // small +
@@ -74,13 +74,13 @@ const styles = (theme) => ({
       padding: [80, 20, 0],
       width: '76%',
       '& h1': {
-        fontSize: 32,
-      },
+        fontSize: 32
+      }
     },
     headingDescription: {
-      bottom: -100,
+      bottom: -100
     }
-  },
+  }
 });
 
 const HomePage = ({ classes }) => (
@@ -89,37 +89,44 @@ const HomePage = ({ classes }) => (
       <title>Real World React</title>
     </Helmet>
     <div className={classes.root}>
-
       {/* HERO */}
       <div className={classes.hero}>
         <Header reversed />
-        <div className='container'>
+        <div className="container">
           <div className={classes.heading}>
             <h1>
-              We are a professional services and consulting firm specializing
-              in <span className='text-inverted background-secondary'>&nbsp;modern front-end tools&nbsp;</span> and
-              serverless architecture.
+              We are a professional services and consulting firm specializing in{' '}
+              <span className="text-inverted background-secondary">
+                &nbsp;modern front-end tools&nbsp;
+              </span>{' '}
+              and serverless architecture.
             </h1>
-            <div className={classes.headingDescription}>Fig. 1 - Our fields of speciality</div>
+            <div className={classes.headingDescription}>
+              Fig. 1 - Our fields of speciality
+            </div>
           </div>
         </div>
-        <TopDrops/>
+        <TopDrops />
       </div>
 
       {/* MAIN */}
       <div className={classes.main}>
         <div className={cx(classes.logos, 'container')}>
           {technologies.map((item, key) => (
-            <TechnologyLogo name={item.name} logo={item.logo} route={item.route} key={key}/>
+            <TechnologyLogo
+              name={item.name}
+              logo={item.logo}
+              route={item.route}
+              key={key}
+            />
           ))}
         </div>
       </div>
 
       {/* FOOTER */}
       <div className={classes.footer}>
-        <Footer></Footer>
+        <Footer />
       </div>
-
     </div>
   </div>
 );
