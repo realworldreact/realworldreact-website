@@ -15,6 +15,7 @@ export default theme => ({
     userSelect: 'none'
   },
   content: {
+    zIndex: 100,
     marginTop: 10,
     padding: 6,
     minWidth: 180,

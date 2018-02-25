@@ -6,7 +6,7 @@ import cx from 'classnames';
 import styles from './styles';
 
 const TechnologyLogo = props => {
-  const { theme, sheet, classes, className, name, logo, ...etc } = props;
+  const { theme, sheet, classes, className, name, logo, route, ...etc } = props;
   const cls = cx(classes.root, className);
   return (
     <div className={cls} {...etc}>

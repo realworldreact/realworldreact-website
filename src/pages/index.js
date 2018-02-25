@@ -4,8 +4,9 @@ import withStyles from 'react-jss';
 import cx from 'classnames';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import { Header, Footer, TopDrops, TechnologyLogo } from '../components';
 import technologies from '../data/technologies.json';
+import { Header, Footer, TopDrops, TechnologyLogo } from '../components';
+import HomeServices from './home/_services';
 
 const styles = theme => ({
   root: {
@@ -20,33 +21,26 @@ const styles = theme => ({
     backgroundImage: `url(${imagePatternDots})`
   },
   heading: {
+    position: 'relative',
     margin: 'auto',
     padding: [0, 20],
     fontWeight: 'bold',
     textAlign: 'center',
-    position: 'relative',
     color: '#fff',
     '& h1': {
       fontSize: 24
     }
   },
-  headingDescription: {
+  headingFooter: {
+    position: 'absolute',
+    left: 0,
+    bottom: -70,
+    width: '100%',
     fontFamily: theme.typography.secondary,
     fontStyle: 'italic',
     textAlign: 'center',
     color: '#fff',
-    position: 'absolute',
-    bottom: -70,
-    fontWeight: 300,
-    left: 0,
-    width: '100%'
-  },
-  continueLabel: {
-    padding: [0, 20, 40],
-    fontFamily: theme.typography.secondary,
-    fontStyle: 'italic',
-    textAlign: 'center',
-    color: '#fff'
+    fontWeight: 300
   },
 
   // MAIN
@@ -73,6 +67,7 @@ const styles = theme => ({
 
   // small +
   '@media screen and (min-width: 48em)': {
+    // HERO
     heading: {
       padding: [80, 20, 0],
       width: '76%',
@@ -83,6 +78,7 @@ const styles = theme => ({
     headingFooter: {
       bottom: -100
     },
+
     // LOGOS
     logos: {
       marginTop: 40,
@@ -124,18 +120,21 @@ const HomePage = ({ classes }) => (
 
       {/* MAIN */}
       <div className={classes.main}>
+        {/* LOGOS */}
         <div className={cx(classes.logos, 'container')}>
           {technologies.map((item, key) => (
-            <div className={classes.technologyLogo}>
+            <div key={key} className={classes.technologyLogo}>
               <TechnologyLogo
                 name={item.name}
                 logo={item.logo}
                 route={item.route}
-                key={key}
               />
             </div>
           ))}
         </div>
+
+        {/* SERVICES */}
+        <HomeServices />
       </div>
 
       {/* FOOTER */}
