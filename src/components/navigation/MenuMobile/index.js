@@ -13,6 +13,10 @@ class MenuMobile extends React.Component {
     this.state = { active: false };
   }
 
+  componentWilUnmount() {
+    this.removeBodyActiveClass();
+  }
+
   render() {
     const { theme, sheet, classes, className, reversed, ...etc } = this.props;
     const { active } = this.state;
@@ -48,6 +52,7 @@ class MenuMobile extends React.Component {
                     palette={reversed ? 'primary' : 'black'}
                     fullWidth
                     outline
+                    onClick={() => this.removeBodyActiveClass()}
                   >
                     {item.name}
                   </Button>
@@ -65,18 +70,35 @@ class MenuMobile extends React.Component {
     this.setState({ active });
 
     // Add/remove body class to remove scrolls according to the state.
-    const baseClass =
-      document.querySelector('body').getAttribute('class') || '';
-    let updateClass = active
-      ? `${baseClass} ${MENU_MOBILE_BODY_ACTIVE}`
-      : baseClass.replace(MENU_MOBILE_BODY_ACTIVE, '').trim();
-    document.querySelector('body').setAttribute('class', updateClass);
+    this.toggleBodyActiveClass(active);
 
     // Set scroll to the top.
     const body = document.body;
     const html = document.documentElement;
     body.scrollTop = html.scrollTop = 0;
   };
+
+  addBodyActiveClass() {
+    const baseClass =
+      document.querySelector('body').getAttribute('class') || '';
+    let updateClass = `${baseClass} ${MENU_MOBILE_BODY_ACTIVE}`.trim();
+    document.querySelector('body').setAttribute('class', updateClass);
+  }
+
+  removeBodyActiveClass() {
+    const baseClass =
+      document.querySelector('body').getAttribute('class') || '';
+    let updateClass = baseClass.replace(MENU_MOBILE_BODY_ACTIVE, '').trim();
+    document.querySelector('body').setAttribute('class', updateClass);
+  }
+
+  toggleBodyActiveClass(add) {
+    if (add) {
+      this.addBodyActiveClass();
+    } else {
+      this.removeBodyActiveClass();
+    }
+  }
 }
 
 MenuMobile.propTypes = {

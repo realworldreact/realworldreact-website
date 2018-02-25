@@ -23,12 +23,18 @@ class Button extends React.Component {
       fullWidth,
       palette,
       outline,
+      buttonProps,
+      onClick,
       ...etc
     } = this.props;
     return (
       <div className={cx(classes.root, className)} {...etc}>
         <Ripples className={classes.ripples}>
-          <button className={classes.button} onClick={this.onClick}>
+          <button
+            {...buttonProps}
+            onClick={this.onClick}
+            className={cx(classes.button, buttonProps.className)}
+          >
             {children}
           </button>
         </Ripples>
@@ -38,6 +44,7 @@ class Button extends React.Component {
 
   onClick = ev => {
     ev.preventDefault();
+    if (this.props.onClick) this.props.onClick(ev);
     if (this.props.href) navigateTo(this.props.href);
   };
 }
@@ -82,7 +89,8 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  palette: 'primary'
+  palette: 'primary',
+  buttonProps: {}
 };
 
 export default withStyles(styles)(Button);

@@ -1,6 +1,7 @@
 export default () => ({
   root: {
-    padding: 20
+    padding: 20,
+    userSelect: 'none'
   },
   logo: {
     display: 'inline-block',

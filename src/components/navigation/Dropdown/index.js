@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import withStyles from 'react-jss';
 import cx from 'classnames';
 import SimpleDropdown, {
@@ -8,19 +7,20 @@ import SimpleDropdown, {
   DropdownContent
 } from 'react-simple-dropdown';
 
+import Option from '../../forms/Option';
 import styles from './styles';
 
 const Dropdown = props => {
   const { theme, sheet, classes, className, trigger, items, ...etc } = props;
   return (
-    <div className={cx(classes.root, className)}>
+    <div className={cx(classes.root, className)} {...etc}>
       <SimpleDropdown removeElement>
         <DropdownTrigger>{trigger}</DropdownTrigger>
         <DropdownContent className={classes.content}>
           {items.map((item, index) => (
-            <Link key={index} className={classes.item} to={item.route}>
+            <Option key={index} className={classes.item} to={item.route}>
               {item.name}
-            </Link>
+            </Option>
           ))}
         </DropdownContent>
       </SimpleDropdown>

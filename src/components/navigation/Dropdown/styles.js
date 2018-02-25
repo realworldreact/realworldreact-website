@@ -23,21 +23,8 @@ export default theme => ({
     animation: 'dropdown-show 200ms ease-out'
   },
   item: {
-    display: 'block',
-    padding: [4, 8],
-    textAlign: 'center',
-    fontWeight: 'bold',
-    color: theme.palette.inverted.base,
-    border: '1px solid #eaeaea',
-    transition: 'all 200ms ease-out',
-
     '& + &': {
       marginTop: 10
-    },
-    '&:hover': {
-      borderColor: theme.palette.primary.base,
-      color: '#fff',
-      backgroundColor: theme.palette.primary.base
     }
   },
 
