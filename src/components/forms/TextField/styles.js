@@ -1,8 +1,9 @@
-export default (theme) => {
-  const getColor = props => props.reversed ? '#fff' : theme.palette.inverted.base;
+export default theme => {
+  const getColor = props =>
+    props.reversed ? '#fff' : theme.palette.inverted.base;
   return {
     root: {
-      display: 'block',
+      display: 'block'
     },
     field: {
       display: 'block',
@@ -17,12 +18,12 @@ export default (theme) => {
       resize: 'none',
       transition: 'border-color 200ms ease-out',
 
-      minHeight: props => props.isTextarea ? 16 * 3 : 'auto',
+      minHeight: props => (props.isTextarea ? 16 * 3 : 'auto'),
       border: props => '2px solid ' + getColor(props),
       color: props => getColor(props),
 
       '&:focus': {
-        borderColor: props => theme.palette[props.palette].base,
+        borderColor: props => theme.palette[props.palette].base
       },
 
       // Remove browser/os appareance
@@ -33,41 +34,41 @@ export default (theme) => {
       // Placeholder color
       '&::-webkit-input-placeholder': {
         opacity: 1,
-        color: props => getColor(props),
+        color: props => getColor(props)
       },
       '&::-moz-placeholder': {
         opacity: 1,
-        color: props => getColor(props),
+        color: props => getColor(props)
       },
       '&:-ms-input-placeholder': {
         opacity: 1,
-        color: props => getColor(props),
+        color: props => getColor(props)
       },
       '&:-moz-placeholder': {
         opacity: 1,
-        color: props => getColor(props),
+        color: props => getColor(props)
       },
 
       // Autofill background color
       '&:-webkit-autofill': {
-        '-webkit-box-shadow': '0 0 0 rgba(0, 0, 0, 0.001)',
+        '-webkit-box-shadow': '0 0 0 rgba(0, 0, 0, 0.001)'
       },
 
       // Input number arrows
       '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button': {
         '-webkit-appearance': 'none',
-        margin: 0,
+        margin: 0
       },
       '&[type="number"]': {
-        '-moz-appearance': 'textfield',
-      },
+        '-moz-appearance': 'textfield'
+      }
     },
     errorText: {
       padding: [4, 0, 0, 14],
       lineHeight: 1.2,
       fontFamily: theme.typography.secondary,
       fontStyle: 'italic',
-      color: theme.palette.alert.base,
-    },
+      color: theme.palette.alert.base
+    }
   };
 };
