@@ -14,6 +14,8 @@ export default () => ({
     },
     text: {
       base: '#2b3642',
+      dark: darken(0.1, '#2b3642'),
+      light: lighten(0.1, '#2b3642'),
       contrastText: '#fff'
     },
     alert: {
