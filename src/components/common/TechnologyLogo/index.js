@@ -9,7 +9,7 @@ const TechnologyLogo = props => {
   const { theme, sheet, classes, className, name, logo, ...etc } = props;
   const cls = cx(classes.root, className);
   return (
-    <div className={cls}>
+    <div className={cls} {...etc}>
       <img className={classes.logo} src={logo} alt={name} />
       <div className={classes.name}>{name}</div>
     </div>

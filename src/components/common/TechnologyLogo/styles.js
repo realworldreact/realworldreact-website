@@ -1,6 +1,5 @@
 export default theme => ({
   root: {
-    width: '50%',
     textAlign: 'center',
     marginBottom: 25,
     '& img': {
@@ -22,7 +21,6 @@ export default theme => ({
   // small +
   '@media screen and (min-width: 48em)': {
     root: {
-      width: '14.28%',
       marginBottom: 45
     },
     name: {

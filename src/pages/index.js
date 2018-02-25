@@ -61,6 +61,9 @@ const styles = theme => ({
     flexDirection: 'row',
     flexWrap: 'wrap'
   },
+  technologyLogo: {
+    width: '50%'
+  },
 
   // FOOTER
   footer: {
@@ -77,8 +80,18 @@ const styles = theme => ({
         fontSize: 32
       }
     },
-    headingDescription: {
+    headingFooter: {
       bottom: -100
+    },
+    // LOGOS
+    logos: {
+      marginTop: 40,
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap'
+    },
+    technologyLogo: {
+      width: '14.28%'
     }
   }
 });
@@ -101,7 +114,7 @@ const HomePage = ({ classes }) => (
               </span>{' '}
               and serverless architecture.
             </h1>
-            <div className={classes.headingDescription}>
+            <div className={classes.headingFooter}>
               Fig. 1 - Our fields of speciality
             </div>
           </div>
@@ -113,12 +126,14 @@ const HomePage = ({ classes }) => (
       <div className={classes.main}>
         <div className={cx(classes.logos, 'container')}>
           {technologies.map((item, key) => (
-            <TechnologyLogo
-              name={item.name}
-              logo={item.logo}
-              route={item.route}
-              key={key}
-            />
+            <div className={classes.technologyLogo}>
+              <TechnologyLogo
+                name={item.name}
+                logo={item.logo}
+                route={item.route}
+                key={key}
+              />
+            </div>
           ))}
         </div>
       </div>

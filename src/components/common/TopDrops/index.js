@@ -10,7 +10,7 @@ import styles from './styles';
 const TopDrops = props => {
   const { theme, sheet, classes, className, ...etc } = props;
   return (
-    <div className={classes.root}>
+    <div className={classes.root} {...etc}>
       <div className={classes.content}>
         <div className={classes.segment} />
       </div>
@@ -18,12 +18,12 @@ const TopDrops = props => {
       <div className={classes.dropsContainer}>
         <div className="container">
           <div className={classes.drops}>
-            <img src={dropLeftA} alt="" />
+            <img src={dropLeftA} />
             <img className={classes.hideOnSmall} src={dropLeftB} />
           </div>
           <div className={classes.drops}>
             <img className={classes.hideOnSmall} src={dropRightA} />
-            <img src={dropRightB} alt="" />
+            <img src={dropRightB} />
           </div>
         </div>
       </div>
