@@ -5,7 +5,7 @@ import cx from 'classnames';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
 import technologies from '../data/technologies.json';
-import { Header, Footer, TopDrops, TechnologyLogo } from '../components';
+import { Header, Footer, Drops, TechnologyLogo } from '../components';
 import HomeServices from './home/_services';
 
 const styles = theme => ({
@@ -64,6 +64,9 @@ const styles = theme => ({
     backgroundColor: theme.palette.inverted.base,
     backgroundImage: `url(${imagePatternDots})`
   },
+  footerDrops: {
+    display: 'none'
+  },
 
   // small +
   '@media screen and (min-width: 48em)': {
@@ -88,6 +91,11 @@ const styles = theme => ({
     },
     technologyLogo: {
       width: '14.28%'
+    },
+
+    // FOOTER
+    footerDrops: {
+      display: 'block'
     }
   }
 });
@@ -115,7 +123,7 @@ const HomePage = ({ classes }) => (
             </div>
           </div>
         </div>
-        <TopDrops />
+        <Drops />
       </div>
 
       {/* MAIN */}
@@ -139,6 +147,9 @@ const HomePage = ({ classes }) => (
 
       {/* FOOTER */}
       <div className={classes.footer}>
+        <div className={classes.footerDrops}>
+          <Drops bottom />
+        </div>
         <Footer />
       </div>
     </div>
