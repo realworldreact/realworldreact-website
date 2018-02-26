@@ -11,10 +11,11 @@ export default theme => ({
   button: {
     display: 'inline-block',
     margin: 0,
-    padding: [8, 20],
+    position: 'relative',
+    padding: props => (props.showArrow ? '8px 35px 8px 10px' : '8px 10px'),
     width: '100%',
     height: '100%',
-    textAlign: 'center',
+    textAlign: props => props.textAlign,
     verticalAlign: 'middle',
     outline: 'none',
     cursor: 'pointer',
@@ -41,5 +42,16 @@ export default theme => ({
     '&::-moz-focus-inner': {
       border: 'none'
     }
+  },
+  arrow: {
+    display: props => (props.showArrow ? 'block' : 'none'),
+    position: 'absolute',
+    right: -2,
+    top: -2,
+    height: 'calc(100% + 4px)',
+    width: 35,
+    padding: 10,
+    backgroundColor: theme.palette.primary.base,
+    color: '#fff'
   }
 });
