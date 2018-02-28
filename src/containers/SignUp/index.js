@@ -32,7 +32,7 @@ const SignUp = props => {
         placeholder="Email"
       />
       <div className={classes.button}>
-        <Button textAlign="left" fullWidth children="Submit" />
+        <Button textAlign="left" children="Submit" />
       </div>
     </div>
   );

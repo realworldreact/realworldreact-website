@@ -66,7 +66,6 @@ const Contact = props => {
         <div className={classes.button}>
           <Button
             showArrow
-            fullWidth
             textAlign="left"
             palette="black"
             children="Submit"
