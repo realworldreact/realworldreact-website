@@ -1,10 +1,16 @@
 export default theme => ({
   root: {
-    display: props => (props.fullWidth ? 'block' : 'inline-block'),
+    display: 'flex',
     overflow: 'hidden',
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
+    cursor: 'pointer',
+
+    '&:hover $arrow': {
+      backgroundColor: theme.palette.primary.light
+    }
   },
   ripples: {
+    flex: '1',
     width: '100%',
     height: '100%'
   },
@@ -15,10 +21,7 @@ export default theme => ({
     border: 0,
     padding: 0,
     alignItems: 'stretch',
-    backgroundColor: 'transparent',
-    '&:hover i': {
-      opacity: 0.8
-    }
+    backgroundColor: 'transparent'
   },
   button: {
     display: 'inline-block',
@@ -36,10 +39,11 @@ export default theme => ({
     lineHeight: '1',
     userSelect: 'none',
     transition: 'all 200ms ease-out',
+    borderStyle: 'solid',
 
     color: props => theme.palette[props.palette].contrastText,
-    border: props =>
-      '2px solid ' +
+    borderWidth: props => (props.showArrow ? '2px 0 2px 2px' : '2px'),
+    borderColor: props =>
       theme.palette[props.palette][props.outline ? 'contrastText' : 'base'],
     backgroundColor: props =>
       props.outline ? 'transparent' : theme.palette[props.palette].base,
@@ -48,11 +52,7 @@ export default theme => ({
       color: props => props.outline && theme.palette[props.palette].light,
       borderColor: props => theme.palette[props.palette].light,
       backgroundColor: props =>
-        !props.outline && theme.palette[props.palette].light,
-
-      '& $arrow': {
-        backgroundColor: theme.palette.primary.light
-      }
+        !props.outline && theme.palette[props.palette].light
     },
 
     '&::-moz-focus-inner': {

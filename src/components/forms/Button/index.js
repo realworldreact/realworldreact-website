@@ -20,7 +20,6 @@ class Button extends React.Component {
       className,
       children,
       href,
-      fullWidth,
       palette,
       outline,
       showArrow,
@@ -58,11 +57,6 @@ Button.propTypes = {
    * On button click, navigate to provided URL.
    */
   href: PropTypes.string,
-
-  /**
-   * Button should take full width.
-   */
-  fullWidth: PropTypes.bool,
 
   /**
    * Color palette for styles.

@@ -31,9 +31,7 @@ class MenuMobile extends React.Component {
         </a>
         <div className={classes.menuContainer}>
           <div className={classes.menu}>
-            <Button href="/contact" fullWidth>
-              Let's Talk
-            </Button>
+            <Button href="/contact">Let's Talk</Button>
 
             {/* Navigations */}
             {navigation.map((nav, index) => (
@@ -50,7 +48,6 @@ class MenuMobile extends React.Component {
                     className={classes.navItem}
                     href={item.route}
                     palette={reversed ? 'primary' : 'black'}
-                    fullWidth
                     outline
                     onClick={() => this.removeBodyActiveClass()}
                   >
