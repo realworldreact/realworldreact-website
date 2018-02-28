@@ -48,7 +48,11 @@ export default theme => ({
       color: props => props.outline && theme.palette[props.palette].light,
       borderColor: props => theme.palette[props.palette].light,
       backgroundColor: props =>
-        !props.outline && theme.palette[props.palette].light
+        !props.outline && theme.palette[props.palette].light,
+
+      '& $arrow': {
+        backgroundColor: theme.palette.primary.light
+      }
     },
 
     '&::-moz-focus-inner': {
@@ -62,6 +66,7 @@ export default theme => ({
     color: '#fff',
     alignItems: 'center',
     cursor: 'pointer',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    transition: 'all 200ms ease-out'
   }
 });

@@ -17,8 +17,7 @@ export default theme => ({
   subtitle: {
     marginTop: 10,
     fontFamily: theme.typography.secondary,
-    fontStyle: 'italic',
-    fontSize: '120%'
+    fontStyle: 'italic'
   },
   text: {
     textAlign: 'left'

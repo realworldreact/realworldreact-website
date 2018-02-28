@@ -3,6 +3,7 @@ export default theme => ({
     padding: [20, 0, 0],
     position: 'relative',
     height: 150,
+    overflow: 'hidden',
     bottom: props => (props.bottom ? '0' : '-1px'),
     transform: props => (props.bottom ? 'rotate(180deg)' : 'rotate(0deg)')
   },

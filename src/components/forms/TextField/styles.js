@@ -16,7 +16,10 @@ export default theme => {
       fontSize: 16,
       fontWeight: 'bold',
       resize: 'none',
-      transition: 'border-color 200ms ease-out',
+
+      // Since <TextareaAutoize /> removes the transition directly
+      // on the element.
+      transition: 'border-color 200ms ease-out !important',
 
       minHeight: props => (props.isTextarea ? 16 * 3 : 'auto'),
       border: props => '2px solid ' + getColor(props),

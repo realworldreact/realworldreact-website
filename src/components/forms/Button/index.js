@@ -82,12 +82,12 @@ Button.propTypes = {
   outline: PropTypes.bool,
 
   /**
-   * Show the arrow on right
+   * Show the arrow on right.
    */
   showArrow: PropTypes.bool,
 
   /**
-   * Button would be outlined.
+   * Content text align.
    */
   textAlign: PropTypes.oneOf(['center', 'left', 'right']),
 

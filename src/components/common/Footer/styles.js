@@ -49,9 +49,6 @@ export default theme => ({
       marginBottom: -60,
       top: -120
     },
-    social: {
-      //float: 'left'
-    },
     centerContainer: {
       maxWidth: 320,
       margin: [0, 'auto']

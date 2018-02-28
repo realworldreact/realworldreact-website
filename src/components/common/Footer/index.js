@@ -18,15 +18,14 @@ const Footer = props => {
     sheet,
     classes,
     className,
-    showContact,
-    footerContent,
     headerContent,
+    footerContent,
     ...etc
   } = props;
   return (
     <footer className={cx(classes.root, 'container', className)} {...etc}>
       <div className="row">
-        {headerContent && (
+        {!!headerContent && (
           <div className={cx(classes.contact, 'col-xs-12')}>
             {headerContent}
           </div>
@@ -34,31 +33,35 @@ const Footer = props => {
         <div className="col-xs-12 col-sm-4 col-lg-3">
           <div className="row">
             <div className="col-xs-6">
-              <a href="/">
+              <Link to="/">
                 <img className={classes.logo} src={logoReversed} />
-              </a>
+              </Link>
             </div>
             <div className="col-xs-6">
-              {/* TODO: Add social media links */}
-
               <div className={cx(classes.social, 'row')}>
                 <div className="col-xs-6">
-                  <a href="/">
+                  <a
+                    href="https://www.youtube.com/channel/UCgL3tdpvoARHuX-_3eLWEgg"
+                    target="youtube"
+                  >
                     <img src={youtube} alt="YouTube" />
                   </a>
                 </div>
                 <div className="col-xs-6">
-                  <a href="/">
-                    <img src={facebook} alt="facebook" />
+                  <a
+                    href="https://www.facebook.com/RealWorldReact"
+                    target="facebook"
+                  >
+                    <img src={facebook} alt="Facebook" />
                   </a>
                 </div>
                 <div className="col-xs-6">
-                  <a href="/">
+                  <a href="https://twitter.com/rwreact" target="twitter">
                     <img src={twitter} alt="Twitter" />
                   </a>
                 </div>
                 <div className="col-xs-6">
-                  <a href="/">
+                  <a href="https://meetup.com/real-World-React" target="meetup">
                     <img src={meetup} alt="Meetup" />
                   </a>
                 </div>
@@ -66,15 +69,8 @@ const Footer = props => {
             </div>
           </div>
         </div>
-        <div
-          className={cx(
-            classes.centerContainer,
-            'col-xs-12',
-            'col-sm-4',
-            'col-lg-6'
-          )}
-        >
-          {footerContent}
+        <div className="col-xs-12 col-sm-4 col-lg-6">
+          <div className={classes.centerContainer}>{footerContent}</div>
         </div>
         <div className="col-xs-12 col-sm-4 col-lg-3">
           <div className="row">
@@ -118,25 +114,14 @@ const Footer = props => {
 
 Footer.propTypes = {
   /**
-   * Show the Contact Component in footer
-   */
-  showContact: PropTypes.bool,
-
-  /**
    * Component or string to renter in header of component
    */
-
-  headerContent: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  headerContent: PropTypes.any,
 
   /**
    * Component or string to renter in center footer of component
    */
-
-  footerContent: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-};
-
-Footer.defaultProps = {
-  showContact: true
+  footerContent: PropTypes.any
 };
 
 export default withStyles(styles)(Footer);
