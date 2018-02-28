@@ -12,7 +12,7 @@ export default theme => ({
     height: 100
   },
   social: {
-    float: 'right',
+    textAlign: 'center',
     '& img': {
       width: 40,
       height: 40,
@@ -23,7 +23,7 @@ export default theme => ({
     maxWidth: '100%',
     margin: [40, 0, 0]
   },
-  bockTitle: {
+  blockTitle: {
     color: '#fff',
     fontSize: 16,
     marginBottom: 15
@@ -50,7 +50,7 @@ export default theme => ({
       top: -120
     },
     social: {
-      float: 'left'
+      //float: 'left'
     },
     centerContainer: {
       maxWidth: 320,

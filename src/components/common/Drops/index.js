@@ -20,9 +20,9 @@ const Drops = props => {
       <div className={classes.dropsContainer}>
         <div className="container">
           <div className={classes.drops}>
-            <img src={dropLeftA} />
-            <div className={classes.hideOnSmall}>
-              <img src={dropLeftB} />
+            <img className={classes.dropImage} src={dropLeftA} />
+            <div className={cx(classes.bigDropImage, classes.hideOnSmall)}>
+              <img className={classes.dropImage} src={dropLeftB} />
               <img
                 className={cx(classes.dropLogo, classes.logoA)}
                 src="/images/technologies/redux.jpg"
@@ -30,14 +30,14 @@ const Drops = props => {
             </div>
           </div>
           <div className={classes.drops}>
-            <div className={classes.hideOnSmall}>
-              <img src={dropRightA} />
+            <div className={cx(classes.bigDropImage, classes.hideOnSmall)}>
+              <img className={classes.dropImage} src={dropRightA} />
               <img
                 className={cx(classes.dropLogo, classes.logoB)}
                 src="/images/technologies/react.jpg"
               />
             </div>
-            <img src={dropRightB} />
+            <img className={classes.dropImage} src={dropRightB} />
           </div>
         </div>
       </div>

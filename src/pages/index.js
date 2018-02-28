@@ -7,6 +7,7 @@ import imagePatternDots from '../assets/images/patterns/dots.png';
 import technologies from '../data/technologies.json';
 import { Header, Footer, Drops, TechnologyLogo } from '../components';
 import HomeServices from './home/_services';
+import { Contact, SignUp } from '../containers';
 
 const styles = theme => ({
   root: {
@@ -150,7 +151,7 @@ const HomePage = ({ classes }) => (
         <div className={classes.footerDrops}>
           <Drops bottom />
         </div>
-        <Footer />
+        <Footer footerContent={<SignUp />} headerContent={<Contact />} />
       </div>
     </div>
   </div>

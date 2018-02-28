@@ -32,12 +32,13 @@ class Button extends React.Component {
     return (
       <div className={cx(classes.root, className)} {...etc}>
         <Ripples className={classes.ripples}>
-          <button
-            {...buttonProps}
-            onClick={this.onClick}
-            className={cx(classes.button, buttonProps.className)}
-          >
-            {children}
+          <button className={classes.container} onClick={this.onClick}>
+            <div
+              {...buttonProps}
+              className={cx(classes.button, buttonProps.className)}
+            >
+              {children}
+            </div>
             <i className={cx(classes.arrow, 'mdi', 'mdi-chevron-right')} />
           </button>
         </Ripples>

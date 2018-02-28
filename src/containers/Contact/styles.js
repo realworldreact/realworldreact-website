@@ -20,7 +20,6 @@ export default theme => ({
     marginBottom: 15
   },
   textArea: {
-    borderColor: theme.palette.primary.base,
     borderBottomWidth: 0,
     minHeight: 180,
     paddingTop: 10

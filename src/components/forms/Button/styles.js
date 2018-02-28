@@ -8,6 +8,18 @@ export default theme => ({
     width: '100%',
     height: '100%'
   },
+  container: {
+    display: 'flex',
+    width: '100%',
+    height: '100%',
+    border: 0,
+    padding: 0,
+    alignItems: 'stretch',
+    backgroundColor: 'transparent',
+    '&:hover i': {
+      opacity: 0.8
+    }
+  },
   button: {
     display: 'inline-block',
     margin: 0,
@@ -44,14 +56,12 @@ export default theme => ({
     }
   },
   arrow: {
-    display: props => (props.showArrow ? 'block' : 'none'),
-    position: 'absolute',
-    right: -2,
-    top: -2,
-    height: 'calc(100% + 4px)',
+    display: props => (props.showArrow ? 'flex' : 'none'),
     width: 35,
-    padding: 10,
     backgroundColor: theme.palette.primary.base,
-    color: '#fff'
+    color: '#fff',
+    alignItems: 'center',
+    cursor: 'pointer',
+    justifyContent: 'center'
   }
 });
