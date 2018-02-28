@@ -23,19 +23,23 @@ class Button extends React.Component {
       fullWidth,
       palette,
       outline,
+      showArrow,
       buttonProps,
+      textAlign,
       onClick,
       ...etc
     } = this.props;
     return (
       <div className={cx(classes.root, className)} {...etc}>
         <Ripples className={classes.ripples}>
-          <button
-            {...buttonProps}
-            onClick={this.onClick}
-            className={cx(classes.button, buttonProps.className)}
-          >
-            {children}
+          <button className={classes.container} onClick={this.onClick}>
+            <div
+              {...buttonProps}
+              className={cx(classes.button, buttonProps.className)}
+            >
+              {children}
+            </div>
+            <i className={cx(classes.arrow, 'mdi', 'mdi-chevron-right')} />
           </button>
         </Ripples>
       </div>
@@ -78,6 +82,16 @@ Button.propTypes = {
   outline: PropTypes.bool,
 
   /**
+   * Show the arrow on right
+   */
+  showArrow: PropTypes.bool,
+
+  /**
+   * Button would be outlined.
+   */
+  textAlign: PropTypes.oneOf(['center', 'left', 'right']),
+
+  /**
    * Options to pass to the button component.
    */
   buttonProps: PropTypes.object,
@@ -90,7 +104,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   palette: 'primary',
-  buttonProps: {}
+  buttonProps: {},
+  textAlign: 'center'
 };
 
 export default withStyles(styles)(Button);

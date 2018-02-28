@@ -2,7 +2,9 @@ export default theme => ({
   root: {
     padding: [20, 0, 0],
     position: 'relative',
-    height: 150
+    height: 150,
+    bottom: props => (props.bottom ? '0' : '-1px'),
+    transform: props => (props.bottom ? 'rotate(180deg)' : 'rotate(0deg)')
   },
 
   // CONTENT AREA
@@ -27,6 +29,7 @@ export default theme => ({
   // CENTER LINE
   line: {
     width: 1,
+    display: props => (props.bottom ? 'none' : 'block'),
     position: 'absolute',
     left: '50%',
     height: 120,
@@ -57,10 +60,6 @@ export default theme => ({
     width: 70,
     height: 70,
     marginTop: 20,
-    '& img': {
-      height: 180,
-      width: 'auto'
-    },
     '&:first-child': {
       float: 'left',
       transform: 'rotate(-3deg)'
@@ -70,8 +69,28 @@ export default theme => ({
       transform: 'rotate(3deg)'
     }
   },
+  dropImage: {
+    height: 180,
+    width: 'auto'
+  },
   hideOnSmall: {
-    display: 'none'
+    display: 'none',
+    position: 'relative'
+  },
+  dropLogo: {
+    display: props => (props.bottom ? 'none' : 'block'),
+    position: 'absolute',
+    height: 60,
+    width: 'auto',
+    borderRadius: '50%'
+  },
+  logoA: {
+    top: 40,
+    right: 12
+  },
+  logoB: {
+    top: 18,
+    right: 15
   },
 
   // medium +
@@ -116,6 +135,10 @@ export default theme => ({
     },
     hideOnSmall: {
       display: 'inline-block'
+    },
+    bigDropImage: {
+      width: 121,
+      height: 180
     }
   }
 });

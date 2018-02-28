@@ -8,13 +8,26 @@ export default theme => ({
     width: '100%',
     height: '100%'
   },
+  container: {
+    display: 'flex',
+    width: '100%',
+    height: '100%',
+    border: 0,
+    padding: 0,
+    alignItems: 'stretch',
+    backgroundColor: 'transparent',
+    '&:hover i': {
+      opacity: 0.8
+    }
+  },
   button: {
     display: 'inline-block',
     margin: 0,
-    padding: [8, 20],
+    position: 'relative',
+    padding: props => (props.showArrow ? '8px 35px 8px 10px' : '8px 10px'),
     width: '100%',
     height: '100%',
-    textAlign: 'center',
+    textAlign: props => props.textAlign,
     verticalAlign: 'middle',
     outline: 'none',
     cursor: 'pointer',
@@ -41,5 +54,14 @@ export default theme => ({
     '&::-moz-focus-inner': {
       border: 'none'
     }
+  },
+  arrow: {
+    display: props => (props.showArrow ? 'flex' : 'none'),
+    width: 35,
+    backgroundColor: theme.palette.primary.base,
+    color: '#fff',
+    alignItems: 'center',
+    cursor: 'pointer',
+    justifyContent: 'center'
   }
 });

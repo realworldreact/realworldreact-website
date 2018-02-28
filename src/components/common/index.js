@@ -1,5 +1,5 @@
 export Header from './Header';
 export Footer from './Footer';
-export TopDrops from './TopDrops';
+export Drops from './Drops';
 export TechnologyLogo from './TechnologyLogo';
 export ImageText from './ImageText';
