@@ -4,17 +4,12 @@ import withStyles from 'react-jss';
 import cx from 'classnames';
 
 import letsChat from '../assets/images/footer/lets_chat.png';
+import clients from '../data/clients.json';
 import imagePatternDots from '../assets/images/patterns/dots.png';
 import comprehensive from '../assets/images/training/comprehensive.png';
 import bestPractices from '../assets/images/training/best_practices.png';
 import realWorld from '../assets/images/training/real_world.png';
 import professionalInstructors from '../assets/images/training/professional_instructors.png';
-import microsoft from '../assets/images/clients/microsoft.png';
-import netflix from '../assets/images/clients/netflix.png';
-import tesla from '../assets/images/clients/tesla.png';
-import pinterest from '../assets/images/clients/pinterest.png';
-import amazon from '../assets/images/clients/amazon.png';
-import twilio from '../assets/images/clients/twilio.png';
 import { Header, Footer, Drops } from '../components';
 import { Contact, SignUp } from '../containers';
 
@@ -258,7 +253,8 @@ const TrainingPage = ({ classes }) => (
                     </h2>
                     <p>
                       No more “hello world” examples. We’ll show you how these
-                      technologies work in the context of a real-world application.
+                      technologies work in the context of a real-world
+                      application.
                     </p>
                   </div>
                 </div>
@@ -285,32 +281,22 @@ const TrainingPage = ({ classes }) => (
             </div>
             <div className="col-sm-4">
               <div className="row">
-                <div className={cx(classes.left, classes.brand, 'col-xs-6')}>
-                  <img
-                    src={microsoft}
-                    className={classes.client}
-                    alt="Microsoft"
-                  />
-                </div>
-                <div className={cx(classes.right, classes.brand, 'col-xs-6')}>
-                  <img src={netflix} className={classes.client} alt="Netflix" />
-                </div>
-                <div className={cx(classes.left, classes.brand, 'col-xs-6')}>
-                  <img src={tesla} className={classes.client} alt="Tesla" />
-                </div>
-                <div className={cx(classes.right, classes.brand, 'col-xs-6')}>
-                  <img
-                    src={pinterest}
-                    className={classes.client}
-                    alt="Pinterest"
-                  />
-                </div>
-                <div className={cx(classes.left, classes.brand, 'col-xs-6')}>
-                  <img src={amazon} className={classes.client} alt="Amazon" />
-                </div>
-                <div className={cx(classes.right, classes.brand, 'col-xs-6')}>
-                  <img src={twilio} className={classes.client} alt="Twilio" />
-                </div>
+                {clients.map((item, key) => (
+                  <div
+                    key={key}
+                    className={cx(
+                      key % 2 ? classes.right : classes.left,
+                      classes.brand,
+                      'col-xs-6'
+                    )}
+                  >
+                    <img
+                      src={item.logo}
+                      className={classes.client}
+                      alt={item.name}
+                    />
+                  </div>
+                ))}
                 <div className={cx(classes.brace, 'col-xs-12')} />
                 <div className={cx(classes.clientsFooter, 'col-xs-12')}>
                   Fig. 1 – Engineers we've trained
