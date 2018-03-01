@@ -8,6 +8,10 @@ import imagePatternOrbit from '../assets/images/patterns/orbit.png';
 import imageProblem from '../assets/images/home/problem.png';
 import imageSolution from '../assets/images/home/solution.png';
 import imageBenefits from '../assets/images/home/benefits.png';
+import imageTalks from '../assets/images/home/talks.png';
+import imagePodcast from '../assets/images/home/podcast.png';
+import imageUpcomingEvents from '../assets/images/home/upcoming-events.png';
+import imageBlog from '../assets/images/home/blog.png';
 import technologies from '../data/technologies.json';
 import {
   Header,
@@ -15,7 +19,8 @@ import {
   Drops,
   TechnologyLogo,
   Tabs,
-  ImageText
+  ImageText,
+  Resource
 } from '../components';
 import { Contact, SignUp } from '../containers';
 
@@ -115,6 +120,51 @@ const styles = theme => ({
     }
   },
 
+  // RESOURCES
+  resources: {
+    padding: [40, 20]
+  },
+  resourcesItem: {
+    marginBottom: 20
+  },
+  resourcesTitle: {
+    marginBottom: 10,
+    textAlign: 'center',
+    fontFamily: theme.typography.secondary
+  },
+  resourcesLine: {
+    position: 'absolute',
+    borderStyle: 'solid',
+    borderColor: '#c9cacc'
+  },
+  resourcesLines: {
+    position: 'relative',
+    height: 30
+  },
+  resourcesLineBase: {
+    width: 0,
+    height: 30,
+    borderWidth: '0 1px 0 0',
+    right: '50%',
+    top: 0,
+    transition: 'translateX(-50%)'
+  },
+  resourcesLineHorizontal: {
+    borderWidth: '0'
+  },
+  resourcesLine1: {
+    borderWidth: '0'
+  },
+  resourcesLine2: {
+    borderWidth: '0'
+  },
+  resourcesLine3: {
+    borderWidth: '0'
+  },
+  resourcesLine4: {
+    borderWidth: '0'
+  },
+
   // FOOTER
   footer: {
     backgroundColor: theme.palette.inverted.base,
@@ -171,6 +221,29 @@ const styles = theme => ({
       transform: 'translate(-50%, -50%)'
     },
 
+    // RESOURCES
+    resourcesLines: {
+      height: 60
+    },
+    resourcesLineHorizontal: {
+      borderWidth: '0 0 1px',
+      top: 30,
+      left: '25%',
+      right: '25%'
+    },
+    resourcesLine1: {
+      borderWidth: '0 1px 0 0',
+      height: 30,
+      top: 30,
+      left: '25%'
+    },
+    resourcesLine2: {
+      borderWidth: '0 1px 0 0',
+      height: 30,
+      top: 30,
+      right: '25%'
+    },
+
     // FOOTER
     footerDrops: {
       display: 'block'
@@ -182,6 +255,45 @@ const styles = theme => ({
     // SERVICES
     servicesBackground: {
       minHeight: 750
+    },
+
+    // RESOURCES
+    resourcesTitle: {
+      marginRight: '12.5%',
+      textAlign: 'right'
+    },
+    resourcesLineBase: {
+      right: '20%',
+      transform: 'none'
+    },
+    resourcesLineHorizontal: {
+      left: '12.5%',
+      right: '12.5%'
+    },
+    resourcesLine1: {
+      borderWidth: '0 1px 0 0',
+      height: 30,
+      top: 30,
+      left: '12.5%'
+    },
+    resourcesLine2: {
+      borderWidth: '0 1px 0 0',
+      height: 30,
+      top: 30,
+      left: '37.5%',
+      right: 'auto'
+    },
+    resourcesLine3: {
+      borderWidth: '0 1px 0 0',
+      height: 30,
+      top: 30,
+      left: '62.5%'
+    },
+    resourcesLine4: {
+      borderWidth: '0 1px 0 0',
+      height: 30,
+      top: 30,
+      right: '12.5%'
     }
   }
 });
@@ -382,6 +494,89 @@ const HomePage = ({ classes }) => (
                   }
                 ]}
               </Tabs>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* RESOURCES */}
+      <div className={classes.resources}>
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12">
+              <div className={classes.resourcesTitle}>
+                Fig 2. - Other Resources
+              </div>
+              <div className={classes.resourcesLines}>
+                <div
+                  className={cx(
+                    classes.resourcesLine,
+                    classes.resourcesLineBase
+                  )}
+                />
+                <div
+                  className={cx(
+                    classes.resourcesLine,
+                    classes.resourcesLineHorizontal
+                  )}
+                />
+                <div
+                  className={cx(classes.resourcesLine, classes.resourcesLine1)}
+                />
+                <div
+                  className={cx(classes.resourcesLine, classes.resourcesLine2)}
+                />
+                <div
+                  className={cx(classes.resourcesLine, classes.resourcesLine3)}
+                />
+                <div
+                  className={cx(classes.resourcesLine, classes.resourcesLine4)}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-3">
+              <Resource
+                className={classes.resourcesItem}
+                image={imageTalks}
+                title="00 Talks"
+                content="Watch technical talks from the experts we've featured at our conferences and meetups."
+                enterText="See all talks"
+                href="/talks"
+              />
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-3">
+              <Resource
+                className={classes.resourcesItem}
+                image={imagePodcast}
+                title="01 Podcast"
+                content="Learn how companies made the switch to React on our podcast, React Profiles."
+                enterText="See all podcasts"
+                href="/podcast"
+              />
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-3">
+              <Resource
+                className={classes.resourcesItem}
+                image={imageUpcomingEvents}
+                title="02 Upcoming Events"
+                content="See what events we've got in the works."
+                enterText="See all upcoming events"
+                href="/events"
+              />
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-3">
+              <Resource
+                className={classes.resourcesItem}
+                image={imageBlog}
+                title="03 Blog"
+                content="Learn what we've been up to from our latest blog posts on Medium."
+                enterText="See blog"
+                href="https://medium.com/@rwreact"
+              />
             </div>
           </div>
         </div>
