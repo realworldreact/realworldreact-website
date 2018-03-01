@@ -1,7 +1,7 @@
 [
   {
     "name": "React Native",
-    "logo": "/images/technologies/react_native.jpg",
+    "logo": "/images/technologies/react-native.jpg",
     "route": ""
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "name": "GraphQL",
-    "logo": "/images/technologies/graph_ql.jpg",
+    "logo": "/images/technologies/graph-ql.jpg",
     "route": ""
   },
   {
@@ -46,17 +46,17 @@
   },
   {
     "name": "JAMstack",
-    "logo": "/images/technologies/jam_stack.jpg",
+    "logo": "/images/technologies/jam-stack.jpg",
     "route": ""
   },
   {
     "name": "AWS Lambda",
-    "logo": "/images/technologies/aws_lambda.jpg",
+    "logo": "/images/technologies/aws-lambda.jpg",
     "route": ""
   },
   {
     "name": "Microsoft Azure",
-    "logo": "/images/technologies/microsoft_azure.jpg",
+    "logo": "/images/technologies/microsoft-azure.jpg",
     "route": ""
   },
   {
@@ -66,7 +66,7 @@
   },
   {
     "name": "and more",
-    "logo": "/images/technologies/and_more.jpg",
+    "logo": "/images/technologies/and-more.jpg",
     "route": ""
   }
 ]

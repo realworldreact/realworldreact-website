@@ -3,13 +3,13 @@ import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 import cx from 'classnames';
 
-import letsChat from '../assets/images/footer/lets_chat.png';
+import letsChat from '../assets/images/message/lets-chat.png';
 import clients from '../data/clients.json';
 import imagePatternDots from '../assets/images/patterns/dots.png';
 import comprehensive from '../assets/images/training/comprehensive.png';
-import bestPractices from '../assets/images/training/best_practices.png';
-import realWorld from '../assets/images/training/real_world.png';
-import professionalInstructors from '../assets/images/training/professional_instructors.png';
+import bestPractices from '../assets/images/training/best-practices.png';
+import realWorld from '../assets/images/training/real-world.png';
+import professionalInstructors from '../assets/images/training/professional-instructors.png';
 import { Header, Footer, Drops } from '../components';
 import { Contact, SignUp } from '../containers';
 
@@ -38,7 +38,7 @@ const styles = theme => ({
   trainings: {
     marginTop: 80
   },
-  training: {
+  unitContent: {
     display: 'flex',
     marginTop: 40
   },
@@ -70,11 +70,21 @@ const styles = theme => ({
   brand: {
     order: 3
   },
+  andMore: {
+    order: 3,
+    textAlign: 'right',
+    marginTop: -20,
+    opacity: 0.4,
+    fontSize: 14
+  },
   left: {
     textAlign: 'left'
   },
   right: {
     textAlign: 'right'
+  },
+  braceContainer: {
+    order: 2
   },
   brace: {
     borderWidth: 1,
@@ -85,7 +95,6 @@ const styles = theme => ({
     borderBottomWidth: 0,
     position: 'relative',
     marginTop: 10,
-    order: 2,
     '&:after': {
       content: '""',
       position: 'absolute',
@@ -148,10 +157,12 @@ const styles = theme => ({
     brand: {
       order: 1
     },
+    andMore: {
+      order: 2
+    },
     brace: {
       borderTopWidth: 0,
       borderBottomWidth: 1,
-      order: 2,
       '&:after': {
         top: 'auto',
         bottom: -25
@@ -210,7 +221,7 @@ const TrainingPage = ({ classes }) => (
 
               {/* TRAININGS */}
               <div className={cx(classes.trainings, classes.leftContent)}>
-                <div className={classes.training}>
+                <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
                     <img src={comprehensive} alt="Comprehensive Training" />
                   </div>
@@ -226,7 +237,7 @@ const TrainingPage = ({ classes }) => (
                     </p>
                   </div>
                 </div>
-                <div className={classes.training}>
+                <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
                     <img src={bestPractices} alt="01 Best Practices" />
                   </div>
@@ -242,7 +253,7 @@ const TrainingPage = ({ classes }) => (
                     </p>
                   </div>
                 </div>
-                <div className={classes.training}>
+                <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
                     <img src={realWorld} alt="02 Real-world Scenarios" />
                   </div>
@@ -258,7 +269,7 @@ const TrainingPage = ({ classes }) => (
                     </p>
                   </div>
                 </div>
-                <div className={classes.training}>
+                <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
                     <img
                       src={professionalInstructors}
@@ -281,11 +292,11 @@ const TrainingPage = ({ classes }) => (
             </div>
             <div className="col-sm-4">
               <div className="row">
-                {clients.map((item, key) => (
+                {clients.map((item, index) => (
                   <div
-                    key={key}
+                    key={index}
                     className={cx(
-                      key % 2 ? classes.right : classes.left,
+                      index % 2 ? classes.right : classes.left,
                       classes.brand,
                       'col-xs-6'
                     )}
@@ -297,7 +308,11 @@ const TrainingPage = ({ classes }) => (
                     />
                   </div>
                 ))}
-                <div className={cx(classes.brace, 'col-xs-12')} />
+                <div className={cx(classes.andMore, 'col-xs-6')} />
+                <div className={cx(classes.andMore, 'col-xs-6')}>and more</div>
+                <div className={cx(classes.braceContainer, 'col-xs-12')}>
+                  <div className={classes.brace} />
+                </div>
                 <div className={cx(classes.clientsFooter, 'col-xs-12')}>
                   Fig. 1 – Engineers we've trained
                 </div>

@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 import cx from 'classnames';
 
-import letsChat from '../assets/images/footer/lets_chat.png';
+import letsChat from '../assets/images/message/lets-chat.png';
 import imagePatternDots from '../assets/images/patterns/dots.png';
 import { Header, Footer, Drops } from '../components';
 import { Contact, SignUp } from '../containers';
@@ -103,10 +103,10 @@ const RemotePlacementPage = ({ classes }) => (
       <title>Remote Placement | Real World React</title>
     </Helmet>
     <div className={classes.root}>
-      {/* HEADER */}
-      <Header>Training</Header>
-
       {/* MAIN */}
+      <Header />
+
+      {/* HEADER */}
       <div className={classes.main}>
         <div className="container">
           <div className={cx(classes.mainContent, 'row')}>
