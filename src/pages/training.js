@@ -3,13 +3,14 @@ import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 import cx from 'classnames';
 
-import letsChat from '../assets/images/message/lets-chat.png';
-import clients from '../data/clients.json';
+import imageLetsChat from '../assets/images/messages/lets-chat.png';
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import comprehensive from '../assets/images/training/comprehensive.png';
-import bestPractices from '../assets/images/training/best-practices.png';
-import realWorld from '../assets/images/training/real-world.png';
-import professionalInstructors from '../assets/images/training/professional-instructors.png';
+import imageComprehensive from '../assets/images/training/comprehensive.png';
+import imageBestPractices from '../assets/images/training/best-practices.png';
+import imageRealWorld from '../assets/images/training/real-world.png';
+import iimageProfessionalInstructors from '../assets/images/training/professional-instructors.png';
+
+import clients from '../data/clients.json';
 import { Header, Footer, Drops } from '../components';
 import { Contact, SignUp } from '../containers';
 
@@ -196,7 +197,7 @@ const TrainingPage = ({ classes }) => (
     </Helmet>
     <div className={classes.root}>
       {/* HEADER */}
-      <Header>Training</Header>
+      <Header />
 
       {/* MAIN */}
       <div className={classes.main}>
@@ -223,7 +224,10 @@ const TrainingPage = ({ classes }) => (
               <div className={cx(classes.trainings, classes.leftContent)}>
                 <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
-                    <img src={comprehensive} alt="Comprehensive Training" />
+                    <img
+                      src={imageComprehensive}
+                      alt="Comprehensive Training"
+                    />
                   </div>
                   <div className={classes.trainingContent}>
                     <h2>
@@ -239,7 +243,7 @@ const TrainingPage = ({ classes }) => (
                 </div>
                 <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
-                    <img src={bestPractices} alt="01 Best Practices" />
+                    <img src={imageBestPractices} alt="01 Best Practices" />
                   </div>
                   <div className={classes.trainingContent}>
                     <h2>
@@ -255,7 +259,7 @@ const TrainingPage = ({ classes }) => (
                 </div>
                 <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
-                    <img src={realWorld} alt="02 Real-world Scenarios" />
+                    <img src={imageRealWorld} alt="02 Real-world Scenarios" />
                   </div>
                   <div className={classes.trainingContent}>
                     <h2>
@@ -272,7 +276,7 @@ const TrainingPage = ({ classes }) => (
                 <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
                     <img
-                      src={professionalInstructors}
+                      src={iimageProfessionalInstructors}
                       alt="03 Professional Instructors"
                     />
                   </div>
@@ -325,7 +329,7 @@ const TrainingPage = ({ classes }) => (
       {/* FOOTER */}
       <div className={classes.footer}>
         <div className={classes.letsChat}>
-          <img src={letsChat} />
+          <img src={imageLetsChat} />
         </div>
         <div className={classes.footerDrops}>
           <Drops bottom />
