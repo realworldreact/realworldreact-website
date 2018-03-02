@@ -11,7 +11,8 @@ import imageRealWorld from '../assets/images/training/real-world.png';
 import iimageProfessionalInstructors from '../assets/images/training/professional-instructors.png';
 
 import clients from '../data/clients.json';
-import { Header, Footer, Drops } from '../components';
+import trainers from '../data/trainers.json';
+import { Header, Footer, Drops, Heading, Tabs } from '../components';
 import { Contact, SignUp } from '../containers';
 
 const styles = theme => ({
@@ -29,15 +30,15 @@ const styles = theme => ({
       fontSize: 20
     }
   },
-  mainContent: {
-    paddingTop: 20,
-    margin: [0, 20]
+  mainContainer: {
+    padding: 20
   },
+  mainContent: {},
   leftContent: {
     maxWidth: '100%'
   },
   trainings: {
-    marginTop: 80
+    marginTop: 50
   },
   unitContent: {
     display: 'flex',
@@ -116,6 +117,20 @@ const styles = theme => ({
     order: 1
   },
 
+  // TEAM
+  team: {
+    marginTop: 20,
+    marginBottom: 20
+  },
+  teamHeader: {
+    marginBottom: 20,
+    textAlign: 'right'
+  },
+  teamHeading: {
+    display: 'inline-block',
+    maxWidth: 320
+  },
+
   // FOOTER
   footer: {
     backgroundColor: theme.palette.inverted.base,
@@ -147,8 +162,10 @@ const styles = theme => ({
       }
     },
     mainContent: {
-      paddingTop: 120,
-      margin: [0, 10]
+      paddingTop: 120
+    },
+    trainings: {
+      marginTop: 80
     },
     leftContent: {
       maxWidth: 550
@@ -201,9 +218,10 @@ const TrainingPage = ({ classes }) => (
 
       {/* MAIN */}
       <div className={classes.main}>
-        <div className="container">
+        <div className={cx(classes.mainContainer, 'container')}>
+          {/* INFORMATION */}
           <div className={cx(classes.mainContent, 'row')}>
-            <div className="col-xs12 col-sm-8">
+            <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <h1>
                   <span className="text-inverted background-secondary">
@@ -294,7 +312,7 @@ const TrainingPage = ({ classes }) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="col-xs-12 col-sm-4">
               <div className="row">
                 {clients.map((item, index) => (
                   <div
@@ -321,6 +339,28 @@ const TrainingPage = ({ classes }) => (
                   Fig. 1 – Engineers we've trained
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* TEAM */}
+          <div className={cx(classes.team, 'row')}>
+            <div className={cx(classes.teamHeader, 'col-xs-12')}>
+              <Heading
+                className={classes.teamHeading}
+                title="T E A M"
+                subtitle="Expert consultants and trainers"
+              />
+            </div>
+            <div className="col-xs-12">
+              {/* TODO: Add proper trainers information and components settings. */}
+              <Tabs>
+                {trainers.map(trainer => ({
+                  name: trainer.name,
+                  href: '/',
+                  enterText: 'Next',
+                  content: trainer.description
+                }))}
+              </Tabs>
             </div>
           </div>
         </div>
