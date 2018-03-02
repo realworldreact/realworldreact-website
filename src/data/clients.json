@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Microsoft",
+    "logo": "/images/clients/microsoft.png",
+    "route": "/"
+  },
+  {
+    "name": "Netflix",
+    "logo": "/images/clients/netflix.png",
+    "route": "/"
+  },
+  {
+    "name": "Tesla",
+    "logo": "/images/clients/tesla.png",
+    "route": "/"
+  },
+  {
+    "name": "Pinterest",
+    "logo": "/images/clients/pinterest.png",
+    "route": "/"
+  },
+  {
+    "name": "Amazon",
+    "logo": "/images/clients/amazon.png",
+    "route": "/"
+  },
+  {
+    "name": "Twilio",
+    "logo": "/images/clients/twilio.png",
+    "route": "/"
+  }
+]
