@@ -5,7 +5,7 @@ import cx from 'classnames';
 
 import letsChat from '../assets/images/message/lets-chat.png';
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import { Header, Footer, Drops } from '../components';
+import { Header, Footer, Drops, Quote } from '../components';
 import { Contact, SignUp } from '../containers';
 
 const styles = theme => ({
@@ -29,19 +29,6 @@ const styles = theme => ({
   },
   leftContent: {
     maxWidth: '100%'
-  },
-  quote: {
-    fontStyle: 'italic',
-    fontFamily: theme.typography.secondary,
-    lineHeight: '32px',
-    paddingTop: 15
-  },
-  author: {
-    fontSize: 14,
-    marginTop: 20,
-    '& strong': {
-      display: 'block'
-    }
   },
 
   // FOOTER
@@ -103,10 +90,10 @@ const RemotePlacementPage = ({ classes }) => (
       <title>Remote Placement | Real World React</title>
     </Helmet>
     <div className={classes.root}>
-      {/* MAIN */}
+      {/* HEADER */}
       <Header />
 
-      {/* HEADER */}
+      {/* MAIN */}
       <div className={classes.main}>
         <div className="container">
           <div className={cx(classes.mainContent, 'row')}>
@@ -150,15 +137,7 @@ const RemotePlacementPage = ({ classes }) => (
               </div>
             </div>
             <div className="col-sm-4">
-              <div className={classes.quote}>
-                “[Real World React is] full of talented, enthusiastic and
-                passionate employees who truly care about the product they are
-                delivering.”
-              </div>
-              <div className={classes.author}>
-                <strong>Roger Hosein</strong>
-                Full Stack Engineer at ShipHero
-              </div>
+              <Quote />
             </div>
           </div>
         </div>
