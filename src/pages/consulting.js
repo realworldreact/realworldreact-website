@@ -82,8 +82,8 @@ const ConsultingPage = ({ classes }) => (
                 <h1>
                   <span className="text-inverted background-secondary">
                     &nbsp;Expert developers&nbsp;
-                  </span>
-                  {' '}available for full-time hire.
+                  </span>{' '}
+                  available for full-time hire.
                 </h1>
               </div>
             </div>
