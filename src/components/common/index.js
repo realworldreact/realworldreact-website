@@ -4,3 +4,4 @@ export Drops from './Drops';
 export TechnologyLogo from './TechnologyLogo';
 export ImageText from './ImageText';
 export Resource from './Resource';
+export Heading from './Heading';
