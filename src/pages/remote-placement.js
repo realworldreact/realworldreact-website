@@ -5,7 +5,7 @@ import cx from 'classnames';
 
 import imageLetsChat from '../assets/images/messages/lets-chat.png';
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import { Header, Footer, Drops } from '../components';
+import { Header, Footer, Drops, Quote } from '../components';
 import { Contact, SignUp } from '../containers';
 
 const styles = theme => ({
@@ -29,19 +29,6 @@ const styles = theme => ({
   },
   leftContent: {
     maxWidth: '100%'
-  },
-  quote: {
-    fontStyle: 'italic',
-    fontFamily: theme.typography.secondary,
-    lineHeight: '32px',
-    paddingTop: 15
-  },
-  author: {
-    fontSize: 14,
-    marginTop: 20,
-    '& strong': {
-      display: 'block'
-    }
   },
 
   // FOOTER
@@ -110,7 +97,7 @@ const RemotePlacementPage = ({ classes }) => (
       <div className={classes.main}>
         <div className="container">
           <div className={cx(classes.mainContent, 'row')}>
-            <div className="col-xs12 col-sm-8">
+            <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <h1>
                   Expert developers available for{' '}
@@ -121,7 +108,7 @@ const RemotePlacementPage = ({ classes }) => (
               </div>
             </div>
             <div className="col-sm-4" />
-            <div className="col-xs12 col-sm-8">
+            <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <p>
                   We know how difficult it is to hire well-qualified engineers.
@@ -150,15 +137,7 @@ const RemotePlacementPage = ({ classes }) => (
               </div>
             </div>
             <div className="col-sm-4">
-              <div className={classes.quote}>
-                “[Real World React is] full of talented, enthusiastic and
-                passionate employees who truly care about the product they are
-                delivering.”
-              </div>
-              <div className={classes.author}>
-                <strong>Roger Hosein</strong>
-                Full Stack Engineer at ShipHero
-              </div>
+              <Quote />
             </div>
           </div>
         </div>
