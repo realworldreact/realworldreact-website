@@ -21,11 +21,7 @@ class Gallery extends React.Component {
   }
 
   componentWillMount() {
-    window.addEventListener('resize', this.getGalley());
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.getGalley());
+    this.getGalley();
   }
 
   getGalley = () => {

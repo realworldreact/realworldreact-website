@@ -1,6 +1,6 @@
 export default theme => ({
   root: {
-    width: '100%',
+    width: '100%'
   },
   imageContainer: {
     width: '50%',
@@ -70,7 +70,7 @@ export default theme => ({
             }
           }
         }
-      },
+      }
     }
   }
 });

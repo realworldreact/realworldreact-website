@@ -4,10 +4,7 @@ import withStyles from 'react-jss';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
 import { Contact, SignUp } from '../containers';
-import {
-  Header,
-  Footer
-} from '../components';
+import { Header, Footer } from '../components';
 
 const styles = theme => ({
   root: {
