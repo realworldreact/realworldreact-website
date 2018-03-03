@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 import cx from 'classnames';
 
-import letsChat from '../assets/images/message/lets-chat.png';
+import imageLetsChat from '../assets/images/messages/lets-chat.png';
 import imagePatternDots from '../assets/images/patterns/dots.png';
 import { Header, Footer, Drops, Quote } from '../components';
 import { Contact, SignUp } from '../containers';
@@ -146,7 +146,7 @@ const RemotePlacementPage = ({ classes }) => (
       {/* FOOTER */}
       <div className={classes.footer}>
         <div className={classes.letsChat}>
-          <img src={letsChat} />
+          <img src={imageLetsChat} />
         </div>
         <div className={classes.footerDrops}>
           <Drops bottom />

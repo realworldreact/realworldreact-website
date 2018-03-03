@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Swizec Teller",
+    "description": "Swizec is a prolific developer, blogger, vlogger, author, speaker and instructor. He has been coding since 9 years old and works with React full time as the front-end lead for a startup in San Francisco.",
+    "photo": "/images/trainers/swizec-teller.jpg",
+    "photoMini": "/images/trainers/swizec-teller-mini.jpg"
+  },
+  {
+    "name": "David Wells",
+    "description": "David is an engineer at Serverless, Inc., where he builds with React and serverless architecture on daily basis. As one of the first employees at Serverless, he is excited by the technologies that allow developers deploy applications as independent functions that respond to events, charge you only when they run, and scale automatically.",
+    "photo": "/images/trainers/david-wells.jpg",
+    "photoMini": "/images/trainers/david-wells-mini.jpg"
+  },
+  {
+    "name": "Harry Tormey",
+    "description": "Harry is a native iOS developer and alumnus of Apple and Facebook. He recognized the potential of React Native in 2015 and has been building most of his client's projects with it since 2016. He enjoys sharing his passion and knowledge with others at conferences and technical workshops.",
+    "photo": "/images/trainers/harry-tormey.jpg",
+    "photoMini": "/images/trainers/harry-tormey-mini.jpg"
+  },
+  {
+    "name": "Mike Grabowski",
+    "description": "Mike is the CTO of Callstack, an European-based consultancy specializing in mobile development with React Native. He was an early adopter to React Native as far back as 2014 and is one of the top core contributors to the project. He speaks frequently at conferences and meetups and organizes the React Native EU conference.",
+    "photo": "/images/trainers/mike-grabowski.jpg",
+    "photoMini": "/images/trainers/mike-grabowski-mini.jpg"
+  }
+]

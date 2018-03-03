@@ -3,14 +3,16 @@ import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 import cx from 'classnames';
 
-import letsChat from '../assets/images/message/lets-chat.png';
-import clients from '../data/clients.json';
+import imageLetsChat from '../assets/images/messages/lets-chat.png';
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import comprehensive from '../assets/images/training/comprehensive.png';
-import bestPractices from '../assets/images/training/best-practices.png';
-import realWorld from '../assets/images/training/real-world.png';
-import professionalInstructors from '../assets/images/training/professional-instructors.png';
-import { Header, Footer, Drops } from '../components';
+import imageComprehensive from '../assets/images/training/comprehensive.png';
+import imageBestPractices from '../assets/images/training/best-practices.png';
+import imageRealWorld from '../assets/images/training/real-world.png';
+import iimageProfessionalInstructors from '../assets/images/training/professional-instructors.png';
+
+import clients from '../data/clients.json';
+import trainers from '../data/trainers.json';
+import { Header, Footer, Drops, Heading, Tabs } from '../components';
 import { Contact, SignUp } from '../containers';
 
 const styles = theme => ({
@@ -28,15 +30,15 @@ const styles = theme => ({
       fontSize: 20
     }
   },
-  mainContent: {
-    paddingTop: 20,
-    margin: [0, 20]
+  mainContainer: {
+    padding: 20
   },
+  mainContent: {},
   leftContent: {
     maxWidth: '100%'
   },
   trainings: {
-    marginTop: 80
+    marginTop: 50
   },
   unitContent: {
     display: 'flex',
@@ -115,6 +117,20 @@ const styles = theme => ({
     order: 1
   },
 
+  // TEAM
+  team: {
+    marginTop: 20,
+    marginBottom: 20
+  },
+  teamHeader: {
+    marginBottom: 20,
+    textAlign: 'right'
+  },
+  teamHeading: {
+    display: 'inline-block',
+    maxWidth: 320
+  },
+
   // FOOTER
   footer: {
     backgroundColor: theme.palette.inverted.base,
@@ -146,8 +162,10 @@ const styles = theme => ({
       }
     },
     mainContent: {
-      paddingTop: 120,
-      margin: [0, 10]
+      paddingTop: 120
+    },
+    trainings: {
+      marginTop: 80
     },
     leftContent: {
       maxWidth: 550
@@ -196,11 +214,12 @@ const TrainingPage = ({ classes }) => (
     </Helmet>
     <div className={classes.root}>
       {/* HEADER */}
-      <Header>Training</Header>
+      <Header />
 
       {/* MAIN */}
       <div className={classes.main}>
-        <div className="container">
+        <div className={cx(classes.mainContainer, 'container')}>
+          {/* INFORMATION */}
           <div className={cx(classes.mainContent, 'row')}>
             <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
@@ -223,7 +242,10 @@ const TrainingPage = ({ classes }) => (
               <div className={cx(classes.trainings, classes.leftContent)}>
                 <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
-                    <img src={comprehensive} alt="Comprehensive Training" />
+                    <img
+                      src={imageComprehensive}
+                      alt="Comprehensive Training"
+                    />
                   </div>
                   <div className={classes.trainingContent}>
                     <h2>
@@ -239,7 +261,7 @@ const TrainingPage = ({ classes }) => (
                 </div>
                 <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
-                    <img src={bestPractices} alt="01 Best Practices" />
+                    <img src={imageBestPractices} alt="01 Best Practices" />
                   </div>
                   <div className={classes.trainingContent}>
                     <h2>
@@ -255,7 +277,7 @@ const TrainingPage = ({ classes }) => (
                 </div>
                 <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
-                    <img src={realWorld} alt="02 Real-world Scenarios" />
+                    <img src={imageRealWorld} alt="02 Real-world Scenarios" />
                   </div>
                   <div className={classes.trainingContent}>
                     <h2>
@@ -272,7 +294,7 @@ const TrainingPage = ({ classes }) => (
                 <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
                     <img
-                      src={professionalInstructors}
+                      src={iimageProfessionalInstructors}
                       alt="03 Professional Instructors"
                     />
                   </div>
@@ -290,7 +312,7 @@ const TrainingPage = ({ classes }) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="col-xs-12 col-sm-4">
               <div className="row">
                 {clients.map((item, index) => (
                   <div
@@ -319,13 +341,35 @@ const TrainingPage = ({ classes }) => (
               </div>
             </div>
           </div>
+
+          {/* TEAM */}
+          <div className={cx(classes.team, 'row')}>
+            <div className={cx(classes.teamHeader, 'col-xs-12')}>
+              <Heading
+                className={classes.teamHeading}
+                title="T E A M"
+                subtitle="Expert consultants and trainers"
+              />
+            </div>
+            <div className="col-xs-12">
+              {/* TODO: Add proper trainers information and components settings. */}
+              <Tabs>
+                {trainers.map(trainer => ({
+                  name: trainer.name,
+                  href: '/',
+                  enterText: 'Next',
+                  content: trainer.description
+                }))}
+              </Tabs>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* FOOTER */}
       <div className={classes.footer}>
         <div className={classes.letsChat}>
-          <img src={letsChat} />
+          <img src={imageLetsChat} />
         </div>
         <div className={classes.footerDrops}>
           <Drops bottom />
