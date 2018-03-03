@@ -5,3 +5,4 @@ export TechnologyLogo from './TechnologyLogo';
 export ImageText from './ImageText';
 export Resource from './Resource';
 export Quote from './Quote';
+export Gallery from './Gallery';

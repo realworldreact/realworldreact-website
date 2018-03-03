@@ -97,7 +97,7 @@ const RemotePlacementPage = ({ classes }) => (
       <div className={classes.main}>
         <div className="container">
           <div className={cx(classes.mainContent, 'row')}>
-            <div className="col-xs12 col-sm-8">
+            <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <h1>
                   Expert developers available for{' '}
@@ -108,7 +108,7 @@ const RemotePlacementPage = ({ classes }) => (
               </div>
             </div>
             <div className="col-sm-4" />
-            <div className="col-xs12 col-sm-8">
+            <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <p>
                   We know how difficult it is to hire well-qualified engineers.

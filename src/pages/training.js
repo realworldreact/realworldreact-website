@@ -202,7 +202,7 @@ const TrainingPage = ({ classes }) => (
       <div className={classes.main}>
         <div className="container">
           <div className={cx(classes.mainContent, 'row')}>
-            <div className="col-xs12 col-sm-8">
+            <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <h1>
                   <span className="text-inverted background-secondary">

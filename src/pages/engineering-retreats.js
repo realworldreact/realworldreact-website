@@ -7,6 +7,7 @@ import imagePatternDots from '../assets/images/patterns/dots.png';
 import { Header, Footer, Drops } from '../components';
 import SignUp from '../containers/SignUp';
 import { TextField, Button } from '../components/forms';
+import Gallery from '../components/common/Gallery';
 
 const styles = theme => ({
   root: {
@@ -46,13 +47,16 @@ const styles = theme => ({
     minHeight: 180,
     paddingTop: 10
   },
+  gallery: {
+    marginTop: 40
+  },
 
   // FOOTER
   footer: {
     backgroundColor: theme.palette.inverted.base,
     backgroundImage: `url(${imagePatternDots})`,
     position: 'relative',
-    marginTop: 120
+    marginTop: 0
   },
   footerDrops: {
     display: 'none'
@@ -76,8 +80,14 @@ const styles = theme => ({
     formContainer: {
       marginTop: 80
     },
+    gallery: {
+      marginTop: 0
+    },
 
     // FOOTER
+    footer: {
+      marginTop: 120
+    },
     footerDrops: {
       display: 'block'
     }
@@ -97,7 +107,7 @@ const EngineeringRetreatsPage = ({ classes }) => (
       <div className={classes.main}>
         <div className="container">
           <div className={cx(classes.mainContent, 'row')}>
-            <div className="col-xs12 col-sm-8">
+            <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <h1>
                   <div>Offsite Retreats to</div>
@@ -218,7 +228,9 @@ const EngineeringRetreatsPage = ({ classes }) => (
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">-</div>
+            <div className={cx(classes.gallery, 'col-xs-12 col-sm-4')}>
+              <Gallery />
+            </div>
           </div>
         </div>
       </div>
