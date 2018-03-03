@@ -5,27 +5,10 @@ import cx from 'classnames';
 import gallery from '../../../data/gallery.json';
 import styles from './styles';
 
-class Gallery extends React.Component {
-  constructor() {
-    super(...arguments);
-    this.state = { gallery: null };
-  }
+const Gallery = props => {
+  const { theme, sheet, classes, className, ...etc } = props;
 
-  render() {
-    const { theme, sheet, classes, className, ...etc } = this.props;
-    return (
-      <div className={cx(classes.root, className)} {...etc}>
-        {this.state.gallery}
-      </div>
-    );
-  }
-
-  componentWillMount() {
-    this.getGalley();
-  }
-
-  getGalley = () => {
-    const { classes } = this.props;
+  const getGalley = () => {
     const blockOptionsCount = 3;
     const blockItemsCount = 3;
     const galleryView = [];
@@ -34,7 +17,7 @@ class Gallery extends React.Component {
     gallery.map((item, index) => {
       blockItems.push(
         <div className="image">
-          <img src={item.logo} alt="" />
+          <img src={item.logo} />
         </div>
       );
       if (
@@ -52,8 +35,14 @@ class Gallery extends React.Component {
         itemClass = itemClass < blockOptionsCount ? itemClass + 1 : 1;
       }
     });
-    this.setState({ gallery: galleryView });
+    return galleryView;
   };
-}
+
+  return (
+    <div className={cx(classes.root, className)} {...etc}>
+      {getGalley()}
+    </div>
+  );
+};
 
 export default withStyles(styles)(Gallery);
