@@ -7,3 +7,4 @@ export Resource from './Resource';
 export Heading from './Heading';
 export Quote from './Quote';
 export Gallery from './Gallery';
+export Trainer from './Trainer';
