@@ -19,27 +19,28 @@ class Button extends React.Component {
       classes,
       className,
       children,
-      href,
+      size,
       palette,
       outline,
+      textAlign,
       showArrow,
       buttonProps,
-      textAlign,
+      href,
       onClick,
       ...etc
     } = this.props;
     return (
       <div className={cx(classes.root, className)} {...etc}>
         <Ripples className={classes.ripples}>
-          <button className={classes.container} onClick={this.onClick}>
-            <div
+          <div className={classes.container} onClick={this.onClick}>
+            <button
               {...buttonProps}
               className={cx(classes.button, buttonProps.className)}
             >
               {children}
-            </div>
+            </button>
             <i className={cx(classes.arrow, 'mdi', 'mdi-chevron-right')} />
-          </button>
+          </div>
         </Ripples>
       </div>
     );
@@ -54,9 +55,9 @@ class Button extends React.Component {
 
 Button.propTypes = {
   /**
-   * On button click, navigate to provided URL.
+   * Button height.
    */
-  href: PropTypes.string,
+  size: PropTypes.number,
 
   /**
    * Color palette for styles.
@@ -91,15 +92,21 @@ Button.propTypes = {
   buttonProps: PropTypes.object,
 
   /**
+   * On button click, navigate to provided URL.
+   */
+  href: PropTypes.string,
+
+  /**
    * Button content.
    */
-  children: PropTypes.any.isRequired
+  children: PropTypes.any
 };
 
 Button.defaultProps = {
+  size: 36,
   palette: 'primary',
-  buttonProps: {},
-  textAlign: 'center'
+  textAlign: 'center',
+  buttonProps: {}
 };
 
 export default withStyles(styles)(Button);

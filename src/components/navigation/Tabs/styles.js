@@ -26,19 +26,13 @@ export default theme => ({
     padding: [0, 10, 10],
     borderStyle: 'solid',
     borderColor: theme.palette.primary.base,
-    borderWidth: '0 2px'
+    borderWidth: '0 2px',
+    cursor: 'pointer'
   },
-  optionContainerInactive: {
+  optionContainerDisabled: {
     border: 'none'
   },
-  option: {
-    transition: 'background-color 200ms ease-out'
-  },
-  optionLink: {
-    //
-  },
-  optionActive: {
-    backgroundColor: theme.palette.primary.base,
+  optionContainerActive: {
     '&:before, &:after': {
       content: '""',
       display: 'block',
@@ -59,8 +53,21 @@ export default theme => ({
       borderColor: 'transparent',
       backgroundColor: 'transparent',
       color: '#fff'
+    },
+    '& $option': {
+      backgroundColor: theme.palette.primary.base
     }
   },
+  option: {
+    position: 'relative',
+    transition: 'background-color 200ms ease-out'
+  },
+  optionLink: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  },
+  optionImage: {},
 
   // Buttons
   buttons: {
@@ -125,12 +132,14 @@ export default theme => ({
       display: 'none'
     },
     tabs: {
-      padding: 0,
-      backgroundColor: '#fff',
+      paddingRight: 0,
       borderRight: '2px solid ' + theme.palette.primary.base
     },
     tabsContent: {
-      border: 'none'
+      borderStyle: 'solid',
+      borderColor: '#ebebeb',
+      borderWidth: props => (props.border ? '1px 1px 0 1px' : '0'),
+      backgroundColor: '#fff'
     },
     tabsItemContent: {
       padding: 40
@@ -146,16 +155,29 @@ export default theme => ({
       border: 'none',
       padding: [0, 0, 10]
     },
-    optionContainerInactive: {
+    optionContainerDisabled: {
       backgroundColor: '#fff'
     },
-    option: {
-      padding: [0, 20]
-    },
-    optionActive: {
+    optionContainerActive: {
       '&:before, &:after': {
         display: 'none'
       }
+    },
+    option: {
+      paddingLeft: 20
+    },
+    optionWithImage: {
+      // The padding right is the width/height of the option image.
+      padding: [0, 34, 0, 20]
+    },
+    optionImage: {
+      position: 'absolute',
+      right: 0,
+      top: 0,
+      bottom: 0,
+      width: 35,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'none'
     },
 
     // Buttons

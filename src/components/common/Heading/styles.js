@@ -6,8 +6,8 @@ export default () => ({
   title: {
     overflow: 'hidden',
     width: '100%',
-    height: 92,
-    fontSize: 92,
+    height: 96,
+    fontSize: 96,
     lineHeight: 1,
     fontWeight: 'bold',
     textAlign: 'justify',

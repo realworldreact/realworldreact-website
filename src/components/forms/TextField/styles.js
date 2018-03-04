@@ -8,7 +8,6 @@ export default theme => {
     field: {
       display: 'block',
       margin: 0,
-      padding: [4, 12],
       width: '100%',
       outline: 'none',
       background: 'transparent',
@@ -21,6 +20,7 @@ export default theme => {
       // on the element.
       transition: 'border-color 200ms ease-out !important',
 
+      padding: props => (props.isTextarea ? '10px 14px' : '4px 14px'),
       minHeight: props => (props.isTextarea ? 16 * 3 : 'auto'),
       border: props => '2px solid ' + getColor(props),
       color: props => getColor(props),

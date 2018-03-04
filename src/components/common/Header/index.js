@@ -16,7 +16,7 @@ const Header = props => {
     <header className={cx(classes.root, 'container', className)} {...etc}>
       <div className="row">
         <div className="col-xs-3">
-          <Link to="/">
+          <Link className={classes.logoLink} to="/">
             <img
               className={classes.logo}
               src={reversed ? logoReversed : logoAuto}

@@ -1,4 +1,4 @@
-export default theme => ({
+export default () => ({
   root: {
     width: '100%'
   },
@@ -6,30 +6,14 @@ export default theme => ({
     width: '50%',
     float: 'left',
     fontSize: 0,
-    '& .image': {
+    '& $imageWrapper': {
       width: '33.2%',
-      paddingTop: '33.2%',
-      boxSizing: 'border-box',
-      position: 'relative',
-      overflow: 'hidden',
-      float: 'left',
-      '& img': {
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        transition: 'all 500ms ease-out',
-        padding: 1,
-        overflow: 'hidden',
-        '&:hover': {
-          opacity: 0.5,
-          transform: 'scale(1.2)'
-        }
-      }
+      paddingTop: '33.2%'
     },
+
+    // TODO: Use JSS classes instead of global classes.
     '&.block-1': {
-      '& .image': {
+      '& $imageWrapper': {
         '&:first-child': {
           width: '66.4%',
           paddingTop: '66.4%'
@@ -37,20 +21,38 @@ export default theme => ({
       }
     },
     '&.block-2, &.block-3': {
-      '& .image': {
+      '& $imageWrapper': {
         '&:nth-child(2)': {
           width: '66.4%',
           paddingTop: '66.4%',
-          float: 'right',
-          '& img': {
-            paddingLeft: 0,
-            paddingRight: 2
-          }
+          float: 'right'
         }
       }
     },
     '& .clearfix': {
       clear: 'both'
+    }
+  },
+  imageWrapper: {
+    boxSizing: 'border-box',
+    position: 'relative',
+    overflow: 'hidden',
+    float: 'left'
+  },
+  image: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    overflow: 'hidden',
+    border: '1px solid transparent',
+    width: '100%',
+    height: '100%',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    transition: 'all 200ms ease-out',
+    '&:hover': {
+      opacity: 0.9,
+      transform: 'scale(1.1)'
     }
   },
 
@@ -59,18 +61,15 @@ export default theme => ({
     imageContainer: {
       width: '100%',
       '&.block-3': {
-        '& .image': {
+        '& $imageWrapper': {
           '&:nth-child(2)': {
             width: '33.2%',
             paddingTop: '33.2%',
-            float: 'left',
-            '& img': {
-              paddingLeft: 1,
-              paddingRight: 1
-            }
+            float: 'left'
           }
         }
       }
-    }
+    },
+    imageWrapper: {}
   }
 });

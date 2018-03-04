@@ -7,6 +7,7 @@ export default theme => ({
   },
   link: {
     padding: [5, 10],
+    outline: 'none',
     fontWeight: 'bold',
     cursor: 'pointer',
     userSelect: 'none',

@@ -4,6 +4,7 @@ export default theme => ({
     overflow: 'hidden',
     verticalAlign: 'middle',
     cursor: 'pointer',
+    height: props => props.size,
 
     '&:hover $arrow': {
       backgroundColor: theme.palette.primary.light
@@ -18,19 +19,14 @@ export default theme => ({
     display: 'flex',
     width: '100%',
     height: '100%',
-    border: 0,
-    padding: 0,
-    alignItems: 'stretch',
-    backgroundColor: 'transparent'
+    alignItems: 'stretch'
   },
   button: {
+    position: 'relative',
     display: 'inline-block',
     margin: 0,
-    position: 'relative',
-    padding: props => (props.showArrow ? '8px 35px 8px 10px' : '8px 10px'),
     width: '100%',
     height: '100%',
-    textAlign: props => props.textAlign,
     verticalAlign: 'middle',
     outline: 'none',
     cursor: 'pointer',
@@ -40,6 +36,12 @@ export default theme => ({
     userSelect: 'none',
     transition: 'all 200ms ease-out',
     borderStyle: 'solid',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+
+    padding: props => `0 ${props.size / 3}px`,
+    textAlign: props => props.textAlign,
 
     color: props => theme.palette[props.palette].contrastText,
     borderWidth: props => (props.showArrow ? '2px 0 2px 2px' : '2px'),
@@ -60,13 +62,14 @@ export default theme => ({
     }
   },
   arrow: {
-    display: props => (props.showArrow ? 'flex' : 'none'),
-    width: 35,
     backgroundColor: theme.palette.primary.base,
     color: '#fff',
     alignItems: 'center',
     cursor: 'pointer',
     justifyContent: 'center',
-    transition: 'all 200ms ease-out'
+    transition: 'all 200ms ease-out',
+
+    display: props => (props.showArrow ? 'flex' : 'none'),
+    width: props => props.size
   }
 });

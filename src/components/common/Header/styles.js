@@ -7,6 +7,9 @@ export default () => ({
     display: 'inline-block',
     height: 60
   },
+  logoLink: {
+    outline: 'none'
+  },
   menu: {
     display: 'flex',
     textAlign: 'right'

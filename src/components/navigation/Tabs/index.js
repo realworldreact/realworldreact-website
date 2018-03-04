@@ -14,7 +14,15 @@ class Tabs extends React.Component {
   }
 
   render() {
-    const { theme, sheet, classes, className, children, ...etc } = this.props;
+    const {
+      theme,
+      sheet,
+      classes,
+      className,
+      children,
+      border,
+      ...etc
+    } = this.props;
     const { activeTab } = this.state;
 
     const activeItem = children[activeTab];
@@ -32,21 +40,24 @@ class Tabs extends React.Component {
                   key={index}
                   className={cx(
                     classes.optionContainer,
-                    activeTab > index && classes.optionContainerInactive
+                    activeTab > index && classes.optionContainerDisabled,
+                    activeTab === index && classes.optionContainerActive
                   )}
+                  onClick={() => this.onTabChange(index)}
                 >
                   <div
                     className={cx(
                       classes.option,
-                      activeTab === index && classes.optionActive
+                      item.optionImage && classes.optionWithImage
                     )}
                   >
-                    <Option
-                      className={classes.optionLink}
-                      onClick={() => this.onTabChange(index)}
-                    >
-                      {item.name}
-                    </Option>
+                    <Option className={classes.optionLink}>{item.name}</Option>
+                    {!!classes.optionImage && (
+                      <div
+                        className={classes.optionImage}
+                        style={{ backgroundImage: `url(${item.optionImage})` }}
+                      />
+                    )}
                   </div>
                 </div>
               ))}
@@ -60,6 +71,8 @@ class Tabs extends React.Component {
                     {activeItem.content}
                   </div>
 
+                  {/* TODO: Support mobile buttons with only one option to go
+                    the the next item with `href` is not provided. */}
                   <div className={cx(classes.buttons, classes.onSmall)}>
                     <div className={classes.buttonsEnter}>
                       <Button
@@ -89,12 +102,19 @@ class Tabs extends React.Component {
                   <div className={cx(classes.buttons, classes.onMedium)}>
                     <Button
                       className={classes.buttonsItem}
-                      href={activeItem.href}
                       palette="text"
                       textAlign="left"
                       showArrow
+                      href={activeItem.href}
+                      onClick={
+                        !activeItem.href
+                          ? () => this.onTabChange(nextTab)
+                          : null
+                      }
                     >
-                      {activeItem.enterText}
+                      {activeItem.href
+                        ? activeItem.enterText
+                        : `Up Next: ${nextItem.name}`}
                     </Button>
                   </div>
                 </div>
@@ -113,14 +133,20 @@ class Tabs extends React.Component {
 
 Tabs.propTypes = {
   /**
+   * If tab content should have border on desktop.
+   */
+  border: PropTypes.bool,
+
+  /**
    * Tabs items definitions.
    */
   children: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       href: PropTypes.string,
-      enterText: PropTypes.string,
-      content: PropTypes.any.isRequired
+      content: PropTypes.any.isRequired,
+      optionImage: PropTypes.string,
+      enterText: PropTypes.string
     })
   )
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { navigateTo } from 'gatsby-link';
 import withStyles from 'react-jss';
 import cx from 'classnames';
 
@@ -31,7 +32,9 @@ class MenuMobile extends React.Component {
         </a>
         <div className={classes.menuContainer}>
           <div className={classes.menu}>
-            <Button href="/contact">Let's Talk</Button>
+            <Button onClick={() => this.onOption('/contact')}>
+              Let's Talk
+            </Button>
 
             {/* Navigations */}
             {navigation.map((nav, index) => (
@@ -46,10 +49,9 @@ class MenuMobile extends React.Component {
                   <Button
                     key={index2}
                     className={classes.navItem}
-                    href={item.route}
                     palette={reversed ? 'primary' : 'black'}
                     outline
-                    onClick={() => this.removeBodyActiveClass()}
+                    onClick={() => this.onOption(item.route)}
                   >
                     {item.name}
                   </Button>
@@ -75,27 +77,35 @@ class MenuMobile extends React.Component {
     body.scrollTop = html.scrollTop = 0;
   };
 
-  addBodyActiveClass() {
+  onOption = route => {
+    this.removeBodyActiveClass();
+    this.setState({ active: false });
+    if (route) {
+      navigateTo(route);
+    }
+  };
+
+  addBodyActiveClass = () => {
     const baseClass =
       document.querySelector('body').getAttribute('class') || '';
     let updateClass = `${baseClass} ${MENU_MOBILE_BODY_ACTIVE}`.trim();
     document.querySelector('body').setAttribute('class', updateClass);
-  }
+  };
 
-  removeBodyActiveClass() {
+  removeBodyActiveClass = () => {
     const baseClass =
       document.querySelector('body').getAttribute('class') || '';
     let updateClass = baseClass.replace(MENU_MOBILE_BODY_ACTIVE, '').trim();
     document.querySelector('body').setAttribute('class', updateClass);
-  }
+  };
 
-  toggleBodyActiveClass(add) {
+  toggleBodyActiveClass = add => {
     if (add) {
       this.addBodyActiveClass();
     } else {
       this.removeBodyActiveClass();
     }
-  }
+  };
 }
 
 MenuMobile.propTypes = {

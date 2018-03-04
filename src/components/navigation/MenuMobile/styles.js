@@ -65,7 +65,7 @@ export default theme => ({
   },
   menu: {
     overflowY: 'auto',
-    padding: 20,
+    padding: 0,
     width: '100%',
     height: 0,
     opacity: 0,
@@ -76,6 +76,7 @@ export default theme => ({
     transition: 'all 500ms ease-out',
 
     '$active &': {
+      padding: 20,
       height: '100%',
       opacity: 1
     }
