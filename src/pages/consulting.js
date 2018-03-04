@@ -5,7 +5,7 @@ import cx from 'classnames';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
 import { Header, Footer, Drops, Quote } from '../components';
-import { Contact, SignUp } from '../containers';
+import { Contact, SignUp, Team } from '../containers';
 
 const styles = theme => ({
   root: {
@@ -22,12 +22,17 @@ const styles = theme => ({
       fontSize: 20
     }
   },
-  mainContent: {
-    paddingTop: 20,
-    margin: [0, 20]
+  mainContainer: {
+    padding: 20
   },
   leftContent: {
     maxWidth: '100%'
+  },
+
+  // TEAM
+  team: {
+    marginTop: 60,
+    padding: [0, 20]
   },
 
   // FOOTER
@@ -49,12 +54,16 @@ const styles = theme => ({
         fontSize: 32
       }
     },
-    mainContent: {
-      paddingTop: 120,
-      margin: [0, 10]
+    mainContainer: {
+      paddingTop: 120
     },
     leftContent: {
       maxWidth: 550
+    },
+
+    // TEAM
+    team: {
+      marginTop: 20
     },
 
     // FOOTER
@@ -75,8 +84,8 @@ const ConsultingPage = ({ classes }) => (
 
       {/* MAIN */}
       <div className={classes.main}>
-        <div className="container">
-          <div className={cx(classes.mainContent, 'row')}>
+        <div className={cx(classes.mainContainer, 'container')}>
+          <div className="row">
             <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <h1>
@@ -87,6 +96,7 @@ const ConsultingPage = ({ classes }) => (
                 </h1>
               </div>
             </div>
+
             <div className="col-sm-4" />
             <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
@@ -117,6 +127,11 @@ const ConsultingPage = ({ classes }) => (
             </div>
           </div>
         </div>
+      </div>
+
+      {/* TEAM */}
+      <div className={cx(classes.team, 'container')}>
+        <Team />
       </div>
 
       {/* FOOTER */}

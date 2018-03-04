@@ -23,9 +23,8 @@ const styles = theme => ({
       fontSize: 20
     }
   },
-  mainContent: {
-    paddingTop: 20,
-    margin: [0, 20]
+  mainContainer: {
+    padding: 20
   },
   leftContent: {
     maxWidth: '100%'
@@ -38,7 +37,7 @@ const styles = theme => ({
     position: 'relative',
     marginTop: 120
   },
-  letsChat: {
+  footerLetsChat: {
     position: 'absolute',
     top: -70,
     zIndex: 10,
@@ -61,16 +60,15 @@ const styles = theme => ({
         fontSize: 32
       }
     },
-    mainContent: {
-      paddingTop: 120,
-      margin: [0, 10]
+    mainContainer: {
+      paddingTop: 120
     },
     leftContent: {
       maxWidth: 550
     },
 
     // FOOTER
-    letsChat: {
+    footerLetsChat: {
       top: -70,
       marginLeft: 120,
       '& img': {
@@ -95,8 +93,8 @@ const RemotePlacementPage = ({ classes }) => (
 
       {/* MAIN */}
       <div className={classes.main}>
-        <div className="container">
-          <div className={cx(classes.mainContent, 'row')}>
+        <div className={cx(classes.mainContainer, 'container')}>
+          <div className="row">
             <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <h1>
@@ -145,7 +143,7 @@ const RemotePlacementPage = ({ classes }) => (
 
       {/* FOOTER */}
       <div className={classes.footer}>
-        <div className={classes.letsChat}>
+        <div className={classes.footerLetsChat}>
           <img src={imageLetsChat} />
         </div>
         <div className={classes.footerDrops}>

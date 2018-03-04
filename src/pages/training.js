@@ -9,11 +9,10 @@ import imageComprehensive from '../assets/images/training/comprehensive.png';
 import imageBestPractices from '../assets/images/training/best-practices.png';
 import imageRealWorld from '../assets/images/training/real-world.png';
 import iimageProfessionalInstructors from '../assets/images/training/professional-instructors.png';
-
 import clients from '../data/clients.json';
-import trainers from '../data/trainers.json';
-import { Header, Footer, Drops, Heading, Tabs } from '../components';
-import { Contact, SignUp } from '../containers';
+
+import { Header, Footer, Drops } from '../components';
+import { Contact, SignUp, Team } from '../containers';
 
 const styles = theme => ({
   root: {
@@ -64,7 +63,7 @@ const styles = theme => ({
     }
   },
 
-  // CLIENTS LOGOS
+  // CLIENTS
   client: {
     width: 100,
     height: 50
@@ -119,16 +118,9 @@ const styles = theme => ({
 
   // TEAM
   team: {
-    marginTop: 20,
-    marginBottom: 20
-  },
-  teamHeader: {
+    marginTop: 60,
     marginBottom: 20,
-    textAlign: 'right'
-  },
-  teamHeading: {
-    display: 'inline-block',
-    maxWidth: 320
+    padding: [0, 20]
   },
 
   // FOOTER
@@ -136,9 +128,9 @@ const styles = theme => ({
     backgroundColor: theme.palette.inverted.base,
     backgroundImage: `url(${imagePatternDots})`,
     position: 'relative',
-    marginTop: 120
+    marginTop: 100
   },
-  letsChat: {
+  footerLetsChat: {
     position: 'absolute',
     top: -70,
     zIndex: 10,
@@ -161,7 +153,7 @@ const styles = theme => ({
         fontSize: 32
       }
     },
-    mainContent: {
+    mainContainer: {
       paddingTop: 120
     },
     trainings: {
@@ -171,7 +163,7 @@ const styles = theme => ({
       maxWidth: 550
     },
 
-    // CLIENTS LOGOS
+    // CLIENTS
     brand: {
       order: 1
     },
@@ -192,8 +184,16 @@ const styles = theme => ({
       order: 3
     },
 
+    // TEAM
+    team: {
+      marginTop: 20
+    },
+
     // FOOTER
-    letsChat: {
+    footer: {
+      marginTop: 120
+    },
+    footerLetsChat: {
       top: -70,
       marginLeft: 120,
       '& img': {
@@ -220,7 +220,7 @@ const TrainingPage = ({ classes }) => (
       <div className={classes.main}>
         <div className={cx(classes.mainContainer, 'container')}>
           {/* INFORMATION */}
-          <div className={cx(classes.mainContent, 'row')}>
+          <div className="row">
             <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <h1>
@@ -237,8 +237,6 @@ const TrainingPage = ({ classes }) => (
                   with and teaching the technologies you want to learn.
                 </p>
               </div>
-
-              {/* TRAININGS */}
               <div className={cx(classes.trainings, classes.leftContent)}>
                 <div className={classes.unitContent}>
                   <div className={classes.trainingImage}>
@@ -312,6 +310,8 @@ const TrainingPage = ({ classes }) => (
                 </div>
               </div>
             </div>
+
+            {/* CLIENTS */}
             <div className="col-xs-12 col-sm-4">
               <div className="row">
                 {clients.map((item, index) => (
@@ -341,34 +341,17 @@ const TrainingPage = ({ classes }) => (
               </div>
             </div>
           </div>
-
-          {/* TEAM */}
-          <div className={cx(classes.team, 'row')}>
-            <div className={cx(classes.teamHeader, 'col-xs-12')}>
-              <Heading
-                className={classes.teamHeading}
-                title="T E A M"
-                subtitle="Expert consultants and trainers"
-              />
-            </div>
-            <div className="col-xs-12">
-              {/* TODO: Add proper trainers information and components settings. */}
-              <Tabs>
-                {trainers.map(trainer => ({
-                  name: trainer.name,
-                  href: '/',
-                  enterText: 'Next',
-                  content: trainer.description
-                }))}
-              </Tabs>
-            </div>
-          </div>
         </div>
+      </div>
+
+      {/* TEAM */}
+      <div className={cx(classes.team, 'container')}>
+        <Team />
       </div>
 
       {/* FOOTER */}
       <div className={classes.footer}>
-        <div className={classes.letsChat}>
+        <div className={classes.footerLetsChat}>
           <img src={imageLetsChat} />
         </div>
         <div className={classes.footerDrops}>

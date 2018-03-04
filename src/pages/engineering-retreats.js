@@ -4,10 +4,16 @@ import withStyles from 'react-jss';
 import cx from 'classnames';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
-import { Header, Footer, Drops } from '../components';
-import SignUp from '../containers/SignUp';
-import { TextField, Button } from '../components/forms';
-import Gallery from '../components/common/Gallery';
+import gallery from '../data/gallery.json';
+import {
+  Header,
+  Footer,
+  Drops,
+  TextField,
+  Button,
+  Gallery
+} from '../components';
+import { SignUp } from '../containers';
 
 const styles = theme => ({
   root: {
@@ -24,31 +30,31 @@ const styles = theme => ({
       fontSize: 20
     }
   },
+  mainContainer: {},
   mainContent: {
-    paddingTop: 20,
-    margin: [0, 20]
-  },
-  leftContent: {
+    padding: 20,
     maxWidth: '100%'
   },
-  formContainer: {
+
+  // FORM
+  form: {
     marginTop: 60
   },
-  input: {
+  formInput: {
     marginBottom: 20
   },
-  inputQuestion: {
-    minHeight: 90,
-    paddingTop: 10,
-    marginBottom: 20
+  formInputQuestion: {
+    marginBottom: 20,
+    minHeight: 90
   },
-  textArea: {
+  formInputMessage: {
     borderBottomWidth: 0,
-    minHeight: 180,
-    paddingTop: 10
+    minHeight: 180
   },
+
+  // GALLERY
   gallery: {
-    marginTop: 40
+    marginTop: 20
   },
 
   // FOOTER
@@ -70,23 +76,27 @@ const styles = theme => ({
         fontSize: 32
       }
     },
-    mainContent: {
-      paddingTop: 120,
-      margin: [0, 10]
+    mainContainer: {
+      padding: [120, 20, 20]
     },
-    leftContent: {
+    mainContent: {
+      padding: 0,
       maxWidth: 550
     },
-    formContainer: {
+
+    // FORM
+    form: {
       marginTop: 80
     },
+
+    // GALLERY
     gallery: {
       marginTop: 0
     },
 
     // FOOTER
     footer: {
-      marginTop: 120
+      marginTop: 80
     },
     footerDrops: {
       display: 'block'
@@ -105,18 +115,16 @@ const EngineeringRetreatsPage = ({ classes }) => (
 
       {/* MAIN */}
       <div className={classes.main}>
-        <div className="container">
-          <div className={cx(classes.mainContent, 'row')}>
+        <div className={cx(classes.mainContainer, 'container')}>
+          <div className="row">
             <div className="col-xs-12 col-sm-8">
-              <div className={classes.leftContent}>
+              <div className={classes.mainContent}>
                 <h1>
                   <div>Offsite Retreats to</div>
                   <span className="text-inverted background-secondary">
                     &nbsp;Supercharge your Engineers&nbsp;
                   </span>
                 </h1>
-              </div>
-              <div className={classes.leftContent}>
                 <p>
                   If you think that retreats are only for senior management, or
                   you just don’t believe that they provide demonstrable value,
@@ -134,102 +142,88 @@ const EngineeringRetreatsPage = ({ classes }) => (
                   Experience the most productive fun you’ve ever had with React
                   Retreat.
                 </p>
-              </div>
-              <div className={cx(classes.leftContent, classes.formContainer)}>
-                <h1>
-                  Tell us about your{' '}
-                  <span className="text-inverted background-secondary">
-                    &nbsp;Dream Retreat&nbsp;
-                  </span>
-                </h1>
-                <div className="row">
-                  <div className="col-sm-6 col-xs-12">
-                    <TextField
-                      className={classes.input}
-                      palette="primary"
-                      type="text"
-                      placeholder="Name*"
-                    />
-                  </div>
-                  <div className="col-sm-6 col-xs-12">
-                    <TextField
-                      className={classes.input}
-                      palette="primary"
-                      type="email"
-                      placeholder="Email*"
-                    />
-                  </div>
-                  <div className="col-sm-6 col-xs-12">
-                    <TextField
-                      className={classes.input}
-                      palette="primary"
-                      type="text"
-                      placeholder="Company*"
-                    />
-                  </div>
-                  <div className="col-sm-6 col-xs-12">
-                    <TextField
-                      className={classes.input}
-                      palette="primary"
-                      type="text"
-                      placeholder="Phone*"
-                    />
-                  </div>
-                  <div className="col-xs-12">
-                    <TextField
-                      isTextarea
-                      palette="primary"
-                      type="text"
-                      placeholder="Question about something?"
-                      fieldProps={{
-                        className: classes.inputQuestion
-                      }}
-                    />
-                  </div>
-                  <div className="col-xs-12">
-                    <TextField
-                      isTextarea
-                      palette="primary"
-                      type="text"
-                      placeholder="Question about something?"
-                      fieldProps={{
-                        className: classes.inputQuestion
-                      }}
-                    />
-                  </div>
-                  <div className="col-xs-12">
-                    <TextField
-                      isTextarea
-                      palette="primary"
-                      type="text"
-                      placeholder="Question about something?"
-                      fieldProps={{
-                        className: classes.inputQuestion
-                      }}
-                    />
-                  </div>
-                  <div className="col-xs-12">
-                    <TextField
-                      isTextarea
-                      palette="primary"
-                      type="text"
-                      placeholder="Message*"
-                      fieldProps={{
-                        className: classes.textArea
-                      }}
-                    />
-                    <Button
-                      showArrow
-                      textAlign="left"
-                      palette="text"
-                      children="Submit"
-                    />
+                <div className={classes.form}>
+                  <h2>
+                    Tell us about your{' '}
+                    <span className="text-inverted background-secondary">
+                      &nbsp;Dream Retreat&nbsp;
+                    </span>
+                  </h2>
+                  <div className="row">
+                    <div className="col-sm-6 col-xs-12">
+                      <TextField
+                        className={classes.formInput}
+                        placeholder="Name*"
+                      />
+                    </div>
+                    <div className="col-sm-6 col-xs-12">
+                      <TextField
+                        className={classes.formInput}
+                        type="email"
+                        placeholder="Email*"
+                      />
+                    </div>
+                    <div className="col-sm-6 col-xs-12">
+                      <TextField
+                        className={classes.formInput}
+                        placeholder="Company*"
+                      />
+                    </div>
+                    <div className="col-sm-6 col-xs-12">
+                      <TextField
+                        className={classes.formInput}
+                        placeholder="Phone*"
+                      />
+                    </div>
+                    <div className="col-xs-12">
+                      <TextField
+                        isTextarea
+                        placeholder="Question about something?"
+                        fieldProps={{
+                          className: classes.formInputQuestion
+                        }}
+                      />
+                    </div>
+                    <div className="col-xs-12">
+                      <TextField
+                        isTextarea
+                        placeholder="Question about something?"
+                        fieldProps={{
+                          className: classes.formInputQuestion
+                        }}
+                      />
+                    </div>
+                    <div className="col-xs-12">
+                      <TextField
+                        isTextarea
+                        placeholder="Question about something?"
+                        fieldProps={{
+                          className: classes.formInputQuestion
+                        }}
+                      />
+                    </div>
+                    <div className="col-xs-12">
+                      <TextField
+                        isTextarea
+                        placeholder="Message*"
+                        fieldProps={{
+                          className: classes.formInputMessage
+                        }}
+                      />
+                      <Button
+                        showArrow
+                        textAlign="left"
+                        palette="text"
+                        children="Submit"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className={cx(classes.gallery, 'col-xs-12 col-sm-4')}>
-              <Gallery />
+              <Gallery images={gallery} />
             </div>
           </div>
         </div>

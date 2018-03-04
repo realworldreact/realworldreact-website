@@ -1,74 +1,70 @@
 [
   {
     "name": "PlaceHolder1",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder2",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder3",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder4",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder5",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder6",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder7",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder8",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder9",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder10",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder11",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder12",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder13",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder14",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder15",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder16",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   },
   {
     "name": "PlaceHolder17",
-    "logo": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder18",
-    "logo": "/images/gallery/400x400.png"
+    "path": "/images/gallery/400x400.png"
   }
 ]

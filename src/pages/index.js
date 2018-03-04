@@ -36,7 +36,7 @@ const styles = theme => ({
     backgroundColor: theme.palette.inverted.base,
     backgroundImage: `url(${imagePatternDots})`
   },
-  heading: {
+  heroHeading: {
     position: 'relative',
     margin: 'auto',
     padding: [0, 20],
@@ -47,7 +47,7 @@ const styles = theme => ({
       fontSize: 24
     }
   },
-  headingFooter: {
+  heroFooter: {
     position: 'absolute',
     left: 0,
     bottom: -70,
@@ -71,7 +71,7 @@ const styles = theme => ({
     flexDirection: 'row',
     flexWrap: 'wrap'
   },
-  technologyLogo: {
+  logosItem: {
     width: '50%'
   },
 
@@ -187,14 +187,14 @@ const styles = theme => ({
   // small +
   '@media screen and (min-width: 48em)': {
     // HERO
-    heading: {
+    heroHeading: {
       padding: [80, 20, 0],
       width: '76%',
       '& h1': {
         fontSize: 32
       }
     },
-    headingFooter: {
+    heroFooter: {
       bottom: -100
     },
 
@@ -205,7 +205,7 @@ const styles = theme => ({
       flexDirection: 'row',
       flexWrap: 'wrap'
     },
-    technologyLogo: {
+    logosItem: {
       width: '14.28%'
     },
 
@@ -307,8 +307,9 @@ const HomePage = ({ classes }) => (
       {/* HERO */}
       <div className={classes.hero}>
         <Header reversed />
+
         <div className="container">
-          <div className={classes.heading}>
+          <div className={classes.heroHeading}>
             <h1>
               We are a professional services and consulting firm specializing in{' '}
               <span className="text-inverted background-secondary">
@@ -316,7 +317,7 @@ const HomePage = ({ classes }) => (
               </span>{' '}
               and serverless architecture.
             </h1>
-            <div className={classes.headingFooter}>
+            <div className={classes.heroFooter}>
               Fig. 1 - Our fields of speciality
             </div>
           </div>
@@ -329,7 +330,7 @@ const HomePage = ({ classes }) => (
         {/* LOGOS */}
         <div className={cx(classes.logos, 'container')}>
           {technologies.map((item, key) => (
-            <div key={key} className={classes.technologyLogo}>
+            <div key={key} className={classes.logosItem}>
               <TechnologyLogo
                 name={item.name}
                 logo={item.logo}

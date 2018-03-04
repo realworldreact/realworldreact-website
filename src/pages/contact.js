@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
+import cx from 'classnames';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
 import { Contact, SignUp } from '../containers';
@@ -14,7 +15,9 @@ const styles = theme => ({
     backgroundColor: theme.palette.inverted.base,
     backgroundImage: `url(${imagePatternDots})`
   },
-  main: {
+
+  // MAIN
+  mainContainer: {
     padding: 20
   }
 });
@@ -26,13 +29,11 @@ const ContactPage = ({ classes }) => (
     </Helmet>
     <div className={classes.root}>
       {/* HERO */}
-      <div className="container">
-        <Header reversed />
-      </div>
+      <Header reversed />
 
       {/* MAIN */}
-      <div className={classes.main}>
-        <div className="container">
+      <div>
+        <div className={cx(classes.mainContainer, 'container')}>
           <div className="row">
             <div className="col-xs-12">
               <Contact />
