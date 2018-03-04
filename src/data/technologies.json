@@ -1,72 +1,80 @@
 [
   {
+    "id": "react-native",
     "name": "React Native",
     "logo": "/images/technologies/react-native.jpg",
     "route": ""
   },
   {
+    "id": "redux",
     "name": "Redux",
     "logo": "/images/technologies/redux.jpg",
     "route": ""
   },
   {
+    "id": "rxjs",
     "name": "RxJS",
     "logo": "/images/technologies/rxjs.jpg",
     "route": ""
   },
   {
+    "id": "react",
     "name": "React",
     "logo": "/images/technologies/react.jpg",
     "route": ""
   },
   {
+    "id": "graphql",
     "name": "GraphQL",
     "logo": "/images/technologies/graph-ql.jpg",
     "route": ""
   },
   {
+    "id": "jsx",
     "name": "JSX",
     "logo": "/images/technologies/jsx.jpg",
     "route": ""
   },
   {
+    "id": "functional-programming",
     "name": "Functional Programming",
     "logo": "/images/technologies/functional.jpg",
     "route": ""
   },
   {
+    "id": "webpack",
     "name": "Webpack",
     "logo": "/images/technologies/webpack.jpg",
     "route": ""
   },
   {
+    "id": "immutablejs",
     "name": "Immutable.js",
     "logo": "/images/technologies/immutable.jpg",
     "route": ""
   },
   {
+    "id": "jamstack",
     "name": "JAMstack",
     "logo": "/images/technologies/jam-stack.jpg",
     "route": ""
   },
   {
+    "id": "aws-lambda",
     "name": "AWS Lambda",
     "logo": "/images/technologies/aws-lambda.jpg",
     "route": ""
   },
   {
+    "id": "microsoft-azure",
     "name": "Microsoft Azure",
     "logo": "/images/technologies/microsoft-azure.jpg",
     "route": ""
   },
   {
+    "id": "serverless-framework",
     "name": "Serverless Framework",
     "logo": "/images/technologies/serverless.jpg",
-    "route": ""
-  },
-  {
-    "name": "and more",
-    "logo": "/images/technologies/and-more.jpg",
     "route": ""
   }
 ]

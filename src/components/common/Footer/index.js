@@ -6,10 +6,10 @@ import cx from 'classnames';
 
 import navigation from '../../../data/navigation.json';
 import logoReversed from '../../../assets/images/rwr/logo-mini-reversed.png';
-import youtube from '../../../assets/images/footer/youtube.png';
-import facebook from '../../../assets/images/footer/facebook.png';
-import twitter from '../../../assets/images/footer/twitter.png';
-import meetup from '../../../assets/images/footer/meetup.png';
+import imageYoutube from '../../../assets/images/social/youtube.png';
+import imageFacebook from '../../../assets/images/social/facebook.png';
+import imageTwitter from '../../../assets/images/social/twitter.png';
+import imageMeetup from '../../../assets/images/social/meetup.png';
 import styles from './styles';
 
 const Footer = props => {
@@ -44,7 +44,7 @@ const Footer = props => {
                     href="https://www.youtube.com/channel/UCgL3tdpvoARHuX-_3eLWEgg"
                     target="youtube"
                   >
-                    <img src={youtube} alt="YouTube" />
+                    <img src={imageYoutube} alt="YouTube" />
                   </a>
                 </div>
                 <div className="col-xs-6">
@@ -52,17 +52,17 @@ const Footer = props => {
                     href="https://www.facebook.com/RealWorldReact"
                     target="facebook"
                   >
-                    <img src={facebook} alt="Facebook" />
+                    <img src={imageFacebook} alt="Facebook" />
                   </a>
                 </div>
                 <div className="col-xs-6">
                   <a href="https://twitter.com/rwreact" target="twitter">
-                    <img src={twitter} alt="Twitter" />
+                    <img src={imageTwitter} alt="Twitter" />
                   </a>
                 </div>
                 <div className="col-xs-6">
                   <a href="https://meetup.com/real-World-React" target="meetup">
-                    <img src={meetup} alt="Meetup" />
+                    <img src={imageMeetup} alt="Meetup" />
                   </a>
                 </div>
               </div>

@@ -12,6 +12,7 @@ import imageTalks from '../assets/images/home/talks.png';
 import imagePodcast from '../assets/images/home/podcast.png';
 import imageUpcomingEvents from '../assets/images/home/upcoming-events.png';
 import imageBlog from '../assets/images/home/blog.png';
+import imageTechAndMore from '../assets/images/home/and-more.jpg';
 import technologies from '../data/technologies.json';
 import {
   Header,
@@ -23,6 +24,10 @@ import {
   Resource
 } from '../components';
 import { Contact, SignUp } from '../containers';
+
+// Select the first 13 elements in the list of technology logos
+// becuse we need to fit them in the layout.
+const selectedTechnologyLogos = technologies.slice(0, 13);
 
 const styles = theme => ({
   root: {
@@ -329,7 +334,7 @@ const HomePage = ({ classes }) => (
       <div className={classes.main}>
         {/* LOGOS */}
         <div className={cx(classes.logos, 'container')}>
-          {technologies.map((item, key) => (
+          {selectedTechnologyLogos.map((item, key) => (
             <div key={key} className={classes.logosItem}>
               <TechnologyLogo
                 name={item.name}
@@ -338,6 +343,9 @@ const HomePage = ({ classes }) => (
               />
             </div>
           ))}
+          <div className={classes.logosItem}>
+            <TechnologyLogo name="And more" logo={imageTechAndMore} />
+          </div>
         </div>
 
         {/* SERVICES */}
