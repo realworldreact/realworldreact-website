@@ -1,5 +1,6 @@
 export default () => ({
   root: {
+    overflow: 'hidden',
     width: '100%'
   },
   imageContainer: {

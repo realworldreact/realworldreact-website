@@ -31,8 +31,11 @@ const styles = theme => ({
     }
   },
   mainContainer: {},
+  mainItems: {
+    padding: 0
+  },
   mainContent: {
-    padding: 20,
+    padding: [20, 10],
     maxWidth: '100%'
   },
 
@@ -54,7 +57,8 @@ const styles = theme => ({
 
   // GALLERY
   gallery: {
-    marginTop: 20
+    marginTop: 20,
+    padding: 0
   },
 
   // FOOTER
@@ -78,6 +82,9 @@ const styles = theme => ({
     },
     mainContainer: {
       padding: [120, 20, 20]
+    },
+    mainItems: {
+      //
     },
     mainContent: {
       padding: 0,
@@ -116,7 +123,7 @@ const EngineeringRetreatsPage = ({ classes }) => (
       {/* MAIN */}
       <div className={classes.main}>
         <div className={cx(classes.mainContainer, 'container')}>
-          <div className="row">
+          <div className={cx(classes.mainItems, 'row')}>
             <div className="col-xs-12 col-sm-8">
               <div className={classes.mainContent}>
                 <h1>
