@@ -5,7 +5,6 @@ export default () => ({
   },
   title: {
     overflow: 'hidden',
-    letterSpacing: props => (props.letterSpace ? props.letterSpace : 'inherit'),
     width: '100%',
     height: 96,
     fontSize: 96,

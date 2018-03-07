@@ -1,13 +1,19 @@
 [
   {
-    "id": 1,
+    "id": "2018-03-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
@@ -17,14 +23,20 @@
     ]
   },
   {
-    "id": 1,
+    "id": "2018-04-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
@@ -34,14 +46,20 @@
     ]
   },
   {
-    "id": 1,
+    "id": "2018-05-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
@@ -51,14 +69,20 @@
     ]
   },
   {
-    "id": 1,
+    "id": "2018-06-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
@@ -68,14 +92,20 @@
     ]
   },
   {
-    "id": 1,
+    "id": "2018-07-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
@@ -85,14 +115,20 @@
     ]
   },
   {
-    "id": 1,
+    "id": "2018-08-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
@@ -102,14 +138,20 @@
     ]
   },
   {
-    "id": 1,
+    "id": "2018-09-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
@@ -119,14 +161,20 @@
     ]
   },
   {
-    "id": 1,
+    "id": "2018-10-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
@@ -136,14 +184,20 @@
     ]
   },
   {
-    "id": 1,
+    "id": "2018-11-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
@@ -153,14 +207,20 @@
     ]
   },
   {
-    "id": 1,
+    "id": "2018-12-isomorphic-react-without-node",
     "title": "Isomorphic React without Node",
     "subtitle": "Ben Ilegbodu from Eventbrite",
-    "description": "Listen to <span>Ben Ilegbodu</span> from <span>Eventbrite</span> as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
+    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
     "content": "React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.",
-    "author": "Ben Ilegbodu",
+    "author": {
+      "name": "Ben Ilegbodu",
+      "url": "http://www.benmvp.com"
+    },
     "image": "/images/talks/ben-ilegbodu.jpg",
-    "from": "Eventbrite",
+    "from": {
+      "name": "Eventbrite",
+      "url": "https://www.eventbrite.com"
+    },
     "videoUrl": "/",
     "specialties": [
       "react-native",
