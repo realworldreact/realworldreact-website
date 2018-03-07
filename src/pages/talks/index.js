@@ -35,7 +35,7 @@ const styles = theme => ({
   talksHeading: {
     display: 'inline-block',
     margin: [0, 'auto'],
-    maxWidth: 330
+    maxWidth: 380
   },
   talk: {
     marginBottom: 20
@@ -65,9 +65,6 @@ const styles = theme => ({
     mainHeading: {
       textAlign: 'left',
       marginBottom: 50
-    },
-    talksHeading: {
-      maxWidth: 370
     },
 
     // FOOTER
