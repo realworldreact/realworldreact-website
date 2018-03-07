@@ -7,7 +7,7 @@ import Button from '../../forms/Button';
 import styles from './styles';
 
 const Talk = props => {
-  const { theme, sheet, classes, className, talk, ...etc } = props;
+  const { theme, sheet, classes, className, url, talk, ...etc } = props;
   const { image, title, description, id } = talk;
   return (
     <article className={cx(classes.root, className)} {...etc}>
@@ -30,7 +30,7 @@ const Talk = props => {
           textAlign="left"
           children="Watch Now"
           showArrow
-          href={`/talks/${url}`}
+          href={url}
         />
       </div>
     </article>
