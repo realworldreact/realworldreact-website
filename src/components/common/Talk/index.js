@@ -7,8 +7,8 @@ import Button from '../../forms/Button';
 import styles from './styles';
 
 const Talk = props => {
-  const { theme, sheet, classes, className, url, talk, ...etc } = props;
-  const { image, title, description, id } = talk;
+  const { theme, sheet, classes, className, talk, ...etc } = props;
+  const { image, title, description, id, url } = talk;
   return (
     <article className={cx(classes.root, className)} {...etc}>
       <div className={cx(classes.main, classes.mainTransition)}>
