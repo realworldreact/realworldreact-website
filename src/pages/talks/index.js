@@ -28,7 +28,7 @@ const styles = theme => ({
       padding: 0
     }
   },
-  componentHeading: {
+  mainHeading: {
     textAlign: 'center',
     marginBottom: 20
   },
@@ -36,6 +36,9 @@ const styles = theme => ({
     display: 'inline-block',
     margin: [0, 'auto'],
     maxWidth: 330
+  },
+  talk: {
+    marginBottom: 20
   },
 
   // FOOTER
@@ -59,7 +62,7 @@ const styles = theme => ({
         padding: [0, '0.5rem']
       }
     },
-    componentHeading: {
+    mainHeading: {
       textAlign: 'left',
       marginBottom: 50
     },
@@ -87,18 +90,20 @@ const TalksPage = ({ classes }) => (
       <div className={classes.main}>
         <div className={cx(classes.mainContainer, 'container')}>
           <div className="row">
-            <div className={cx(classes.componentHeading, 'col-xs-12')}>
+            <div className={cx(classes.mainHeading, 'col-xs-12')}>
               <Heading
-                letterSpace={15}
                 className={classes.talksHeading}
-                title="TALKS"
+                title="T A L K S"
                 subtitle="Lessons from Leaders in the Field"
               />
             </div>
             <div className="col-xs-12">
               <div className="row">
                 {talks.map((talk, index) => (
-                  <div key={index} className="col-xs-12 col-sm-6">
+                  <div
+                    key={index}
+                    className={cx(classes.talk, 'col-xs-12', 'col-sm-6')}
+                  >
                     <Talk talk={talk} />
                   </div>
                 ))}

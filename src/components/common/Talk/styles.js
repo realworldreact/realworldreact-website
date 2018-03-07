@@ -1,8 +1,7 @@
 export default theme => ({
   root: {
     display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 20
+    flexDirection: 'column'
   },
   main: {
     boxShadow: 'none',
@@ -28,27 +27,27 @@ export default theme => ({
     width: 75,
     height: 75
   },
-  description: {
+  info: {
     flex: 1,
     padding: 20,
     fontSize: 14,
     lineHeight: '18px',
-    '& h4': {
+    '& h1': {
       fontSize: 16,
       color: theme.palette.text.light,
       marginTop: 0
-    },
-    '& p': {
-      width: '100%',
-      textOverflow: 'ellipsis',
-      overflow: 'hidden',
-      maxHeight: 90,
-      display: '-webkit-box',
-      '-webkit-line-clamp': 5,
-      '-webkit-box-orient': 'vertical',
-      '& span': {
-        color: theme.palette.primary.base
-      }
+    }
+  },
+  description: {
+    width: '100%',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    maxHeight: 90,
+    display: '-webkit-box',
+    '-webkit-line-clamp': 5,
+    '-webkit-box-orient': 'vertical',
+    '& span': {
+      color: theme.palette.primary.base
     }
   },
 
@@ -56,31 +55,33 @@ export default theme => ({
   '@media screen and (min-width: 48em)': {
     root: {
       '&:hover': {
-        '& .cta': {
+        '& $cta': {
           opacity: 1
         },
-        '& .main-transition': {
+        '& $mainTransition': {
           borderLeft: [1, 'solid', theme.palette.primary.base],
           boxShadow: 'none',
           '&:after': {
             width: '100%',
-            transition: 'width 500ms ease-out',
+            transition: 'width 200ms ease-out',
             transitionDelay: '0ms'
           },
           '&:before': {
             height: '100%',
-            transition: 'height 500ms ease-out',
-            transitionDelay: '500ms'
+            transition: 'height 200ms ease-out',
+            transitionDelay: '200ms'
           }
         }
       },
-      '& .cta': {
-        transition: 'opacity 500ms ease',
+      '& $cta': {
+        transition: 'opacity 200ms ease',
         opacity: 0
       }
     },
+    mainTransition: {},
+    cta: {},
     main: {
-      boxShadow: { x: 5, y: 8, blur: 20, spread: 3, color: 'rgba(0,0,0,.06)' },
+      boxShadow: { x: 0, y: 8, blur: 16, spread: 3, color: 'rgba(0,0,0,.05)' },
       height: 220,
       '&:after': {
         content: '""',
@@ -90,8 +91,8 @@ export default theme => ({
         backgroundColor: theme.palette.primary.base,
         width: 0,
         height: 1,
-        transition: 'width 500ms ease-in',
-        transitionDelay: '500ms'
+        transition: 'width 200ms ease-in',
+        transitionDelay: '200ms'
       },
       '&:before': {
         content: '""',
@@ -102,7 +103,7 @@ export default theme => ({
         backgroundColor: theme.palette.primary.base,
         width: 1,
         height: 0,
-        transition: 'height 500ms ease-in',
+        transition: 'height 200ms ease-in',
         transitionDelay: '0ms'
       }
     },
@@ -110,7 +111,7 @@ export default theme => ({
       width: 220,
       height: 'auto'
     },
-    description: {
+    info: {
       border: '1px solid #EAEAEA',
       borderLeftColor: 'transparent'
     }
