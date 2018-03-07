@@ -41,6 +41,11 @@ const styles = theme => ({
     marginBottom: 40
   },
 
+  // SERVICES
+  services: {
+    padding: [0, 20]
+  },
+
   // FOOTER
   footer: {
     backgroundColor: theme.palette.inverted.base,
@@ -65,11 +70,11 @@ const styles = theme => ({
     }
   },
 
-  // small +
+  // medium +
   '@media screen and (min-width: 64em)': {
     // INSTRUCTORS
     instructorItem: {
-      // Min height of the largest trainer contents.
+      // Min height of the largest trainer content.
       minHeight: 420
     }
   }
@@ -106,6 +111,18 @@ const InstructorsPage = ({ classes }) => (
                   />
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* SERVICES */}
+        <div className={cx(classes.services, 'container')}>
+          <div className="row">
+            <div className="col-xs-12 col-sm-8">
+              <h2>
+                Our experts will send your engineers through a hyperloop of
+                productivity.
+              </h2>
             </div>
           </div>
         </div>

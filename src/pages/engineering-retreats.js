@@ -26,8 +26,7 @@ const styles = theme => ({
   main: {
     flex: '1',
     '& h1': {
-      marginTop: 0,
-      fontSize: 20
+      marginTop: 0
     }
   },
   mainContainer: {},
@@ -35,7 +34,7 @@ const styles = theme => ({
     padding: 0
   },
   mainContent: {
-    padding: [20, 10],
+    padding: 20,
     maxWidth: '100%'
   },
 
@@ -75,11 +74,6 @@ const styles = theme => ({
   // small +
   '@media screen and (min-width: 48em)': {
     // MAIN
-    main: {
-      '& h1': {
-        fontSize: 32
-      }
-    },
     mainContainer: {
       padding: [120, 20, 20]
     },

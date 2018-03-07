@@ -90,7 +90,7 @@ Trainer.propTypes = {
     photo: PropTypes.string,
     twitter: PropTypes.string,
     github: PropTypes.string,
-    specialties: PropTypes.string
+    specialties: PropTypes.arrayOf(PropTypes.string)
   }).isRequired,
 
   /**
