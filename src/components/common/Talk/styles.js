@@ -45,10 +45,7 @@ export default theme => ({
     maxHeight: 90,
     display: '-webkit-box',
     '-webkit-line-clamp': 5,
-    '-webkit-box-orient': 'vertical',
-    '& span': {
-      color: theme.palette.primary.base
-    }
+    '-webkit-box-orient': 'vertical'
   },
 
   // small +

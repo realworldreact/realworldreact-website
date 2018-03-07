@@ -30,7 +30,7 @@ const Talk = props => {
           textAlign="left"
           children="Watch Now"
           showArrow
-          href={`/talks/${id}`}
+          href={`/talks/${url}`}
         />
       </div>
     </article>
@@ -43,21 +43,10 @@ Talk.propTypes = {
    */
   talk: PropTypes.shape({
     id: PropTypes.string,
+    url: PropTypes.string,
     title: PropTypes.string,
-    subtitle: PropTypes.string,
     description: PropTypes.string,
-    content: PropTypes.string,
-    author: PropTypes.shape({
-      name: PropTypes.string,
-      url: PropTypes.string
-    }),
-    image: PropTypes.string,
-    from: PropTypes.shape({
-      name: PropTypes.string,
-      url: PropTypes.string
-    }),
-    videoUrl: PropTypes.string,
-    specialties: PropTypes.array
+    image: PropTypes.string
   }).isRequired
 };
 
