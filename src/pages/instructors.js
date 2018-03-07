@@ -4,10 +4,16 @@ import withStyles from 'react-jss';
 import cx from 'classnames';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
+import imageLearnMoreMobile from '../assets/images/messages/learn-more-mobile.png';
+import imageLearnMoreDesktop from '../assets/images/messages/learn-more-desktop.png';
 import trainers from '../data/trainers.json';
 import technologies from '../data/technologies.json';
-import { Header, Footer, Drops, Heading, Trainer } from '../components';
+import navigation from '../data/navigation.json';
+import { Header, Footer, Drops, Heading, Trainer, Option } from '../components';
 import { Contact, SignUp } from '../containers';
+
+// The the navigation services items.
+const navigationServices = navigation.find(item => item.id === 'services');
 
 const styles = theme => ({
   root: {
@@ -45,6 +51,25 @@ const styles = theme => ({
   services: {
     padding: [0, 20]
   },
+  servicesTitle: {
+    marginBottom: 60
+  },
+  servicesMessage: {
+    position: 'absolute',
+    left: '50%',
+    top: -50,
+    width: 140,
+    height: 70,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${imageLearnMoreMobile})`
+  },
+  servicesOptions: {
+    position: 'relative'
+  },
+  serviceOption: {
+    marginBottom: 10
+  },
 
   // FOOTER
   footer: {
@@ -62,6 +87,18 @@ const styles = theme => ({
     // MAIN
     mainContainer: {
       padding: [40, 20]
+    },
+
+    // SERVICES
+    servicesTitle: {
+      marginBottom: 40
+    },
+    servicesMessage: {
+      left: 'auto',
+      right: -200,
+      width: 200,
+      height: 100,
+      backgroundImage: `url(${imageLearnMoreDesktop})`
     },
 
     // FOOTER
@@ -119,10 +156,25 @@ const InstructorsPage = ({ classes }) => (
         <div className={cx(classes.services, 'container')}>
           <div className="row">
             <div className="col-xs-12 col-sm-8">
-              <h2>
+              <h2 className={classes.servicesTitle}>
                 Our experts will send your engineers through a hyperloop of
                 productivity.
               </h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xs-12 col-sm-8">
+              <div className={cx(classes.servicesOptions, 'row')}>
+                <div className={classes.servicesMessage} />
+                {navigationServices.items.map((item, index) => (
+                  <div
+                    className={cx(classes.serviceOption, 'col-xs-12 col-sm-6')}
+                    key={index}
+                  >
+                    <Option to={item.route}>{item.name}</Option>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
