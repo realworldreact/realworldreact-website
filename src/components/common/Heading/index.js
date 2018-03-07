@@ -6,7 +6,16 @@ import cx from 'classnames';
 import styles from './styles';
 
 const Heading = props => {
-  const { theme, sheet, classes, className, title, subtitle, ...etc } = props;
+  const {
+    theme,
+    sheet,
+    classes,
+    className,
+    letterSpace,
+    title,
+    subtitle,
+    ...etc
+  } = props;
   return (
     <div className={cx(classes.root, className)} {...etc}>
       <div className={classes.title}>{title}</div>
@@ -24,7 +33,12 @@ Heading.propTypes = {
   /**
    * Text above the title. It'll be centered inside the title.
    */
-  subtitle: PropTypes.string.isRequired
+  subtitle: PropTypes.string.isRequired,
+
+  /**
+   * Space between characters in Title
+   */
+  letterSpace: PropTypes.number
 };
 
 export default withStyles(styles)(Heading);

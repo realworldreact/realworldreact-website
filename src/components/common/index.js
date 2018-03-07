@@ -8,3 +8,4 @@ export Heading from './Heading';
 export Quote from './Quote';
 export Gallery from './Gallery';
 export Trainer from './Trainer';
+export Talk from './Talk';
