@@ -117,7 +117,7 @@ const styles = theme => ({
   }
 });
 
-const InstructorsPage = ({ classes }) => (
+const TeamPage = ({ classes }) => (
   <div>
     <Helmet>
       <title>Instructors | Real World React</title>
@@ -191,4 +191,4 @@ const InstructorsPage = ({ classes }) => (
   </div>
 );
 
-export default withStyles(styles)(InstructorsPage);
+export default withStyles(styles)(TeamPage);

@@ -9,7 +9,6 @@ import { TextField, Button } from '../../components/forms';
 const Contact = props => {
   const { theme, sheet, classes, className, palette, ...etc } = props;
   const cls = cx(classes.root, className, 'row');
-  const inputPalette = palette === 'text' || 'primary';
   return (
     <div className={cls} {...etc}>
       <div className="col-xs-12">
@@ -27,29 +26,26 @@ const Contact = props => {
         <TextField
           reversed
           className={classes.input}
-          palette={inputPalette}
-          type="text"
+          palette={palette}
           placeholder="Name*"
         />
         <TextField
           reversed
           className={classes.input}
-          palette={inputPalette}
-          type="text"
+          palette={palette}
           placeholder="Company*"
         />
         <TextField
           reversed
           className={classes.input}
-          palette={inputPalette}
+          palette={palette}
           type="email"
           placeholder="Email*"
         />
         <TextField
           reversed
           className={classes.input}
-          palette={inputPalette}
-          type="number"
+          palette={palette}
           placeholder="Phone"
         />
       </div>
@@ -57,8 +53,8 @@ const Contact = props => {
         <TextField
           reversed
           isTextarea
-          palette="primary"
           placeholder="Message*"
+          palette={palette}
           fieldProps={{
             className: classes.textArea
           }}
@@ -80,11 +76,11 @@ Contact.propTypes = {
   /**
    * Color palette for content text and inputs.
    */
-  palette: PropTypes.oneOf(['text', 'black'])
+  palette: PropTypes.oneOf(['primary', 'secondary', 'text', 'black'])
 };
 
 Contact.defaultProps = {
-  palette: 'black'
+  palette: 'primary'
 };
 
 export default withStyles(styles)(Contact);

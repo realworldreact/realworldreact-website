@@ -29,6 +29,10 @@ export default () => ({
   teamItemBtn: {
     flex: 1
   },
+  teamEnter: {
+    marginTop: 20,
+    paddingRight: 2
+  },
 
   // small +
   '@media screen and (min-width: 48em)': {

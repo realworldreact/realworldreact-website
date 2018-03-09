@@ -40,6 +40,10 @@
       {
         "name": "Blog",
         "route": "/"
+      },
+      {
+        "name": "Our Team",
+        "route": "/team"
       }
     ]
   }

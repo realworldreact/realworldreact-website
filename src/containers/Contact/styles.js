@@ -1,7 +1,7 @@
 export default theme => ({
   root: {
     marginBottom: 25,
-    color: props => theme.palette[props.palette].base
+    color: '#fff'
   },
   heading: {
     maxWidth: 550,

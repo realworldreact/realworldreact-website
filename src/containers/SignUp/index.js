@@ -59,7 +59,7 @@ SignUp.defaultProps = {
   palette: 'black',
   title: 'Stay in touch',
   description:
-    'Some text explaining what people are signing up for and reinforce that you won’t spam them.'
+    'Stay up to date with the latest talks, videos, and events with our (non-spammy) newsletter.'
 };
 
 export default withStyles(styles)(SignUp);

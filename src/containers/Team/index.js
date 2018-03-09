@@ -24,7 +24,7 @@ const Team = props => {
             <div
               className={classes.teamItem}
               key={trainer.name}
-              onClick={() => navigateTo('/instructors')}
+              onClick={() => navigateTo('/team')}
             >
               <div
                 className={classes.teamItemImage}
@@ -36,20 +36,35 @@ const Team = props => {
                 textAlign="left"
                 size={44}
                 showArrow
-                href="/instructors"
+                href="/team"
               >
                 {trainer.name}
               </Button>
             </div>
           ))}
         </div>
-        <Tabs className={classes.teamDesktop} border>
-          {trainers.map(trainer => ({
-            name: trainer.name,
-            content: trainer.description,
-            optionImage: trainer.photoMini
-          }))}
-        </Tabs>
+        <div className={classes.teamDesktop}>
+          <Tabs className={classes.teamDesktop} border>
+            {trainers.map(trainer => ({
+              name: trainer.name,
+              content: trainer.description,
+              optionImage: trainer.photoMini
+            }))}
+          </Tabs>
+          <div className="row">
+            <div className={cx(classes.teamEnter, 'col-xs-12 col-sm-8')}>
+              <Button
+                href="/team"
+                palette="black"
+                textAlign="left"
+                outline
+                showArrow
+              >
+                Learn more about Our Team
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
