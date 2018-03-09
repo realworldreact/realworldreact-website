@@ -1,0 +1,29 @@
+{
+  "featuredEngineers": [
+    {
+      "name": "Ben Ilegbodu",
+      "company": "Eventbrite",
+      "photo": "/images/people/ben-ilegbodu-mini.jpg"
+    },
+    {
+      "name": "Brian Douglas",
+      "company": "Netlify",
+      "photo": "/images/people/ben-ilegbodu-mini.jpg"
+    },
+    {
+      "name": "Imad Elyafi",
+      "company": "Pinterest",
+      "photo": "/images/people/ben-ilegbodu-mini.jpg"
+    },
+    {
+      "name": "Jessica Chan",
+      "company": "Pinterest",
+      "photo": "/images/people/ben-ilegbodu-mini.jpg"
+    },
+    {
+      "name": "Justin Bacharik",
+      "company": "NPR",
+      "photo": "/images/people/ben-ilegbodu-mini.jpg"
+    }
+  ]
+}
