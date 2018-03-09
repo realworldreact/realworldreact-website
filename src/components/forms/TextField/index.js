@@ -44,7 +44,13 @@ TextField.propTypes = {
   /**
    * Color palette.
    */
-  palette: PropTypes.oneOf(['primary', 'secondary', 'black']),
+  palette: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'text',
+    'black',
+    'inverted'
+  ]),
 
   /**
    * If colors should be reversed.

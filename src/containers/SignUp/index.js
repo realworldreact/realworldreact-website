@@ -13,6 +13,7 @@ const SignUp = props => {
     classes,
     className,
     title,
+    reversed,
     palette,
     description,
     ...etc
@@ -26,8 +27,8 @@ const SignUp = props => {
       </div>
       <div className={classes.description}>{description}</div>
       <TextField
-        reversed
-        palette={palette === 'text' || 'primary'}
+        reversed={reversed}
+        palette={palette}
         type="email"
         placeholder="Email"
       />
@@ -40,23 +41,35 @@ const SignUp = props => {
 
 SignUp.propTypes = {
   /**
-   * Component Title Text
+   * If the palette color is reversed.
+   */
+  reversed: PropTypes.bool,
+
+  /**
+   * Title text.
    */
   title: PropTypes.string.isRequired,
 
   /**
-   * Component Description Text
+   * Description text.
    */
   description: PropTypes.string.isRequired,
 
   /**
    * Color palette for title and inputs.
    */
-  palette: PropTypes.oneOf(['text', 'black'])
+  palette: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'text',
+    'inverted',
+    'black'
+  ])
 };
 
 SignUp.defaultProps = {
-  palette: 'black',
+  reversed: true,
+  palette: 'primary',
   title: 'Stay in touch',
   description:
     'Stay up to date with the latest talks, videos, and events with our (non-spammy) newsletter.'
