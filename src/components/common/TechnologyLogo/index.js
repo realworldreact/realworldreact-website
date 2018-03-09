@@ -6,7 +6,17 @@ import cx from 'classnames';
 import styles from './styles';
 
 const TechnologyLogo = props => {
-  const { theme, sheet, classes, className, name, logo, route, ...etc } = props;
+  const {
+    theme,
+    sheet,
+    classes,
+    className,
+    name,
+    logo,
+    route,
+    hideNameOnSmall,
+    ...etc
+  } = props;
   const cls = cx(classes.root, className);
   return (
     <div className={cls} {...etc}>
@@ -26,10 +36,16 @@ TechnologyLogo.propTypes = {
    * Technology logo absolute path.
    */
   logo: PropTypes.string.isRequired,
+
   /**
    * Technology route to website.
    */
-  route: PropTypes.string
+  route: PropTypes.string,
+
+  /**
+   * Hide the name on small
+   */
+  hideNameOnSmall: PropTypes.bool
 };
 
 export default withStyles(styles)(TechnologyLogo);
