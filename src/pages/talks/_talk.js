@@ -77,16 +77,14 @@ const styles = theme => ({
   },
 
   // RIGHT CONTENT
-  rightContent: {
-    '& h2': {
-      marginTop: 10,
-      fontSize: 16,
-      marginBottom: 10,
-      backgroundColor: '#EAEAEA',
-      padding: [10, 20],
-      '& span': {
-        display: 'none'
-      }
+  rightTitle: {
+    marginTop: 10,
+    fontSize: 16,
+    marginBottom: 10,
+    backgroundColor: '#EAEAEA',
+    padding: [10, 20],
+    '& span': {
+      display: 'none'
     }
   },
   button: {
@@ -132,13 +130,13 @@ const styles = theme => ({
     // RIGHT CONTENT
     rightTitle: {
       marginTop: 40,
-      marginBottom: 10,
       backgroundColor: 'transparent',
       padding: 0,
       '& span': {
         display: 'inline-block'
       }
     },
+
     button: {
       display: 'none'
     },
