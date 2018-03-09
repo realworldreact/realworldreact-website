@@ -80,6 +80,7 @@ const styles = theme => ({
   rightContent: {
     '& h2': {
       marginTop: 10,
+      fontSize: 16,
       marginBottom: 10,
       backgroundColor: '#EAEAEA',
       padding: [10, 20],
@@ -129,15 +130,13 @@ const styles = theme => ({
     },
 
     // RIGHT CONTENT
-    rightContent: {
-      '& h2': {
-        marginTop: 30,
-        marginBottom: 10,
-        backgroundColor: 'transparent',
-        padding: 0,
-        '& span': {
-          display: 'inline-block'
-        }
+    rightTitle: {
+      marginTop: 40,
+      marginBottom: 10,
+      backgroundColor: 'transparent',
+      padding: 0,
+      '& span': {
+        display: 'inline-block'
       }
     },
     button: {
@@ -203,34 +202,32 @@ const Talk = ({ classes, children }) => {
                 </Link>
               </div>
               <div className="col-xs-12 col-sm-4">
-                <div className={classes.rightContent}>
-                  <h2>
-                    <span className="text-primary">_</span>
-                    <strong>Technologies Discussed</strong>
-                  </h2>
-                  <div className="row">
-                    {specialties.map((item, index) => {
-                      const tech = technologies.find(t => t.id === item);
-                      return (
-                        <div
-                          className={cx(
-                            classes.logoContainer,
-                            'col-xs-2 col-sm-6'
-                          )}
-                          key={index}
-                        >
-                          <div className={classes.logo}>
-                            <TechnologyLogo
-                              hideNameOnSmall
-                              logo={tech.logo}
-                              name={tech.name}
-                              route={tech.route}
-                            />
-                          </div>
+                <div className={classes.rightTitle}>
+                  <span className="text-primary">_</span>
+                  <strong>Technologies Discussed</strong>
+                </div>
+                <div className="row">
+                  {specialties.map((item, index) => {
+                    const tech = technologies.find(t => t.id === item);
+                    return (
+                      <div
+                        className={cx(
+                          classes.logoContainer,
+                          'col-xs-2 col-sm-6'
+                        )}
+                        key={index}
+                      >
+                        <div className={classes.logo}>
+                          <TechnologyLogo
+                            hideNameOnSmall
+                            logo={tech.logo}
+                            name={tech.name}
+                            route={tech.route}
+                          />
                         </div>
-                      );
-                    })}
-                  </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
               {nexTalk && (
