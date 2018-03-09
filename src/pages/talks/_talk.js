@@ -117,7 +117,7 @@ const styles = theme => ({
       height: 530
     },
     backButton: {
-      display: 'block'
+      display: 'flex'
     },
     topButton: {
       display: 'none'
@@ -162,7 +162,7 @@ const Talk = ({ classes, children }) => {
     nextTalk
   } = children;
   const nexTalk = talks.find(
-    (item, index) => item.id === id && !nexTalk && talks[index + 1]
+    (item, index) => item.id === id && talks[index + 1]
   );
   return (
     <div>
