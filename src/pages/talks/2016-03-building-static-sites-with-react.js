@@ -1,21 +1,21 @@
 import React from 'react';
-import withStyles from 'react-jss';
 
 import Talk from './_talk';
 
-const styles = theme => ({
-  root: {
-    width: '100%'
-  }
-});
-
-const BuildingStaticSites = ({ classes }) => (
+const BuildingStaticSites = () => (
   <Talk>
     {{
+      id: 'isomorphic-react-without-node',
       title: 'Building Static Sites with React',
       subtitle: (
         <div>
-          Ian Sinnott <span>from</span> TruSTAR Technologies
+          <a href="https://www.iansinnott.com" target="_blank">
+            Ian Sinnott
+          </a>{' '}
+          from
+          <a href="https://www.trustar.co" target="_blank">
+            TruSTAR Technologies
+          </a>
         </div>
       ),
       videoUrl: 'https://www.youtube.com/embed/_1k2HEPH6fY',
@@ -33,13 +33,9 @@ const BuildingStaticSites = ({ classes }) => (
           </p>
         </div>
       ),
-      specialties: ['react-native', 'graphql', 'aws-lambda', 'microsoft-azure'],
-      nextTalk: {
-        name: 'Building Static Sites with React',
-        url: '/talks/2016-03-building-static-sites-with-react'
-      }
+      specialties: ['react-native', 'graphql', 'aws-lambda', 'microsoft-azure']
     }}
   </Talk>
 );
 
-export default withStyles(styles)(BuildingStaticSites);
+export default BuildingStaticSites;

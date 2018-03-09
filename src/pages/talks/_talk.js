@@ -6,9 +6,16 @@ import cx from 'classnames';
 import Link from 'gatsby-link';
 
 import imagePatternDots from '../../assets/images/patterns/dots.png';
-import { Header, Drops, Footer, TechnologyLogo, Button } from '../../components';
+import {
+  Header,
+  Drops,
+  Footer,
+  TechnologyLogo,
+  Button
+} from '../../components';
 import { Contact, SignUp } from '../../containers';
 import technologies from '../../data/technologies.json';
+import talks from '../../data/talks.json';
 
 const styles = theme => ({
   root: {
@@ -25,7 +32,7 @@ const styles = theme => ({
     }
   },
   mainContainer: {
-    padding: [40, 0, 0],
+    padding: [20, 0, 0],
     '& .row': {
       margin: 0
     },
@@ -52,31 +59,27 @@ const styles = theme => ({
   logo: {
     width: '100%',
     padding: [25, 0],
-    margin: ['0.5rem', 0]
+    margin: [8, 0]
   },
   subtitle: {
     fontStyle: 'italic',
     fontFamily: theme.typography.secondary,
-    color: theme.palette.primary.base,
-    marginBottom: 30,
-    '& span': {
-      color: theme.palette.text.base
-    }
+    color: theme.palette.text.base,
+    marginBottom: 30
   },
   backButton: {
-    display: 'inline-block',
     marginTop: 20,
-    fontWeight: 'bold',
-    position: 'absolute',
-    top: 80,
-    left: 20
+    display: 'none'
+  },
+  topButton: {
+    margin: [0, 0, 20, 20],
+    display: 'flex'
   },
 
   // RIGHT CONTENT
   rightContent: {
     '& h2': {
       marginTop: 10,
-      fontSize: 16,
       marginBottom: 10,
       backgroundColor: '#EAEAEA',
       padding: [10, 20],
@@ -105,14 +108,20 @@ const styles = theme => ({
     mainContainer: {
       padding: [40, 20, 20],
       '& .row': {
-        margin: [0, '-0.5rem']
+        margin: [0, -8]
       },
       '& .col-xs-12': {
-        padding: [0, '0.5rem']
+        padding: [0, 8]
       }
     },
     videoFrame: {
       height: 530
+    },
+    backButton: {
+      display: 'block'
+    },
+    topButton: {
+      display: 'none'
     },
     leftContent: {
       maxWidth: 550,
@@ -131,11 +140,6 @@ const styles = theme => ({
         }
       }
     },
-    backButton: {
-      position: 'relative',
-      top: 0,
-      left: 0
-    },
     button: {
       display: 'none'
     },
@@ -151,7 +155,18 @@ const styles = theme => ({
 });
 
 const Talk = ({ classes, children }) => {
-  const { videoUrl, title, subtitle, content, specialties, nextTalk } = children;
+  const {
+    id,
+    videoUrl,
+    title,
+    subtitle,
+    content,
+    specialties,
+    nextTalk
+  } = children;
+  const nexTalk = talks.find(
+    (item, index) => item.id === id && !nexTalk && talks[index + 1]
+  );
   return (
     <div>
       <Helmet>
@@ -166,6 +181,9 @@ const Talk = ({ classes, children }) => {
           <div className={cx(classes.mainContainer, 'container')}>
             <div className="row">
               <div className={cx(classes.videoContainer, 'col-xs-12')}>
+                <Link className={cx(classes.topButton, 'bold')} to="/talks">
+                  ← Back to All Talks
+                </Link>
                 <iframe
                   className={classes.videoFrame}
                   src={videoUrl}
@@ -180,7 +198,7 @@ const Talk = ({ classes, children }) => {
                   <div className={classes.subtitle}>{subtitle}</div>
                   <div>{content}</div>
                 </div>
-                <Link className={classes.backButton} to="/talks">
+                <Link className={cx(classes.backButton, 'bold')} to="/talks">
                   ← Back to All Talks
                 </Link>
               </div>
@@ -215,15 +233,17 @@ const Talk = ({ classes, children }) => {
                   </div>
                 </div>
               </div>
-              <Button
-                showArrow
-                palette="text"
-                textAlign="left"
-                className={classes.button}
-                href={nextTalk.url}
-              >
-                Up Next: {nextTalk.name}
-              </Button>
+              {nexTalk && (
+                <Button
+                  showArrow
+                  palette="text"
+                  textAlign="left"
+                  className={classes.button}
+                  href={nexTalk.url}
+                >
+                  Up Next: {nexTalk.title}
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -245,15 +265,12 @@ Talk.propTypes = {
    * Talk definitions.
    */
   children: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.object.isRequired,
     videoUrl: PropTypes.any.isRequired,
     content: PropTypes.object.isRequired,
-    specialties: PropTypes.arrayOf(PropTypes.string).isRequired,
-    nextTalk: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired
-    }).isRequired
+    specialties: PropTypes.arrayOf(PropTypes.string).isRequired
   })
 };
 

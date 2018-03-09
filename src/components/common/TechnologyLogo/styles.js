@@ -25,7 +25,7 @@ export default theme => ({
     },
     name: {
       padding: 0,
-      display: props => 'block'
+      display: () => 'block'
     }
   }
 });
