@@ -13,6 +13,7 @@ import imagePodcast from '../assets/images/home/podcast.png';
 import imageUpcomingEvents from '../assets/images/home/upcoming-events.png';
 import imageBlog from '../assets/images/home/blog.png';
 import imageTechAndMore from '../assets/images/home/and-more.jpg';
+
 import technologies from '../data/technologies.json';
 import {
   Header,
@@ -313,7 +314,7 @@ const HomePage = ({ classes }) => (
     <div className={classes.root}>
       {/* HERO */}
       <div className={classes.hero}>
-        <Header reversed />
+        <Header reversed showHomeLink={false} />
 
         <div className="container">
           <div className={classes.heroHeading}>
@@ -417,7 +418,12 @@ const HomePage = ({ classes }) => (
                     enterText: 'Learn more about Consulting',
                     content: (
                       <div>
-                        <p className={classes.servicesSection}>
+                        <ImageText
+                          className={classes.servicesSection}
+                          image={imageProblem}
+                          subtitle="Problem"
+                          stackOnMobile
+                        >
                           As technologists, it’s all too easy to get decision
                           fatigue. Fancy new solutions promise to solve our
                           technical and business problems. But what is the best
@@ -425,20 +431,30 @@ const HomePage = ({ classes }) => (
                           trouble 2 years from now? What are the trade-offs
                           between Angular and React? What is the cost of not
                           changing from your current stack?
-                        </p>
-                        <p className={classes.servicesSection}>
+                        </ImageText>
+                        <ImageText
+                          className={classes.servicesSection}
+                          image={imageSolution}
+                          subtitle="Solution"
+                          stackOnMobile
+                        >
                           We can help you to answer these questions and more.
                           With expert advice, code reviews, and one-on-one
                           coding assistance, we’ll guide you through the process
                           to modernize your stack, lower costs, increase your
                           productivity, improve performance, and increase
                           developer happiness.
-                        </p>
-                        <p className={classes.servicesSection}>
+                        </ImageText>
+                        <ImageText
+                          className={classes.servicesSection}
+                          image={imageBenefits}
+                          subtitle="Benefit"
+                          stackOnMobile
+                        >
                           Don’t just learn about the technologies redefining
                           tomorrow’s infrastructure – learn why they will save
                           you money and even help you attract new talent, today.
-                        </p>
+                        </ImageText>
                       </div>
                     )
                   },
@@ -448,14 +464,24 @@ const HomePage = ({ classes }) => (
                     enterText: 'Learn more about Remote Placement',
                     content: (
                       <div>
-                        <p className={classes.servicesSection}>
+                        <ImageText
+                          className={classes.servicesSection}
+                          image={imageProblem}
+                          subtitle="Problem"
+                          stackOnMobile
+                        >
                           Let’s face it – hiring is hard. It’s even more
                           difficult when you have to pay recruiters upwards of
                           25% first-year salary. In this modern connected world,
                           why should we limit our tech employees to those
                           physically present at our office?
-                        </p>
-                        <p className={classes.servicesSection}>
+                        </ImageText>
+                        <ImageText
+                          className={classes.servicesSection}
+                          image={imageSolution}
+                          subtitle="Solution"
+                          stackOnMobile
+                        >
                           With offices in New York, Quito, and Medellin, our
                           engineering partners at JobSity give you the
                           short-term or long-term development assistance that
@@ -465,11 +491,16 @@ const HomePage = ({ classes }) => (
                           culture fit, engineers will go through your company’s
                           internal hiring process and work under your
                           management.
-                        </p>
-                        <p className={classes.servicesSection}>
+                        </ImageText>
+                        <ImageText
+                          className={classes.servicesSection}
+                          image={imageBenefits}
+                          subtitle="Benefit"
+                          stackOnMobile
+                        >
                           Expand your team today with high quality remote
                           engineers – without the recruiter’s fee.
-                        </p>
+                        </ImageText>
                       </div>
                     )
                   },
@@ -479,14 +510,24 @@ const HomePage = ({ classes }) => (
                     enterText: 'Learn more about Engineering Retreats',
                     content: (
                       <div>
-                        <p className={classes.servicesSection}>
+                        <ImageText
+                          className={classes.servicesSection}
+                          image={imageProblem}
+                          subtitle="Problem"
+                          stackOnMobile
+                        >
                           We believe that offsite retreats should be as
                           productive as they are fun. But all too often retreats
                           fail at both: productivity is stymied by a lack of
                           fresh perspective, and the fun is tainted by your
                           inability to be productive.
-                        </p>
-                        <p className={classes.servicesSection}>
+                        </ImageText>
+                        <ImageText
+                          className={classes.servicesSection}
+                          image={imageSolution}
+                          subtitle="Solution"
+                          stackOnMobile
+                        >
                           With React Retreat, our consultants offer fresh
                           perspective and insight into the technical problems
                           you are experiencing, and provide you with an
@@ -495,11 +536,16 @@ const HomePage = ({ classes }) => (
                           with team-building activities that appeal to your
                           engineering team – to ensure both productivity and
                           fun.
-                        </p>
-                        <p className={classes.servicesSection}>
+                        </ImageText>
+                        <ImageText
+                          className={classes.servicesSection}
+                          image={imageBenefits}
+                          subtitle="Benefit"
+                          stackOnMobile
+                        >
                           Bring your engineers closer together while solving
                           your toughest engineering challenges, today.
-                        </p>
+                        </ImageText>
                       </div>
                     )
                   }

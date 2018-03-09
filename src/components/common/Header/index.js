@@ -11,7 +11,15 @@ import MenuMobile from '../../navigation/MenuMobile';
 import styles from './styles';
 
 const Header = props => {
-  const { theme, sheet, classes, className, reversed, ...etc } = props;
+  const {
+    theme,
+    sheet,
+    classes,
+    className,
+    reversed,
+    showHomeLink,
+    ...etc
+  } = props;
   return (
     <header className={cx(classes.root, 'container', className)} {...etc}>
       <div className="row">
@@ -26,7 +34,11 @@ const Header = props => {
         </div>
         <div className={cx(classes.menu, 'col-xs-9')}>
           <MenuMobile className={classes.mobile} reversed={reversed} />
-          <MenuDesktop className={classes.desktop} reversed={reversed} />
+          <MenuDesktop
+            className={classes.desktop}
+            reversed={reversed}
+            showHomeLink={showHomeLink}
+          />
         </div>
       </div>
     </header>
@@ -37,7 +49,16 @@ Header.propTypes = {
   /**
    * Set theme with reversed colors.
    */
-  reversed: PropTypes.bool
+  reversed: PropTypes.bool,
+
+  /**
+   * In the list of links, add the home link in the beggining.
+   */
+  showHomeLink: PropTypes.bool
+};
+
+Header.defaultProps = {
+  showHomeLink: true
 };
 
 export default withStyles(styles)(Header);
