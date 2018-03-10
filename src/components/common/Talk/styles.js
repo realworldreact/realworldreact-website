@@ -106,7 +106,7 @@ export default theme => ({
     },
     image: {
       width: 220,
-      height: 'auto'
+      height: 220
     },
     info: {
       border: '1px solid #EAEAEA',

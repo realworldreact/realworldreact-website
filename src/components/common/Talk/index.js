@@ -8,7 +8,7 @@ import styles from './styles';
 
 const Talk = props => {
   const { theme, sheet, classes, className, talk, ...etc } = props;
-  const { image, title, description, id, url } = talk;
+  const { url, name, description, image } = talk;
   return (
     <article className={cx(classes.root, className)} {...etc}>
       <div className={cx(classes.main, classes.mainTransition)}>
@@ -17,7 +17,7 @@ const Talk = props => {
           style={{ backgroundImage: `url(${image})` }}
         />
         <div className={classes.info}>
-          <h1>{title}</h1>
+          <h1>{name}</h1>
           <div
             className={classes.description}
             dangerouslySetInnerHTML={{ __html: description }}
@@ -44,7 +44,7 @@ Talk.propTypes = {
   talk: PropTypes.shape({
     id: PropTypes.string,
     url: PropTypes.string,
-    title: PropTypes.string,
+    name: PropTypes.string,
     description: PropTypes.string,
     image: PropTypes.string
   }).isRequired

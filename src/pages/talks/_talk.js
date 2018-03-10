@@ -152,22 +152,14 @@ const styles = theme => ({
 });
 
 const Talk = ({ classes, children }) => {
-  const {
-    id,
-    videoUrl,
-    title,
-    subtitle,
-    content,
-    specialties,
-    nextTalk
-  } = children;
-  const nexTalk = talks.find(
-    (item, index) => item.id === id && talks[index + 1]
-  );
+  const { id, videoUrl, subtitle, content, specialties } = children;
+  const talk = talks.find(item => item.id === id);
+  const talkIndex = talks.findIndex(item => item.id === id);
+  const nextTalk = talks[talkIndex + 1];
   return (
     <div>
       <Helmet>
-        <title>{title}</title>
+        <title>{talk.name}</title>
       </Helmet>
       <div className={classes.root}>
         {/* HEADER */}
@@ -191,7 +183,7 @@ const Talk = ({ classes, children }) => {
             <div className="row">
               <div className="col-xs-12 col-sm-8">
                 <div className={classes.leftContent}>
-                  <h1>{title}</h1>
+                  <h1>{talk.name}</h1>
                   <div className={classes.subtitle}>{subtitle}</div>
                   <div>{content}</div>
                 </div>
@@ -228,15 +220,15 @@ const Talk = ({ classes, children }) => {
                   })}
                 </div>
               </div>
-              {nexTalk && (
+              {!!nextTalk && (
                 <Button
                   showArrow
                   palette="text"
                   textAlign="left"
                   className={classes.button}
-                  href={nexTalk.url}
+                  href={nextTalk.url}
                 >
-                  Up Next: {nexTalk.title}
+                  Up Next: {nextTalk.title}
                 </Button>
               )}
             </div>
@@ -258,13 +250,14 @@ const Talk = ({ classes, children }) => {
 Talk.propTypes = {
   /**
    * Talk definitions.
+   * The information from the talk which is shown in the list of talks
+   * is fetched from the talks data file using the talk id.
    */
   children: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.object.isRequired,
+    subtitle: PropTypes.any.isRequired,
     videoUrl: PropTypes.any.isRequired,
-    content: PropTypes.object.isRequired,
+    content: PropTypes.any.isRequired,
     specialties: PropTypes.arrayOf(PropTypes.string).isRequired
   })
 };

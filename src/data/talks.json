@@ -1,23 +1,9 @@
 [
   {
-    "id": "isomorphic-react-without-node-1",
-    "url": "/talks/2018-03-isomorphic-react-without-node",
-    "title": "Isomorphic React without Node",
-    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
-    "image": "/images/talks/2018-03-isomorphic-react-without-node.jpg"
-  },
-  {
-    "id": "isomorphic-react-without-node-2",
-    "url": "/talks/2018-03-isomorphic-react-without-node",
-    "title": "Isomorphic React without Node",
-    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
-    "image": "/images/talks/2018-03-isomorphic-react-without-node.jpg"
-  },
-  {
-    "id": "isomorphic-react-without-node-2",
+    "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
-    "title": "Isomorphic React without Node",
-    "description": "Listen to Ben Ilegbodu from Eventbrite as he takes you through some really cool stuff that pertains to isomorphic react without using Node.",
-    "image": "/images/talks/2018-03-isomorphic-react-without-node.jpg"
+    "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
+    "name": "Building Static Sites with React",
+    "description": "This talk will focus on how we can use our existing knowledge of JavaScript and React to build rich static sites without the overhead of learning new technology. We can continue to leverage all the existing dev tools we know and love to build full React applications and then simply generate static files from our components. We’ll also discuss some options to add common server-side functionality to static sites without running a server."
   }
 ]
