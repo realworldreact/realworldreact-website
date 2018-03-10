@@ -35,6 +35,8 @@ const styles = theme => ({
     '.text-inverted': {
       color: theme.palette.inverted.base
     },
+
+    // Background
     '.background-primary': {
       backgroundColor: theme.palette.primary.base
     },

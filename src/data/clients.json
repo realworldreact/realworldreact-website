@@ -2,31 +2,31 @@
   {
     "name": "Microsoft",
     "logo": "/images/clients/microsoft.png",
-    "route": "/"
+    "route": ""
   },
   {
     "name": "Netflix",
     "logo": "/images/clients/netflix.png",
-    "route": "/"
+    "route": ""
   },
   {
     "name": "Tesla",
     "logo": "/images/clients/tesla.png",
-    "route": "/"
+    "route": ""
   },
   {
     "name": "Pinterest",
     "logo": "/images/clients/pinterest.png",
-    "route": "/"
+    "route": ""
   },
   {
     "name": "Amazon",
     "logo": "/images/clients/amazon.png",
-    "route": "/"
+    "route": ""
   },
   {
     "name": "Twilio",
     "logo": "/images/clients/twilio.png",
-    "route": "/"
+    "route": ""
   }
 ]
