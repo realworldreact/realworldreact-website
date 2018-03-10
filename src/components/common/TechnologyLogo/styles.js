@@ -1,7 +1,6 @@
 export default theme => ({
   root: {
     textAlign: 'center',
-    marginBottom: 25,
     '& img': {
       diplay: 'block'
     }
@@ -11,7 +10,8 @@ export default theme => ({
     fontStyle: 'italic',
     fontSize: 16,
     lineHeight: '20px',
-    padding: [0, 10]
+    padding: [0, 10],
+    display: props => (props.hideNameOnSmall ? 'none' : 'block')
   },
   logo: {
     width: 60,
@@ -21,10 +21,11 @@ export default theme => ({
   // small +
   '@media screen and (min-width: 48em)': {
     root: {
-      marginBottom: 45
+      //
     },
     name: {
-      padding: 0
+      padding: 0,
+      display: () => 'block'
     }
   }
 });

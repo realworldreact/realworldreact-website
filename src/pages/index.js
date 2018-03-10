@@ -77,7 +77,8 @@ const styles = theme => ({
     flexWrap: 'wrap'
   },
   logosItem: {
-    width: '50%'
+    width: '50%',
+    marginBottom: 25
   },
 
   // SERVICES
@@ -211,7 +212,8 @@ const styles = theme => ({
       flexWrap: 'wrap'
     },
     logosItem: {
-      width: '14.28%'
+      width: '14.28%',
+      marginBottom: 45
     },
 
     // SERVICES
