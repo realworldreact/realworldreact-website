@@ -20,12 +20,14 @@ const ImageText = props => {
   } = props;
   return (
     <div className={cx(classes.root, className)} {...etc}>
-      <div className={classes.imageContainer}>
-        <img
-          src={image}
-          {...imageProps}
-          className={cx(classes.image, imageProps.className)}
-        />
+      <div className={classes.resources}>
+        <div className={classes.imageContainer}>
+          <img
+            src={image}
+            {...imageProps}
+            className={cx(classes.image, imageProps.className)}
+          />
+        </div>
         {!!subtitle && <div className={classes.subtitle}>{subtitle}</div>}
       </div>
       <div className={classes.text}>{children}</div>

@@ -482,10 +482,10 @@ const HomePage = ({ classes }) => (
                           subtitle="Solution"
                           stackOnMobile
                         >
-                          With offices in New York, Quito, and Medellin, our
-                          engineering partners at JobSity give you the
-                          short-term or long-term development assistance that
-                          you need. We select candidates from the top 1% of
+                          With offices in New York, Quito, Cartagena, and
+                          Medellin, our engineering partners at JobSity give you
+                          the short-term or long-term development assistance
+                          that you need. We select candidates from the top 1% of
                           applicants and send them through a comprehensive
                           training program. To further vet the talent and
                           culture fit, engineers will go through your company’s

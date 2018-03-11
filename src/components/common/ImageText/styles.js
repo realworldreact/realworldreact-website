@@ -4,33 +4,37 @@ export default theme => ({
     width: '100%',
     flexDirection: props => (props.stackOnMobile ? 'column' : 'row')
   },
-  imageContainer: {
+  resources: {
     flex: '0 0 auto',
-    textAlign: 'center',
-    marginRight: props => (props.stackOnMobile ? 0 : 40),
-    marginBottom: props => (props.stackOnMobile ? 20 : 'auto')
+    textAlign: props => (props.stackOnMobile ? 'center' : 'left'),
+    marginBottom: props => (props.stackOnMobile ? 20 : 'auto'),
+    width: props => (props.stackOnMobile ? '100%' : 90)
   },
+  imageContainer: {},
   image: {
     display: 'inline-block',
     width: 50
   },
   subtitle: {
     marginTop: 10,
+    paddingRight: 5,
     fontFamily: theme.typography.secondary,
     fontStyle: 'italic'
   },
-  text: {
-    textAlign: 'left'
-  },
+  text: {},
 
   // small +
   '@media screen and (min-width: 30em)': {
     root: {
       flexDirection: () => 'row'
     },
-    imageContainer: {
-      marginRight: () => 40,
-      marginBottom: () => 'auto'
+    resources: {
+      textAlign: () => 'left',
+      marginBottom: () => 'auto',
+      width: () => 90
+    },
+    subtitle: {
+      wordBreak: 'break-all'
     }
   }
 });

@@ -18,6 +18,8 @@ const TextField = props => {
     type,
     value,
     onChange,
+    onFocus,
+    onBlur,
     placeholder,
     errorText,
     fieldProps,
@@ -31,6 +33,8 @@ const TextField = props => {
         type: node === 'input' ? type : null,
         value,
         onChange,
+        onFocus,
+        onBlur,
         placeholder,
         ...fieldProps,
         className: cx(classes.field, fieldProps.className)
@@ -68,14 +72,12 @@ TextField.propTypes = {
   type: PropTypes.oneOf(['text', 'number', 'email']),
 
   /**
-   * Field value when controlled.
+   * Field input props.
    */
   value: PropTypes.string,
-
-  /**
-   * Field onchange event handler.
-   */
   onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
 
   /**
    * Field placeholder text.

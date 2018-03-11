@@ -15,9 +15,7 @@ export default theme => ({
     width: 24,
     backgroundColor: theme.palette.primary.base
   },
-  photoContainer: {
-    //
-  },
+  photoContainer: {},
   photo: {
     borderStyle: 'solid',
     borderColor: '#fff',
@@ -25,6 +23,7 @@ export default theme => ({
     width: 120,
     height: 120,
     backgroundSize: 'cover',
+    backgroundColor: theme.palette.inverted.base,
     backgroundImage: props => 'url(' + props.trainer.photo + ')'
   },
   info: {
@@ -62,9 +61,7 @@ export default theme => ({
     flex: 1,
     padding: 20
   },
-  footer: {
-    //
-  },
+  footer: {},
   footerTitle: {
     padding: [12, 24],
     fontWeight: 'bold',

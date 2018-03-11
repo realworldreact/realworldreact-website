@@ -11,7 +11,7 @@ export default theme => {
       width: '100%',
       outline: 'none',
       background: 'transparent',
-      lineHeight: '1',
+      lineHeight: `${16 * 1.5}px`,
       fontSize: 16,
       fontWeight: 'bold',
       resize: 'none',
