@@ -20,7 +20,15 @@ export default theme => ({
     }
   },
   socialButton: {
-    //
+    width: 40,
+    height: 40,
+    background: '#ffffff',
+    display: 'inline-block',
+    borderRadius: '50%',
+    lineHeight: '40px',
+    margin: 10,
+    color: theme.palette.black.contrastText,
+    fontSize: 22
   },
   centerContainer: {
     maxWidth: '100%',
@@ -55,7 +63,7 @@ export default theme => ({
     socialButton: {
       transition: 'all 200ms ease-out',
       '&:hover': {
-        opacity: 0.5
+        color: theme.palette.primary.light
       }
     },
     centerContainer: {
