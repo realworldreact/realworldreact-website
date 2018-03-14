@@ -6,7 +6,6 @@ import cx from 'classnames';
 
 import navigation from '../../../data/navigation.json';
 import logoReversed from '../../../assets/images/rwr/logo-mini-reversed.png';
-import imageMeetup from '../../../assets/images/social/meetup.svg';
 import styles from './styles';
 
 const Footer = props => {
