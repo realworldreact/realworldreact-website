@@ -43,6 +43,12 @@ const styles = theme => ({
   instructors: {
     //
   },
+  instructorsList: {
+    margin: 0
+  },
+  instructorColumn: {
+    padding: 0
+  },
   instructorItem: {
     marginBottom: 40
   },
@@ -87,6 +93,14 @@ const styles = theme => ({
     // MAIN
     mainContainer: {
       padding: [40, 20]
+    },
+
+    // INSTRUCTORS
+    instructorsList: {
+      margin: [0, -8]
+    },
+    instructorColumn: {
+      padding: [0, 8]
     },
 
     // SERVICES
@@ -138,9 +152,16 @@ const TeamPage = ({ classes }) => (
 
           {/* INSTRUCTORS */}
           <div className={classes.instructors}>
-            <div className="row">
+            <div className={cx(classes.instructorsList, 'row')}>
               {trainers.map((trainer, index) => (
-                <div key={index} className="col-xs-12 col-sm-6">
+                <div
+                  key={index}
+                  className={cx(
+                    classes.instructorColumn,
+                    'col-xs-12',
+                    'col-sm-6'
+                  )}
+                >
                   <Trainer
                     className={classes.instructorItem}
                     trainer={trainer}
