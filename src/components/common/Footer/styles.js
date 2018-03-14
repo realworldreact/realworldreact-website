@@ -19,6 +19,9 @@ export default theme => ({
       marginBottom: 10
     }
   },
+  socialButton: {
+    //
+  },
   centerContainer: {
     maxWidth: '100%',
     margin: [40, 0, 0]
@@ -48,6 +51,12 @@ export default theme => ({
     contact: {
       marginBottom: -60,
       top: -120
+    },
+    socialButton: {
+      transition: 'all 200ms ease-out',
+      '&:hover': {
+        opacity: 0.5
+      }
     },
     centerContainer: {
       maxWidth: 320,

@@ -31,7 +31,8 @@ const styles = theme => ({
   },
   mainContainer: {},
   mainItems: {
-    padding: 0
+    padding: 0,
+    margin: 0
   },
   mainContent: {
     padding: 20,

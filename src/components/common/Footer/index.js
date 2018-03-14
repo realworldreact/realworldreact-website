@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import withStyles from 'react-jss';
 import cx from 'classnames';
+import Ripples from 'react-ripples';
 
 import navigation from '../../../data/navigation.json';
 import logoReversed from '../../../assets/images/rwr/logo-mini-reversed.png';
-import imageYoutube from '../../../assets/images/social/youtube.png';
-import imageFacebook from '../../../assets/images/social/facebook.png';
-import imageTwitter from '../../../assets/images/social/twitter.png';
-import imageMeetup from '../../../assets/images/social/meetup.png';
+import imageYoutube from '../../../assets/images/social/youtube.svg';
+import imageFacebook from '../../../assets/images/social/facebook.svg';
+import imageTwitter from '../../../assets/images/social/twitter.svg';
+import imageMeetup from '../../../assets/images/social/meetup.svg';
 import styles from './styles';
 
 const Footer = props => {
@@ -40,30 +41,48 @@ const Footer = props => {
             <div className="col-xs-6">
               <div className={cx(classes.social, 'row')}>
                 <div className="col-xs-6">
-                  <a
-                    href="https://www.youtube.com/channel/UCgL3tdpvoARHuX-_3eLWEgg"
-                    target="youtube"
-                  >
-                    <img src={imageYoutube} alt="YouTube" />
-                  </a>
+                  <Ripples>
+                    <a
+                      className={classes.socialButton}
+                      href="https://www.youtube.com/channel/UCgL3tdpvoARHuX-_3eLWEgg"
+                      target="youtube"
+                    >
+                      <img src={imageYoutube} alt="YouTube" />
+                    </a>
+                  </Ripples>
                 </div>
                 <div className="col-xs-6">
-                  <a
-                    href="https://www.facebook.com/RealWorldReact"
-                    target="facebook"
-                  >
-                    <img src={imageFacebook} alt="Facebook" />
-                  </a>
+                  <Ripples>
+                    <a
+                      className={classes.socialButton}
+                      href="https://www.facebook.com/RealWorldReact"
+                      target="facebook"
+                    >
+                      <img src={imageFacebook} alt="Facebook" />
+                    </a>
+                  </Ripples>
                 </div>
                 <div className="col-xs-6">
-                  <a href="https://twitter.com/rwreact" target="twitter">
-                    <img src={imageTwitter} alt="Twitter" />
-                  </a>
+                  <Ripples>
+                    <a
+                      className={classes.socialButton}
+                      href="https://twitter.com/rwreact"
+                      target="twitter"
+                    >
+                      <img src={imageTwitter} alt="Twitter" />
+                    </a>
+                  </Ripples>
                 </div>
                 <div className="col-xs-6">
-                  <a href="https://meetup.com/real-World-React" target="meetup">
-                    <img src={imageMeetup} alt="Meetup" />
-                  </a>
+                  <Ripples>
+                    <a
+                      className={classes.socialButton}
+                      href="https://meetup.com/real-World-React"
+                      target="meetup"
+                    >
+                      <img src={imageMeetup} alt="Meetup" />
+                    </a>
+                  </Ripples>
                 </div>
               </div>
             </div>
