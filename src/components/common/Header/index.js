@@ -4,8 +4,8 @@ import Link from 'gatsby-link';
 import withStyles from 'react-jss';
 import cx from 'classnames';
 
-import logoAuto from '../../../assets/images/rwr/logo-mini.png';
-import logoReversed from '../../../assets/images/rwr/logo-mini-reversed.png';
+import logoAuto from '../../../assets/images/logos/logo-mini.png';
+import logoReversed from '../../../assets/images/logos/logo-mini-reversed.png';
 import MenuDesktop from '../../navigation/MenuDesktop';
 import MenuMobile from '../../navigation/MenuMobile';
 import styles from './styles';

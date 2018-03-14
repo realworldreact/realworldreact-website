@@ -3,6 +3,9 @@ import imagePatternDots from '../../../assets/images/patterns/dots.png';
 // The height of the page header.
 export const MENU_MOBILE_HEADER_HEIGHT = 100;
 
+// The time the menu takes to animate.
+export const MENU_MOBILE_ANIM_TIME = 500;
+
 // The class to add/remove to the body element on menu shown/hidden.
 export const MENU_MOBILE_BODY_ACTIVE = 'menu-mobile-body-active';
 
@@ -31,7 +34,7 @@ export default theme => ({
     margin: [6, 0],
     display: 'block',
     top: 0,
-    transition: 'all 500ms ease-out',
+    transition: `all ${MENU_MOBILE_ANIM_TIME}ms ease-out`,
     backgroundColor: props =>
       props.reversed ? '#fff' : theme.palette.inverted.base,
 
@@ -73,7 +76,7 @@ export default theme => ({
     backgroundColor: props =>
       props.reversed ? theme.palette.inverted.base : '#fff',
     backgroundImage: props => props.reversed && `url(${imagePatternDots})`,
-    transition: 'all 500ms ease-out',
+    transition: `all ${MENU_MOBILE_ANIM_TIME}ms ease-out`,
 
     '$active &': {
       padding: 20,

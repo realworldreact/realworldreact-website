@@ -4,18 +4,22 @@
     "name": "Services",
     "items": [
       {
+        "id": "training",
         "name": "Training",
         "route": "/training"
       },
       {
+        "id": "consulting",
         "name": "Consulting",
         "route": "/consulting"
       },
       {
+        "id": "remote-placement",
         "name": "Remote Placement",
         "route": "/remote-placement"
       },
       {
+        "id": "engineering-retreats",
         "name": "Engineering Retreats",
         "route": "/engineering-retreats"
       }
@@ -26,22 +30,27 @@
     "name": "Resources",
     "items": [
       {
+        "id": "talks",
         "name": "Talks",
         "route": "/talks"
       },
       {
+        "id": "podcast",
         "name": "Podcast",
         "route": "/podcast"
       },
       {
+        "id": "events",
         "name": "Events",
         "route": "/events"
       },
       {
+        "id": "blog",
         "name": "Blog",
-        "route": "/"
+        "route": "https://medium.com/real-world-react"
       },
       {
+        "id": "our-team",
         "name": "Our Team",
         "route": "/team"
       }

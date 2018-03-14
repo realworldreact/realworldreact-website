@@ -6,7 +6,10 @@ import cx from 'classnames';
 
 import navigation from '../../../data/navigation.json';
 import Button from '../../forms/Button';
-import styles, { MENU_MOBILE_BODY_ACTIVE } from './styles';
+import styles, {
+  MENU_MOBILE_BODY_ACTIVE,
+  MENU_MOBILE_ANIM_TIME
+} from './styles';
 
 class MenuMobile extends React.Component {
   constructor() {
@@ -80,9 +83,15 @@ class MenuMobile extends React.Component {
   onOption = route => {
     this.removeBodyActiveClass();
     this.setState({ active: false });
-    if (route) {
-      navigateTo(route);
-    }
+
+    // Allow the user to close the menu before URL changes.
+    setTimeout(() => {
+      if (/^https?\:\/\//.test(route)) {
+        window.open(route, '_blank');
+      } else {
+        navigateTo(route);
+      }
+    }, MENU_MOBILE_ANIM_TIME);
   };
 
   addBodyActiveClass = () => {

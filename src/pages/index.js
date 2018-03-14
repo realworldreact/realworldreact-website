@@ -15,6 +15,7 @@ import imageBlog from '../assets/images/home/blog.png';
 import imageTechAndMore from '../assets/images/home/and-more.jpg';
 
 import technologies from '../data/technologies.json';
+import navigation from '../data/navigation.json';
 import {
   Header,
   Footer,
@@ -29,6 +30,10 @@ import { Contact, SignUp } from '../containers';
 // Select the first 13 elements in the list of technology logos
 // becuse we need to fit them in the layout.
 const selectedTechnologyLogos = technologies.slice(0, 13);
+
+// Get the links from navigation data.
+const linksResources = navigation.find(items => items.id === 'resources');
+const linkBlog = linksResources.items.find(item => item.id === 'blog');
 
 const styles = theme => ({
   root: {
@@ -632,7 +637,7 @@ const HomePage = ({ classes }) => (
                 title="03 Blog"
                 content="Learn what we've been up to from our latest blog posts on Medium."
                 enterText="See blog"
-                href="https://medium.com/@rwreact"
+                href={linkBlog.route}
               />
             </div>
           </div>

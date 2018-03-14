@@ -47,10 +47,7 @@ class Resource extends React.Component {
 
   onClick = event => {
     event.preventDefault();
-
     const { href } = this.props;
-
-    // If link is outside website.
     if (/^https?\:\/\//.test(href)) {
       window.open(href, '_blank');
     } else {

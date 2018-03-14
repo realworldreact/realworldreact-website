@@ -5,7 +5,7 @@ import withStyles from 'react-jss';
 import cx from 'classnames';
 
 import navigation from '../../../data/navigation.json';
-import logoReversed from '../../../assets/images/rwr/logo-mini-reversed.png';
+import logoReversed from '../../../assets/images/logos/logo-mini-reversed.png';
 import styles from './styles';
 
 const Footer = props => {
