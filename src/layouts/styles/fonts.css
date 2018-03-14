@@ -75,14 +75,14 @@
 }
 
 @font-face {
-  font-family: "icomeetup";
-  SRC: url("../../assets/fonts/icomeetup.woff") format("woff");
+  font-family: "iconmeetup";
+  SRC: url("../../assets/fonts/iconmeetup.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  font-family: "icomeetup";
+  font-family: "iconmeetup";
   speak: none;
   font-style: normal;
   font-weight: normal;
