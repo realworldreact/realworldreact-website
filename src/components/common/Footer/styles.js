@@ -25,7 +25,7 @@ export default theme => ({
     display: 'inline-block',
     borderRadius: '50%',
     lineHeight: '40px',
-    margin: 10,
+    margin: [0, 10, 10],
     color: theme.palette.black.contrastText,
     fontSize: 22
   },
