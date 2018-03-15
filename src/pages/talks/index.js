@@ -29,14 +29,13 @@ const styles = theme => ({
     }
   },
   mainHeading: {
-    textAlign: 'center',
+    display: 'flex',
     marginBottom: 20
   },
   talksHeading: {
-    display: 'inline-block',
-    margin: [0, 'auto'],
-    maxWidth: 380
+    margin: 'auto'
   },
+  headingTitleClassName: {},
   talk: {
     marginBottom: 20
   },
@@ -50,11 +49,20 @@ const styles = theme => ({
     display: 'none'
   },
 
+  // small -
+  '@media screen and (max-width: 30em)': {
+    // HEADING
+    headingTitleClassName: {
+      height: 80,
+      fontSize: 80
+    }
+  },
+
   // small +
   '@media screen and (min-width: 48em)': {
     // MAIN
     mainContainer: {
-      padding: [60, 20, 20],
+      padding: [40, 20],
       '& .row': {
         margin: [0, '-0.5rem']
       },
@@ -90,6 +98,7 @@ const TalksPage = ({ classes }) => (
             <div className={cx(classes.mainHeading, 'col-xs-12')}>
               <Heading
                 className={classes.talksHeading}
+                titleClassName={classes.headingTitleClassName}
                 title="T A L K S"
                 subtitle="Lessons from Leaders in the Field"
               />
