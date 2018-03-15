@@ -114,7 +114,7 @@ const styles = theme => ({
 
     // FOOTER
     footer: {
-      marginTop: 60
+      marginTop: 80
     },
     footerDrops: {
       display: 'block'

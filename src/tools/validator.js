@@ -5,14 +5,16 @@ const globalOptions = {
 };
 
 validate.formatters.getFirst = errors => {
-  const flatList = validate.flattenErrorsToArray(errors);
-  if (flatList && flatList.length) {
-    return flatList[0];
-  }
-  return false;
+  const formatted = {};
+  errors.forEach(err => {
+    formatted[err.attribute] = err.options.message || err.error;
+  });
+  return formatted;
 };
 
 export const createValidator = (constraints, options) => ({
+  constraints,
+
   validateForm: (dataMap, customOptions) => {
     return validate(dataMap, constraints, {
       ...globalOptions,
@@ -20,6 +22,7 @@ export const createValidator = (constraints, options) => ({
       ...customOptions
     });
   },
+
   validateField: (value, name, customOptions) => {
     const errors = validate.single(value, constraints[name], {
       ...globalOptions,

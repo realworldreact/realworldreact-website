@@ -4,6 +4,7 @@ import withStyles from 'react-jss';
 import TextareaAutoize from 'react-textarea-autosize';
 import cx from 'classnames';
 
+import ErrorMsg from '../ErrorMsg';
 import styles from './styles';
 
 const TextField = props => {
@@ -39,7 +40,7 @@ const TextField = props => {
         ...fieldProps,
         className: cx(classes.field, fieldProps.className)
       })}
-      {!!errorText && <div className={classes.errorText}>{errorText}</div>}
+      {!!errorText && <ErrorMsg>{errorText}</ErrorMsg>}
     </div>
   );
 };
@@ -85,9 +86,9 @@ TextField.propTypes = {
   placeholder: PropTypes.string,
 
   /**
-   * When the field has an error, show this text below it.
+   * When the field has an error, show this content below it.
    */
-  errorText: PropTypes.string,
+  errorText: PropTypes.any,
 
   /**
    * Extra fields to pass to the encapsulated field element.

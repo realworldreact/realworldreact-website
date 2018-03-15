@@ -65,13 +65,6 @@ export default theme => {
       '&[type="number"]': {
         '-moz-appearance': 'textfield'
       }
-    },
-    errorText: {
-      padding: [4, 0, 0, 14],
-      lineHeight: 1.2,
-      fontFamily: theme.typography.secondary,
-      fontStyle: 'italic',
-      color: theme.palette.alert.base
     }
   };
 };

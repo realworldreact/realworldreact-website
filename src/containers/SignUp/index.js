@@ -4,11 +4,11 @@ import withStyles from 'react-jss';
 import cx from 'classnames';
 
 import styles from './styles';
-import { TextField, Button } from '../../components/forms';
+import { Validation, TextField, Button } from '../../components/forms';
 import { createValidator } from '../../tools';
 
 const validator = createValidator({
-  Email: {
+  email: {
     email: { message: 'A valid email address is required.' }
   }
 });
@@ -16,7 +16,18 @@ const validator = createValidator({
 class SignUp extends React.Component {
   constructor() {
     super(...arguments);
-    this.state = { dirty: false, error: '', value: '' };
+
+    this.state = {
+      data: {
+        fields: { email: '' },
+        dirties: {},
+        changed: {},
+        errors: {}
+      }
+    };
+
+    // Validation form ref.
+    this.validation = null;
   }
 
   render() {
@@ -32,50 +43,53 @@ class SignUp extends React.Component {
       ...etc
     } = this.props;
     const cls = cx(classes.root, className);
-    const { error, value } = this.state;
+    const { data } = this.state;
     return (
-      <div className={cls} {...etc}>
-        <div className={classes.title}>
-          <span className="text-primary">_</span>
-          <strong>{title}</strong>
-        </div>
-        <div className={classes.description}>{description}</div>
-        <TextField
-          reversed={reversed}
-          palette={palette}
-          type="email"
-          placeholder="Email"
-          value={value}
-          onBlur={() => this.validate()}
-          onChange={this.onChange}
-        />
-        {!!error && <div className={classes.errorMsg}>{error}</div>}
-        <div className={classes.button}>
-          <Button textAlign="left" children="Submit" onClick={this.onSubmit} />
-        </div>
-      </div>
+      <Validation
+        ref={el => (this.validation = el)}
+        data={data}
+        validator={validator}
+        onUpdate={this.onUpdate}
+      >
+        <form className={cls} {...etc} onSubmit={this.onSubmit}>
+          <div className={classes.title}>
+            <span className="text-primary">_</span>
+            <strong>{title}</strong>
+          </div>
+          <div className={classes.description}>{description}</div>
+          <TextField
+            reversed={reversed}
+            palette={palette}
+            type="email"
+            placeholder="Email"
+            errorText={data.errors.email}
+            value={data.fields.email}
+            onBlur={() => this.validation.onBlur('email')}
+            onChange={ev => this.validation.onChange('email', ev.target.value)}
+          />
+          <div className={classes.button}>
+            <Button
+              textAlign="left"
+              children="Submit"
+              buttonProps={{ type: 'submit' }}
+              onClick={this.onSubmit}
+            />
+          </div>
+        </form>
+      </Validation>
     );
   }
 
-  validate = callback => {
-    const error = validator.validateField(this.state.value, 'Email');
-    this.setState({ dirty: true, error }, callback);
-  };
-
-  onChange = ev => {
-    const value = ev.target.value;
-    this.setState({ value }, () => {
-      if (this.state.dirty) {
-        this.validate();
-      }
-    });
+  onUpdate = (data, callback) => {
+    this.setState({ data }, callback);
   };
 
   onSubmit = ev => {
     ev.preventDefault();
-    this.validate(() => {
-      if (!this.state.error) {
-        // TODO: Connect with Netlify.
+    this.validation.validate(() => {
+      if (!this.validation.getCurrentErrors()) {
+        // TODO:
+        console.log('fields', this.state.data.fields);
       }
     });
   };

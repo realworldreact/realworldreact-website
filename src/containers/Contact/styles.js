@@ -1,15 +1,11 @@
 export default theme => ({
   root: {
-    marginBottom: 25,
     color: '#fff'
   },
   heading: {
     maxWidth: 550,
     margin: 'auto',
-    textAlign: 'center',
-    '& h2': {
-      fontSize: 20
-    }
+    textAlign: 'center'
   },
   required: {
     fontFamily: theme.typography.secondary,
@@ -23,14 +19,5 @@ export default theme => ({
     borderBottomWidth: 0,
     minHeight: 180,
     paddingTop: 10
-  },
-
-  // small +
-  '@media screen and (min-width: 48em)': {
-    heading: {
-      '& h2': {
-        fontSize: 32
-      }
-    }
   }
 });

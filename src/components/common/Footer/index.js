@@ -22,7 +22,7 @@ const Footer = props => {
     <footer className={cx(classes.root, 'container', className)} {...etc}>
       <div className="row">
         {!!headerContent && (
-          <div className={cx(classes.contact, 'col-xs-12')}>
+          <div className={cx(classes.headerContent, 'col-xs-12')}>
             {headerContent}
           </div>
         )}

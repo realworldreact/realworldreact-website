@@ -2,10 +2,9 @@ export default theme => ({
   root: {
     padding: 20
   },
-  contact: {
+  headerContent: {
     position: 'relative',
-    top: 0,
-    marginBottom: 30
+    marginBottom: 40
   },
   logo: {
     width: 100,
@@ -32,7 +31,7 @@ export default theme => ({
   },
   centerContainer: {
     maxWidth: '100%',
-    margin: [40, 0, 0]
+    margin: [40, 0]
   },
   blockTitle: {
     color: '#fff',
@@ -56,8 +55,8 @@ export default theme => ({
 
   // small +
   '@media screen and (min-width: 48em)': {
-    contact: {
-      marginBottom: -60,
+    headerContent: {
+      marginBottom: -40,
       top: -120
     },
     socialButton: {
