@@ -9,3 +9,4 @@ export Quote from './Quote';
 export Gallery from './Gallery';
 export Trainer from './Trainer';
 export Talk from './Talk';
+export EventItem from './EventItem';

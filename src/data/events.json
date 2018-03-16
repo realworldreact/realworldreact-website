@@ -1,0 +1,20 @@
+[
+  {
+    "id": "2017-12-14",
+    "meetupLink": "https://www.meetup.com/Real-World-React/events/245095649",
+    "name": "Visual Regression Testing, React + Serverless, Component Best Practices",
+    "place": "Brigade",
+    "address": "524 3rd St · San Francisco, CA",
+    "date": "Thursday, December 14, 2017",
+    "time": "6:00 PM to 9:00 PM",
+    "mapLat": 37.7808637,
+    "mapLng": -122.3954939,
+    "mapZoom": 18,
+    "talks": [
+      "Valeri Karpov: Casting and Validating State With Archetype",
+      "Parris Khachi: The Holy Grail of Visual Regression Testing",
+      "David Wells: React + Serverless Backends: A match made in heaven",
+      "Vlad Tsvang and Ryan Booth: Reusability Without Compromise"
+    ]
+  }
+]
