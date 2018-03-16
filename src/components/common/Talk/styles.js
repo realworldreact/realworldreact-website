@@ -23,9 +23,11 @@ export default theme => ({
     }
   },
   image: {
-    backgroundSize: 'cover',
     width: 75,
-    height: 75
+    height: 75,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundColor: theme.palette.inverted.base
   },
   info: {
     flex: 1,
