@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Form extends React.Component {
+class Validation extends React.Component {
   render() {
-    return this.props.children;
+    return <div>{this.props.children}</div>;
   }
 
   /**
@@ -75,7 +75,7 @@ class Form extends React.Component {
   };
 }
 
-Form.propTypes = {
+Validation.propTypes = {
   /**
    * Form data states.
    */
@@ -101,4 +101,4 @@ Form.propTypes = {
   onUpdate: PropTypes.func.isRequired
 };
 
-export default Form;
+export default Validation;
