@@ -83,10 +83,11 @@ const ConsultingPage = ({ classes }) => (
             <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <h1>
+                  In person, on-site consulting services for{' '}
                   <span className="text-inverted background-secondary">
-                    &nbsp;Expert developers&nbsp;
+                    scaling your architecture
                   </span>{' '}
-                  available for full-time hire.
+                  effectively
                 </h1>
               </div>
             </div>
@@ -95,24 +96,19 @@ const ConsultingPage = ({ classes }) => (
             <div className="col-xs-12 col-sm-8">
               <div className={classes.leftContent}>
                 <p>
-                  As technologists, it’s all too easy to get decision fatigue.
-                  Fancy new solutions promise to solve our technical and
-                  business problems. But what is the best choice, and why? Will
-                  heading down one path get you in trouble 2 years from now?
-                  What are the trade-offs between Angular and React? What is the
-                  cost of not changing from your current stack?
+                  Your engineering team is full of talented and capable
+                  individuals. They are led by competent managers. But even the
+                  best teams can benefit from outside, expert advice.
                 </p>
                 <p>
-                  We can help you to answer these questions and more. With
-                  expert advice, code reviews, and one-on-one coding assistance,
-                  we’ll guide you through the process to modernize your stack,
-                  lower costs, increase your productivity, and increase
-                  developer happiness.
+                  Our consulting services can help you to effectively scale your
+                  architecture and to ensure that the decisions you are making
+                  today will benefit you in 10 years time, not get you into
+                  technical debt.
                 </p>
                 <p>
-                  Don’t just learn about the technologies redefining tomorrow’s
-                  infrastructure -- learn why they will save you money and even
-                  help you attract new talent, today.
+                  Contact us today to learn how one of our expert consultants
+                  can help you to build tomorrow’s architecture, today.
                 </p>
               </div>
             </div>
