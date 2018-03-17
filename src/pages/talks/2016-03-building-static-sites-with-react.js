@@ -35,7 +35,7 @@ const TalkImplementation = () => (
           </p>
         </div>
       ),
-      specialties: ['react-native', 'graphql', 'aws-lambda', 'microsoft-azure']
+      specialties: ['react', 'redux', 'webpack']
     }}
   </Talk>
 );
