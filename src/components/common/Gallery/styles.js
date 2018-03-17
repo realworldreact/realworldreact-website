@@ -50,6 +50,7 @@ export default () => ({
     height: '100%',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
     transition: 'all 200ms ease-out',
     '&:hover': {
       opacity: 0.9,
