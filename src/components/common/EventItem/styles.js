@@ -23,7 +23,7 @@ export default theme => ({
     //
   },
   main: {
-    //
+    backgroundColor: '#fff'
   },
   content: {
     padding: [0, 20, 20]

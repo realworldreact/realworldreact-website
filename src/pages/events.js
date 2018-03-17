@@ -42,10 +42,11 @@ const styles = theme => ({
   events: {
     marginTop: 40
   },
-  event: {
-    '&:not(:first-child)': {
-      marginTop: 40
-    }
+  event: {},
+  eventSeparator: {
+    display: 'block',
+    width: '100%',
+    height: 40
   },
 
   // FOOTER
@@ -85,9 +86,12 @@ const styles = theme => ({
 
     // EVENTS
     event: {
-      display: 'flex'
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column'
     },
     eventItem: {
+      zIndex: 2,
       maxWidth: 620
     },
     // Event item even
@@ -97,6 +101,45 @@ const styles = theme => ({
     // Event item odd
     eventItem1: {
       marginLeft: 'auto'
+    },
+    eventSeparator: {
+      zIndex: 1,
+      position: 'relative',
+      '&:before': {
+        content: '""',
+        display: 'block',
+        position: 'absolute',
+        left: '50%',
+        top: 0,
+        height: 40,
+        borderLeft: '1px solid #e9e9e9'
+      },
+      '&:after': {
+        content: '""',
+        display: 'block',
+        position: 'absolute',
+        borderStyle: 'solid',
+        borderColor: '#e9e9e9',
+        borderWidth: 0
+      },
+      // Left event line
+      '$eventItem0 + &': {
+        '&:after': {
+          left: '18%',
+          width: 300,
+          height: 205,
+          borderWidth: '0 0 1px 1px'
+        }
+      },
+      // Right event line
+      '$eventItem1 + &': {
+        '&:after': {
+          right: '18%',
+          width: 300,
+          height: 205,
+          borderWidth: '0 1px 1px 0'
+        }
+      }
     },
 
     // FOOTER
@@ -140,6 +183,9 @@ const EventsPage = ({ classes }) => (
                       event={event}
                       googleAPIKey={settings.googleAPIKey}
                     />
+                    {index < events.length - 1 && (
+                      <div className={classes.eventSeparator} />
+                    )}
                   </div>
                 ))}
               </div>
