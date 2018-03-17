@@ -76,5 +76,23 @@
     "name": "Serverless Framework",
     "logo": "/images/technologies/serverless.jpg",
     "route": ""
+  },
+  {
+    "id": "d3",
+    "name": "D3",
+    "logo": "/images/technologies/d3.png",
+    "route": ""
+  },
+  {
+    "id": "swift",
+    "name": "Swift",
+    "logo": "/images/technologies/swift.png",
+    "route": ""
+  },
+  {
+    "id": "obj-c",
+    "name": "Objetive C",
+    "logo": "/images/technologies/obj-c.jpg",
+    "route": ""
   }
 ]

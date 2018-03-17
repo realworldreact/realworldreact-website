@@ -17,7 +17,7 @@ const Trainer = props => {
   } = props;
   const {
     name,
-    nickname,
+    company,
     description,
     photo,
     twitter,
@@ -35,7 +35,7 @@ const Trainer = props => {
           <div className={classes.info}>
             <div className={classes.profile}>
               <h1 className={classes.name}>{name}</h1>
-              <div className={classes.nickname}>"{nickname}"</div>
+              <div className={classes.company}>{company}</div>
             </div>
             <div className={classes.social}>
               <a
@@ -85,7 +85,7 @@ Trainer.propTypes = {
    */
   trainer: PropTypes.shape({
     name: PropTypes.string,
-    nickname: PropTypes.string,
+    company: PropTypes.string,
     description: PropTypes.string,
     photo: PropTypes.string,
     twitter: PropTypes.string,

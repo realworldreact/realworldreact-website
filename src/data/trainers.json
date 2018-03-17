@@ -1,70 +1,92 @@
 [
   {
     "name": "Swizec Teller",
-    "nickname": "Cool Nickname",
+    "company": "Yup Technologies",
     "description": "Swizec is a prolific developer, blogger, vlogger, author, speaker and instructor. He has been coding since 9 years old and works with React full time as the front-end lead for a startup in San Francisco.",
     "photo": "/images/people/swizec-teller.jpg",
     "photoMini": "/images/people/swizec-teller-mini.jpg",
     "twitter": "swizec",
     "github": "swizec",
     "specialties": [
-      "immutablejs",
-      "jamstack",
-      "graphql",
-      "rxjs",
+      "react",
       "redux",
-      "microsoft-azure"
+      "d3"
     ]
   },
   {
     "name": "David Wells",
-    "nickname": "Cool Nickname",
+    "company": "Serverless",
     "description": "David is an engineer at Serverless, Inc., where he builds with React and serverless architecture on daily basis. As one of the first employees at Serverless, he is excited by the technologies that allow developers deploy applications as independent functions that respond to events, charge you only when they run, and scale automatically.",
     "photo": "/images/people/david-wells.jpg",
     "photoMini": "/images/people/david-wells-mini.jpg",
     "twitter": "davidwells",
     "github": "davidwells",
     "specialties": [
-      "immutablejs",
-      "jamstack",
-      "graphql",
-      "rxjs",
+      "serverless-framework",
+      "react",
       "redux",
+      "aws-lambda",
       "microsoft-azure"
     ]
   },
   {
     "name": "Harry Tormey",
-    "nickname": "Cool Nickname",
+    "company": "LaunchDrawer",
     "description": "Harry is a native iOS developer and alumnus of Apple and Facebook. He recognized the potential of React Native in 2015 and has been building most of his client's projects with it since 2016. He enjoys sharing his passion and knowledge with others at conferences and technical workshops.",
     "photo": "/images/people/harry-tormey.jpg",
     "photoMini": "/images/people/harry-tormey-mini.jpg",
     "twitter": "htormey",
     "github": "hgale",
     "specialties": [
-      "immutablejs",
-      "jamstack",
-      "graphql",
-      "rxjs",
+      "react-native",
       "redux",
-      "microsoft-azure"
+      "swift",
+      "obj-c"
     ]
   },
   {
     "name": "Mike Grabowski",
-    "nickname": "Cool Nickname",
+    "company": "Callstack",
     "description": "Mike is the CTO of Callstack, an European-based consultancy specializing in mobile development with React Native. He was an early adopter to React Native as far back as 2014 and is one of the top core contributors to the project. He speaks frequently at conferences and meetups and organizes the React Native EU conference.",
     "photo": "/images/people/mike-grabowski.jpg",
     "photoMini": "/images/people/mike-grabowski-mini.jpg",
     "twitter": "grabbou",
     "github": "grabbou",
     "specialties": [
-      "immutablejs",
-      "jamstack",
+      "react-native",
+      "redux"
+    ]
+  },
+  {
+    "name": "Nikolas Burk",
+    "company": "GraphCool",
+    "description": "Nikolas is a polyglot developer coming from an iOS background, but is increasingly excited by the developments in the JS and React / React Native worlds. He works in developer relations for GraphCool, a self-hosted GraphQL backend as a service.",
+    "photo": "/images/people/nikolas-burk.jpg",
+    "photoMini": "/images/people/nikolas-burk-mini.jpg",
+    "twitter": "nikolasburk",
+    "github": "nikolasburk",
+    "specialties": [
       "graphql",
-      "rxjs",
+      "react",
+      "react-native",
       "redux",
-      "microsoft-azure"
+      "aws-lambda"
+    ]
+  },
+  {
+    "name": "Johannes Schickling",
+    "company": "GraphCool",
+    "description": "Johannes is CEO and co-founder of Graphcool/Prisma (GraphQL database proxy) and is currently based in SF & Berlin. He previously built and sold the VR company “Optonaut”. Johannes loves cutting-edge technologies and was one of the first adopters of Docker, React & GraphQL.",
+    "photo": "/images/people/johannes-schickling.jpg",
+    "photoMini": "/images/people/johannes-schickling-mini.jpg",
+    "twitter": "_schickling",
+    "github": "schickling",
+    "specialties": [
+      "graphql",
+      "react",
+      "react-native",
+      "redux",
+      "aws-lambda"
     ]
   }
 ]

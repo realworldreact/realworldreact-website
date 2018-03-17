@@ -41,7 +41,7 @@ export default theme => ({
     fontSize: 16,
     fontWeight: 'bold'
   },
-  nickname: {
+  company: {
     fontStyle: 'italic',
     fontFamily: theme.typography.secondary
   },
