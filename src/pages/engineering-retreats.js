@@ -180,7 +180,23 @@ const EngineeringRetreatsPage = ({ classes }) => (
                     <div className="col-xs-12">
                       <TextField
                         isTextarea
-                        placeholder="Question about something?"
+                        placeholder="What technologies are you seeking to learn, or improve?"
+                        fieldProps={{
+                          className: classes.formInputQuestion
+                        }}
+                      />
+                    </div>
+                    <div className="col-xs-12">
+                      <TextField
+                        className={classes.formInput}
+                        type="number"
+                        placeholder="How big is your team?"
+                      />
+                    </div>
+                    <div className="col-xs-12">
+                      <TextField
+                        isTextarea
+                        placeholder="Where would you like your retreat to be?"
                         fieldProps={{
                           className: classes.formInputQuestion
                         }}
@@ -189,25 +205,7 @@ const EngineeringRetreatsPage = ({ classes }) => (
                     <div className="col-xs-12">
                       <TextField
                         isTextarea
-                        placeholder="Question about something?"
-                        fieldProps={{
-                          className: classes.formInputQuestion
-                        }}
-                      />
-                    </div>
-                    <div className="col-xs-12">
-                      <TextField
-                        isTextarea
-                        placeholder="Question about something?"
-                        fieldProps={{
-                          className: classes.formInputQuestion
-                        }}
-                      />
-                    </div>
-                    <div className="col-xs-12">
-                      <TextField
-                        isTextarea
-                        placeholder="Message*"
+                        placeholder="Tell us more about what you're looking to learn from this Retreat."
                         fieldProps={{
                           className: classes.formInputMessage
                         }}

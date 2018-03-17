@@ -27,21 +27,9 @@ Quote.propTypes = {
   author: PropTypes.any
 };
 
-// TODO: Remove the default props when there is content defined by
-// the components consuming this one.
 Quote.defaultProps = {
-  children: `
-    “Jobsity full of talented, enthusiastic and passionate employees who
-    truly care about the product they are delivering.”
-  `,
-  author: (
-    <div>
-      <a href="https://jobsity.com" target="jobsity">
-        Jobsity
-      </a>{' '}
-      is the remote dev partner of Real World React
-    </div>
-  )
+  children: '',
+  author: ''
 };
 
 export default withStyles(styles)(Quote);

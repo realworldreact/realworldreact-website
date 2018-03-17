@@ -17,12 +17,12 @@ const Gallery = props => {
   let blockItems = [];
   let itemClass = 1;
 
-  images.forEach((item, index) => {
+  images.forEach((path, index) => {
     blockItems.push(
       <div className={classes.imageWrapper}>
         <div
           className={classes.image}
-          style={{ backgroundImage: `url(${item.path})` }}
+          style={{ backgroundImage: `url(${path})` }}
         />
       </div>
     );
@@ -53,12 +53,7 @@ Gallery.propTypes = {
   /**
    * List of images.
    */
-  images: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      path: PropTypes.string.isRequired
-    })
-  )
+  images: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default withStyles(styles)(Gallery);

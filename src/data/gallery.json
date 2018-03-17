@@ -1,70 +1,20 @@
 [
-  {
-    "name": "PlaceHolder1",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder2",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder3",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder4",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder5",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder6",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder7",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder8",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder9",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder10",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder11",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder12",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder13",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder14",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder15",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder16",
-    "path": "/images/gallery/400x400.png"
-  },
-  {
-    "name": "PlaceHolder17",
-    "path": "/images/gallery/400x400.png"
-  }
+  "/images/gallery/relax1.jpg",
+  "/images/gallery/relax2.jpg",
+  "/images/gallery/relax3.jpg",
+  "/images/gallery/work1.jpeg",
+  "/images/gallery/work2.jpeg",
+  "/images/gallery/work3.jpeg",
+  "/images/gallery/relax4.jpg",
+  "/images/gallery/relax5.jpg",
+  "/images/gallery/relax6.jpg",
+  "/images/gallery/work4.jpeg",
+  "/images/gallery/work5.jpeg",
+  "/images/gallery/work6.jpg",
+  "/images/gallery/relax8.jpg",
+  "/images/gallery/relax9.jpg",
+  "/images/gallery/relax7.jpg",
+  "/images/gallery/work7.jpg",
+  "/images/gallery/work8.jpg",
+  "/images/gallery/work9.jpg"
 ]
