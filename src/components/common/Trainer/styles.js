@@ -70,7 +70,7 @@ export default theme => ({
   tech: {
     overflow: 'hidden',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     flexFlow: 'row wrap',
     padding: 10,
     height: 60
