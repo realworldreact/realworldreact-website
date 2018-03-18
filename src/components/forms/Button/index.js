@@ -19,6 +19,7 @@ class Button extends React.Component {
       classes,
       className,
       children,
+      type,
       size,
       palette,
       outline,
@@ -35,6 +36,7 @@ class Button extends React.Component {
           <div className={classes.container} onClick={this.onClick}>
             <button
               {...buttonProps}
+              type={type}
               className={cx(classes.button, buttonProps.className)}
             >
               {children}
@@ -47,13 +49,17 @@ class Button extends React.Component {
   }
 
   onClick = ev => {
-    ev.preventDefault();
     if (this.props.onClick) this.props.onClick(ev);
     if (this.props.href) navigateTo(this.props.href);
   };
 }
 
 Button.propTypes = {
+  /**
+   * Button type.
+   */
+  type: PropTypes.string,
+
   /**
    * Button height.
    */

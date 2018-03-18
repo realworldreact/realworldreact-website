@@ -16,19 +16,38 @@ class Validation extends React.Component {
   }
 
   /**
+   * Get the current field error.
+   * @param  {String} name
+   * @return {String} - null if valid.
+   */
+  getValidityField = name => {
+    const { data, validator } = this.props;
+    return validator.validateField(data.fields[name], name);
+  };
+
+  /**
    * Validate a provided field.
    * @param  {String} name
    * @param  {Function} callback
    */
   validateField = (name, callback) => {
-    const { data, validator } = this.props;
-    let { dirties, errors, fields } = data;
+    const { data } = this.props;
+    let { dirties, errors } = data;
 
-    const error = validator.validateField(fields[name], name);
+    const error = this.getValidityField(name);
     dirties = { ...dirties, [name]: true };
     errors = { ...errors, [name]: error };
 
     this.props.onUpdate({ ...data, dirties, errors }, callback);
+  };
+
+  /**
+   * Get the current form fields errors.
+   * @return {Object} - null if valid.
+   */
+  getValidityForm = () => {
+    const { data, validator } = this.props;
+    return validator.validateForm(data.fields);
   };
 
   /**
@@ -43,7 +62,7 @@ class Validation extends React.Component {
       dirties[key] = true;
     });
 
-    const errors = validator.validateForm(data.fields) || {};
+    const errors = this.getValidityForm() || {};
 
     this.props.onUpdate({ ...data, dirties, errors }, callback);
   };

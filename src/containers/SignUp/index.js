@@ -51,7 +51,15 @@ class SignUp extends React.Component {
         validator={validator}
         onUpdate={this.onUpdate}
       >
-        <form className={cls} {...etc} onSubmit={this.onSubmit}>
+        <form
+          className={cls}
+          {...etc}
+          noValidate
+          onSubmit={this.onSubmit}
+          name="signup"
+          method="POST"
+          data-netlify="true"
+        >
           <div className={classes.title}>
             <span className="text-primary">_</span>
             <strong>{title}</strong>
@@ -60,6 +68,7 @@ class SignUp extends React.Component {
           <TextField
             reversed={reversed}
             palette={palette}
+            name="email"
             type="email"
             placeholder="Email"
             errorText={data.errors.email}
@@ -68,12 +77,9 @@ class SignUp extends React.Component {
             onChange={ev => this.validation.onChange('email', ev.target.value)}
           />
           <div className={classes.button}>
-            <Button
-              textAlign="left"
-              children="Submit"
-              buttonProps={{ type: 'submit' }}
-              onClick={this.onSubmit}
-            />
+            <Button textAlign="left" type="submit">
+              Submit
+            </Button>
           </div>
         </form>
       </Validation>
@@ -85,13 +91,12 @@ class SignUp extends React.Component {
   };
 
   onSubmit = ev => {
-    ev.preventDefault();
-    this.validation.validate(() => {
-      if (!this.validation.getCurrentErrors()) {
-        // TODO:
-        console.log('fields', this.state.data.fields);
-      }
-    });
+    const formHasErrors = this.validation.getValidityForm();
+    if (formHasErrors) {
+      ev.preventDefault();
+      this.validation.validate();
+      return;
+    }
   };
 }
 

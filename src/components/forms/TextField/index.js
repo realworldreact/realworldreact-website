@@ -17,6 +17,7 @@ const TextField = props => {
     reversed,
     isTextarea,
     type,
+    name,
     value,
     onChange,
     onFocus,
@@ -32,6 +33,7 @@ const TextField = props => {
     <div className={cls} {...etc}>
       {React.createElement(node, {
         type: node === 'input' ? type : null,
+        name,
         value,
         onChange,
         onFocus,
@@ -68,13 +70,10 @@ TextField.propTypes = {
   isTextarea: PropTypes.bool,
 
   /**
-   * If node 'input', its type.
-   */
-  type: PropTypes.oneOf(['text', 'number', 'email']),
-
-  /**
    * Field input props.
    */
+  type: PropTypes.oneOf(['text', 'number', 'email']),
+  name: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
