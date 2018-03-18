@@ -52,10 +52,9 @@ const validator = createValidator({
   },
   companySize: {
     presence: { message: 'The company size field is required.' },
-    numericality: {
-      onlyInteger: true,
-      greaterThan: 0,
-      lessThanOrEqualTo: 1000000,
+    length: {
+      minimum: 2,
+      maximum: 2048,
       message: 'A valid company size is required.'
     }
   },
@@ -307,8 +306,11 @@ class EngineeringRetreatsPage extends React.Component {
                           </div>
                           <div className={cx(classes.formInput, 'col-xs-12')}>
                             {makeField('companySize', {
-                              type: 'number',
-                              placeholder: 'How big is your team?'
+                              isTextarea: true,
+                              placeholder: 'How big is your team?',
+                              fieldProps: {
+                                className: classes.formInputQuestion
+                              }
                             })}
                           </div>
                           <div className={cx(classes.formInput, 'col-xs-12')}>
