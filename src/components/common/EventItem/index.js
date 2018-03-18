@@ -69,6 +69,7 @@ const EventItem = props => {
       <Button
         className={classes.button}
         palette="text"
+        textAlign="left"
         showArrow
         onClick={() => window.open(event.meetupLink, '_blank')}
       >

@@ -1,6 +1,5 @@
 export default theme => ({
   root: {
-    display: 'flex',
     overflow: 'hidden',
     verticalAlign: 'middle',
     cursor: 'pointer',
@@ -11,21 +10,20 @@ export default theme => ({
     }
   },
   ripples: {
-    flex: '1',
     width: '100%',
     height: '100%'
   },
   container: {
-    display: 'flex',
+    overflow: 'hidden',
     width: '100%',
-    height: '100%',
-    alignItems: 'stretch'
+    height: '100%'
   },
   button: {
+    float: 'left',
     position: 'relative',
     display: 'inline-block',
     margin: 0,
-    width: '100%',
+    width: props => (props.showArrow ? `calc(100% - ${props.size}px)` : '100%'),
     height: '100%',
     verticalAlign: 'middle',
     outline: 'none',
@@ -62,6 +60,7 @@ export default theme => ({
     }
   },
   arrow: {
+    float: 'left',
     backgroundColor: theme.palette.primary.base,
     color: '#fff',
     alignItems: 'center',
@@ -70,6 +69,7 @@ export default theme => ({
     transition: 'all 200ms ease-out',
 
     display: props => (props.showArrow ? 'flex' : 'none'),
-    width: props => props.size
+    width: props => props.size,
+    height: props => props.size
   }
 });

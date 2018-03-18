@@ -45,7 +45,8 @@ const styles = theme => ({
   },
   videoFrame: {
     width: '100%',
-    height: 200
+    height: 200,
+    backgroundColor: theme.palette.inverted.base
   },
   leftContent: {
     maxWidth: '100%',

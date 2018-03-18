@@ -8,6 +8,7 @@ export default theme => ({
   tabsContent: {
     flex: 1,
     display: 'flex',
+    minWidth: 0,
     borderStyle: 'solid',
     borderColor: theme.palette.primary.base,
     borderWidth: '0 2px'
@@ -15,7 +16,8 @@ export default theme => ({
   tabsItem: {
     flex: 1,
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    minWidth: 0
   },
   tabsItemContent: {
     padding: 20
