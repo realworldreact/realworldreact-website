@@ -193,6 +193,7 @@ class EngineeringRetreatsPage extends React.Component {
     const makeField = (name, props) => (
       <TextField
         {...props}
+        name={name}
         errorText={data.errors[name]}
         value={data.fields[name]}
         onChange={ev => this.validation.onChange(name, ev.target.value)}
@@ -238,7 +239,14 @@ class EngineeringRetreatsPage extends React.Component {
                       Experience the most productive fun you’ve ever had with
                       React Retreat.
                     </p>
-                    <form className={classes.form} onSubmit={this.onSubmit}>
+                    <form
+                      className={classes.form}
+                      onSubmit={this.onSubmit}
+                      noValidate
+                      name="engineering-retreats"
+                      method="POST"
+                      data-netlify="true"
+                    >
                       <Validation
                         ref={el => (this.validation = el)}
                         data={data}
@@ -320,6 +328,7 @@ class EngineeringRetreatsPage extends React.Component {
                               fieldProps={{
                                 className: classes.formInputMessage
                               }}
+                              name="notes"
                               value={data.fields.notes}
                               onChange={ev =>
                                 this.validation.onChange(
@@ -333,6 +342,7 @@ class EngineeringRetreatsPage extends React.Component {
                               showArrow
                               textAlign="left"
                               palette="text"
+                              type="submit"
                               children="Submit"
                               onClick={this.onSubmit}
                             />
@@ -370,13 +380,12 @@ class EngineeringRetreatsPage extends React.Component {
   };
 
   onSubmit = ev => {
-    ev.preventDefault();
-    this.validation.validate(() => {
-      if (!this.validation.getCurrentErrors()) {
-        // TODO:
-        console.log('fields', this.state.data.fields);
-      }
-    });
+    const formHasErrors = this.validation.getValidityForm();
+    if (formHasErrors) {
+      ev.preventDefault();
+      this.validation.validate();
+      return;
+    }
   };
 }
 
