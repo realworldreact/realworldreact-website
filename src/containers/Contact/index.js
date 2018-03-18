@@ -48,6 +48,7 @@ class Contact extends React.Component {
         className={classes.input}
         palette={palette}
         {...props}
+        name={name}
         errorText={data.errors[name]}
         value={data.fields[name]}
         onChange={ev => this.validation.onChange(name, ev.target.value)}
@@ -62,7 +63,15 @@ class Contact extends React.Component {
         validator={validator}
         onUpdate={this.onUpdate}
       >
-        <form className={cls} {...etc} onSubmit={this.onSubmit}>
+        <form
+          className={cls}
+          {...etc}
+          onSubmit={this.onSubmit}
+          noValidate
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
           <div className="col-xs-12">
             <div className={classes.heading}>
               <h2>
@@ -89,6 +98,7 @@ class Contact extends React.Component {
               fieldProps={{
                 className: classes.textArea
               }}
+              name="message"
               value={data.fields.message}
               onChange={ev =>
                 this.validation.onChange('message', ev.target.value)
@@ -100,6 +110,7 @@ class Contact extends React.Component {
                 showArrow
                 textAlign="left"
                 palette="black"
+                type="submit"
                 children="Submit"
                 onClick={this.onSubmit}
               />
@@ -118,13 +129,12 @@ class Contact extends React.Component {
   };
 
   onSubmit = ev => {
-    ev.preventDefault();
-    this.validation.validate(() => {
-      if (!this.validation.getCurrentErrors()) {
-        // TODO:
-        console.log('fields', this.state.data.fields);
-      }
-    });
+    const formHasErrors = this.validation.getValidityForm();
+    if (formHasErrors) {
+      ev.preventDefault();
+      this.validation.validate();
+      return;
+    }
   };
 }
 
