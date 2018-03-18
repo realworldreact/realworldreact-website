@@ -21,6 +21,7 @@
     "gatsby-plugin-react-helmet": "^2.0.5",
     "polished": "^1.9.2",
     "react-helmet": "^5.2.0",
+    "react-reveal": "^1.2.1",
     "react-ripples": "^1.1.2",
     "react-simple-dropdown": "^3.2.0",
     "react-textarea-autosize": "^5.2.1",

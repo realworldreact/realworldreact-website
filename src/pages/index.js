@@ -90,6 +90,7 @@ const styles = theme => ({
 
   // SERVICES
   services: {
+    overflow: 'hidden',
     position: 'relative',
     padding: [20, 0]
   },
@@ -226,7 +227,9 @@ const styles = theme => ({
     // SERVICES
     servicesBackground: {
       display: 'block',
-      minHeight: 900
+      marginLeft: '-10%',
+      minHeight: 920,
+      width: '120%'
     },
     servicesContent: {
       position: 'absolute',
