@@ -84,6 +84,11 @@ export default theme => ({
       opacity: 1
     }
   },
+  menuMainButton: {
+    '&:not(:first-child)': {
+      marginTop: 20
+    }
+  },
   navTitle: {
     margin: [20, 0],
     fontSize: 20,

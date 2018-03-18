@@ -3,15 +3,19 @@ export default theme => ({
     width: '100%'
   },
   tabs: {
-    //
+    display: 'flex'
   },
   tabsContent: {
+    flex: 1,
+    display: 'flex',
     borderStyle: 'solid',
     borderColor: theme.palette.primary.base,
     borderWidth: '0 2px'
   },
   tabsItem: {
-    //
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column'
   },
   tabsItemContent: {
     padding: 20
@@ -71,7 +75,7 @@ export default theme => ({
 
   // Buttons
   buttons: {
-    //
+    marginTop: 'auto'
   },
   buttonsItem: {
     width: '100%',
@@ -132,14 +136,16 @@ export default theme => ({
       display: 'none'
     },
     tabs: {
-      paddingRight: 0,
-      borderRight: '2px solid ' + theme.palette.primary.base
+      paddingRight: 0
     },
     tabsContent: {
       borderStyle: 'solid',
-      borderColor: '#ebebeb',
-      borderWidth: props => (props.border ? '1px 1px 0 1px' : '0'),
+      borderColor: props => (props.border ? '#ebebeb' : 'transparent'),
+      borderWidth: '1px 1px 0 1px',
       backgroundColor: '#fff'
+    },
+    tabsItem: {
+      borderRight: '2px solid ' + theme.palette.primary.base
     },
     tabsItemContent: {
       padding: 40
@@ -147,7 +153,7 @@ export default theme => ({
 
     // Options
     options: {
-      marginLeft: -2,
+      marginLeft: -3,
       border: 'none',
       paddingLeft: 0
     },
@@ -156,6 +162,8 @@ export default theme => ({
       padding: [0, 0, 10]
     },
     optionContainerDisabled: {
+      marginLeft: -1,
+      borderLeft: props => '1px solid ' + (props.border ? '#ebebeb' : '#fff'),
       backgroundColor: '#fff'
     },
     optionContainerActive: {

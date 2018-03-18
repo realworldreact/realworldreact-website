@@ -31,7 +31,7 @@ class Tabs extends React.Component {
 
     return (
       <div className={cx(classes.root, className)} {...etc}>
-        <div className="container">
+        <div className="container" ref={el => (this.containerEl = el)}>
           <div className="row">
             {/* OPTIONS */}
             <div className={cx(classes.options, 'col-xs-12 col-sm-4 last-sm')}>
@@ -128,6 +128,15 @@ class Tabs extends React.Component {
 
   onTabChange = activeTab => {
     this.setState({ activeTab });
+
+    // If user is on mobile, scroll to the container beginning.
+    if (window.screen.width < 768) {
+      const box = this.containerEl.getBoundingClientRect();
+      const currentTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      const top = box.top + currentTop;
+      document.documentElement.scrollTop = document.body.scrollTop = top;
+    }
   };
 }
 

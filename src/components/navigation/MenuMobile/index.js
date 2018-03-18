@@ -35,8 +35,19 @@ class MenuMobile extends React.Component {
         </a>
         <div className={classes.menuContainer}>
           <div className={classes.menu}>
-            <Button onClick={() => this.onOption('/contact')}>
+            <Button
+              className={classes.menuMainButton}
+              onClick={() => this.onOption('/contact')}
+            >
               Let's Talk
+            </Button>
+            <Button
+              className={classes.menuMainButton}
+              outline
+              palette={reversed ? 'primary' : 'black'}
+              onClick={() => this.onOption('/')}
+            >
+              Home
             </Button>
 
             {/* Navigations */}

@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import withStyles from 'react-jss';
 import cx from 'classnames';
-import Rotate from 'react-reveal/Rotate';
 
 import imagePatternDots from '../assets/images/patterns/dots.png';
 import imageOrbit from '../assets/images/home/orbit.svg';
@@ -362,9 +361,7 @@ const HomePage = ({ classes }) => (
 
         {/* SERVICES */}
         <div className={classes.services}>
-          <Rotate top right>
-            <img className={classes.servicesBackground} src={imageOrbit} />
-          </Rotate>
+          <img className={classes.servicesBackground} src={imageOrbit} />
           <div className={classes.servicesContent}>
             <div className="container">
               <div className="row">
