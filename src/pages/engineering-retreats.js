@@ -35,9 +35,7 @@ const validator = createValidator({
     email: { message: 'A valid email address is required.' }
   },
   phone: {
-    presence: { message: 'Phone number field is required.' },
     length: {
-      minimum: 3,
       maximum: 32,
       message: 'A valid phone number is required.'
     }
@@ -292,13 +290,13 @@ class EngineeringRetreatsPage extends React.Component {
                               'col-sm-6 col-xs-12'
                             )}
                           >
-                            {makeField('phone', { placeholder: 'Phone*' })}
+                            {makeField('phone', { placeholder: 'Phone' })}
                           </div>
                           <div className={cx(classes.formInput, 'col-xs-12')}>
                             {makeField('tech', {
                               isTextarea: true,
                               placeholder:
-                                'What technologies are you seeking to learn, or improve?',
+                                'What technologies are you seeking to learn, or improve?*',
                               fieldProps: {
                                 className: classes.formInputQuestion
                               }
@@ -307,7 +305,7 @@ class EngineeringRetreatsPage extends React.Component {
                           <div className={cx(classes.formInput, 'col-xs-12')}>
                             {makeField('companySize', {
                               isTextarea: true,
-                              placeholder: 'How big is your team?',
+                              placeholder: 'How big is your team?*',
                               fieldProps: {
                                 className: classes.formInputQuestion
                               }
@@ -317,7 +315,7 @@ class EngineeringRetreatsPage extends React.Component {
                             {makeField('location', {
                               isTextarea: true,
                               placeholder:
-                                'Where would you like your retreat to be?',
+                                'Where would you like your retreat to be?*',
                               fieldProps: {
                                 className: classes.formInputQuestion
                               }
@@ -326,7 +324,7 @@ class EngineeringRetreatsPage extends React.Component {
                           <div className={cx(classes.formInput, 'col-xs-12')}>
                             <TextField
                               isTextarea
-                              placeholder="Tell us more about what you're looking to learn from this Retreat."
+                              placeholder="Tell us more about what you're looking to learn from this Retreat*"
                               fieldProps={{
                                 className: classes.formInputMessage
                               }}
@@ -346,7 +344,6 @@ class EngineeringRetreatsPage extends React.Component {
                               palette="text"
                               type="submit"
                               children="Submit"
-                              onClick={this.onSubmit}
                             />
                             {!!data.errors.notes && (
                               <ErrorMsg>{data.errors.notes}</ErrorMsg>
