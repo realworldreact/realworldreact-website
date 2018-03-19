@@ -491,7 +491,7 @@ const HomePage = ({ classes }) => (
                           stackOnMobile
                         >
                           With offices in New York, Quito, Cartagena, and
-                          Medellin, our engineering partners at JobSity give you
+                          Medellin, our engineering partners at Jobsity give you
                           the short-term or long-term development assistance
                           that you need. We select candidates from the top 1% of
                           applicants and send them through a comprehensive
