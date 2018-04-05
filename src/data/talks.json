@@ -64,6 +64,14 @@
     "bio": "Harry is an iOS developer who is very enthusiastic about React Native. Currently he works as a mobile contractor with various companies. In the past he’s worked as a Software Engineer at Facebook, Apple and a number of startups you've probably never heard of."
   },
   {
+    "id": "intro-to-graphql",
+    "url": "/talks/2018-03-intro-to-graphql",
+    "image": "/images/talks/jon-wong@3x.png",
+    "name": "Intro to GraphQL",
+    "description": "GraphQL is a declarative query language that is revolutionizing how we think about the data in our applications — it helps make accessing APIs from both the client and the server an absolute breeze. Come learn the basics of GraphQL and how you can use it today!",
+    "bio": "Jon is an engineer on the Frontend Infrastructure team at Coursera where he works to help developers focus on the problem at hand: building a world-class learning experience! He's been using GraphQL for over a year and loves using it for every product he builds and is looking forward to share the joy of GraphQL with as many people as he can!"
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
