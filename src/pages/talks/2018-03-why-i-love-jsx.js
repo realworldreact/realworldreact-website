@@ -26,9 +26,12 @@ const TalkImplementation = () => (
           <p>
             Presented at Reactathon 2018 in San Francisco.
           </p>
+          <p style={{ fontSize: 14 }}>
+            Reactive programming nut and compiler enthusiast. Jay is a Senior Software Engineer at This Dot Media. Lover of all things open source, his contributions span numerous ecosystems. Former RxJS core team member and author of core-decorators, git-blame-someone-else, and co-author of redux-observable.
+          </p>
         </div>
       ),
-      specialties: ['react']
+      specialties: ['react', 'jsx']
     }}
   </Talk>
 );

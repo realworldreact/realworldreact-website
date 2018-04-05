@@ -21,7 +21,15 @@
     "image": "/images/talks/jay-phelps@3x.png",
     "name": "Why I Love JSX!",
     "description": "JSX is an XML-like syntax extension to JavaScript, popularized by React. When seen for the first time it can often elicit bad memories of intermixing HTML and code, but JSX is *very* different! Let's learn exactly what it is, how it works, and even how you can use it outside of React.",
-    "bio": "Reactive programming nut and compiler enthusiast. Jay is a Senior Software Engineer at Netflix. Lover of all things open source, his contributions span numerous ecosystems. Former RxJS core team member and author of core-decorators, git-blame-someone-else, and co-author of redux-observable."
+    "bio": "Reactive programming nut and compiler enthusiast. Jay is a Senior Software Engineer at This Dot Media. Lover of all things open source, his contributions span numerous ecosystems. Former RxJS core team member and author of core-decorators, git-blame-someone-else, and co-author of redux-observable."
+  },
+  {
+    "id": "from-imperative-to-declarative",
+    "url": "/talks/2018-03-from-imperative-to-declarative",
+    "image": "/images/talks/feather-knee@3x.png",
+    "name": "From Imperative to Declarative",
+    "description": "There are often many ways to solve the same problem. This talk explores two different approaches, imperative and declarative. We will look at code samples and discuss the relative merits of each, starting with vanilla JS then moving to more concrete examples in JSX.",
+    "bio": "Feather started her career at Accenture as a technical consultant in various Silicon Valley companies including Sun Microsystems, Robert Half, and Electronic Arts. She went on to work as a Java developer for various startups that didn’t survive the first dot.com meltdown. After this she left the tech world to have a career as a working artist for several years. She returned to teach a web development bootcamp in both NYC and SF for General Assembly. She then went on to work as a full stack developer at Netflix for the next few years, and is now a front end developer at Nvidia. She lives in San Jose with her partner and the cutest dog on earth."
   },
   {
     "id": "building-static-sites-with-react",

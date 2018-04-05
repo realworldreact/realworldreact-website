@@ -26,6 +26,9 @@ const TalkImplementation = () => (
           <p>
             Presented at Reactathon 2018 in San Francisco.
           </p>
+          <p style={{ fontSize: 14 }}>
+            Ben is a Christian, a husband and a father of 2 with 10+ years of experience developing user interfaces for the Web. He currently leads and manages Eventbrite’s Frontend Platform team. On the side, Ben also enjoys playing basketball, DIY, watching movies, and blogging. He blogs at (benmvp.com) and tweets (@benmvp) about his experiences with new web technologies.
+          </p>
         </div>
       ),
       specialties: ['react']
