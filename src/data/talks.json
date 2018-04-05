@@ -1,5 +1,12 @@
 [
   {
+    "id": "reactathon-2018-kickoff",
+    "url": "/talks/2018-03-reactathon-2018-kickoff.js",
+    "image": "/images/talks/brian-douglas.png",
+    "name": "Reactathon 2018 Kickoff",
+    "description": "React revolutionized the way we build modern user interfaces. But before it took off, it was built to solve a few key problems when building apps for the web. In this short talk, we'll learn what those problems were and how React approached solving them."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
