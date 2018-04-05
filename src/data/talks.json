@@ -72,6 +72,14 @@
     "bio": "Jon is an engineer on the Frontend Infrastructure team at Coursera where he works to help developers focus on the problem at hand: building a world-class learning experience! He's been using GraphQL for over a year and loves using it for every product he builds and is looking forward to share the joy of GraphQL with as many people as he can!"
   },
   {
+    "id": "the-client-side-revolution",
+    "url": "/talks/2018-03-the-client-side-revolution",
+    "image": "/images/talks/kyle-mathews@3x.png",
+    "name": "The Client-Side Revolution, Brought to you by React",
+    "description": "Building websites has changed dramatically over the last few years. In this session we’ll go on a history trip to discover where we came from, why React is a such a big deal, and where we might be going soon. We’ll discuss what a website is and why we use the tools we do to build them and how this is the best of all times to be building for the web.",
+    "bio": "Kyle is a tech entrepreneur based in San Francisco, CA. He's founded several startups and is now helping build a next generation open source JavaScript website framework called Gatsby that blends the speed and simplicity of static sites with the rich tooling and client-side capabilities of React.js."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
