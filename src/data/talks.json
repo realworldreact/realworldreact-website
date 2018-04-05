@@ -88,6 +88,14 @@
     "bio": "David Wells is a full stack developer at Serverless, Inc. in San Francisco. He is passionate about developer experience and creating products that are powerful and easy to use. His previous roles include lead UI/UX developer at Mulesoft and founder of Inbound Now, an open source marketing software platform. He specialized in Full stack JavaScript, HTML, CSS, Marketing, & UI/ UX."
   },
   {
+    "id": "react-and-the-jamstack",
+    "url": "/talks/2018-03-react-and-the-jamstack",
+    "image": "/images/talks/matt-biilmann@3x.png",
+    "name": "React and the JAMstack",
+    "description": "The JAMstack is revolutionzing how modern websites and applications are built. Learn how to leverage your JavaScript, APIs, and Markup to make your web apps faster, less expensive, more secure, and infinitely scalable.",
+    "bio": "Matt is regarded as one of the driving forces behind the resurgence of static websites and is a founder at Netlify, the fastest growing automation platform for modern websites. Matt has lead the development of all of 3 commercial CMS (swears he won’t do a fourth), has written production code in more than a dozen programming languages, is trilingual and enjoys listening to beer and drinking modern jazz."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
