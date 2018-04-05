@@ -80,6 +80,14 @@
     "bio": "Kyle is a tech entrepreneur based in San Francisco, CA. He's founded several startups and is now helping build a next generation open source JavaScript website framework called Gatsby that blends the speed and simplicity of static sites with the rich tooling and client-side capabilities of React.js."
   },
   {
+    "id": "intro-to-serverless-architecture",
+    "url": "/talks/2018-03-intro-to-serverless-architecture",
+    "image": "/images/talks/david-wells@3x.png",
+    "name": "Introduction to Serverless Architecture",
+    "description": "The 'Serverless Architecture' has become massively popular this year, and for the right reasons. It’s zero-administration nature and pay-per-execution pricing model enable developers to manage less infrastructure and build more than ever. So what are developers actually building with it? David will explore different use cases for building microservices with Serverless technology. The talk will include real world serverless examples from companies & the open source world.",
+    "bio": "David Wells is a full stack developer at Serverless, Inc. in San Francisco. He is passionate about developer experience and creating products that are powerful and easy to use. His previous roles include lead UI/UX developer at Mulesoft and founder of Inbound Now, an open source marketing software platform. He specialized in Full stack JavaScript, HTML, CSS, Marketing, & UI/ UX."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
