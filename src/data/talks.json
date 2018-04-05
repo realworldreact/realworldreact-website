@@ -32,6 +32,14 @@
     "bio": "Feather started her career at Accenture as a technical consultant in various Silicon Valley companies including Sun Microsystems, Robert Half, and Electronic Arts. She went on to work as a Java developer for various startups that didn’t survive the first dot.com meltdown. After this she left the tech world to have a career as a working artist for several years. She returned to teach a web development bootcamp in both NYC and SF for General Assembly. She then went on to work as a full stack developer at Netflix for the next few years, and is now a front end developer at Nvidia. She lives in San Jose with her partner and the cutest dog on earth."
   },
   {
+    "id": "css-in-react",
+    "url": "/talks/2018-03-css-in-react",
+    "image": "/images/talks/joe-seifi@3x.png",
+    "name": "CSS in React",
+    "description": "React has no standard way to style components. A slew of ideas and frameworks have grown out of the community. But, with so many CSS in JS solutions, how do you know which one to choose? In this talk, I will cover five different ways to style your React projects, and the pros and cons of each approach. From CSS Modules with SASS to Styled Components, you’ll learn how each library works so that you know which one(s) best fits your needs.",
+    "bio": "Joe Seifi is a senior software engineer at Eventbrite in San Francisco. Previously he worked at Trulia, Apple, and Disney on various web projects."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
