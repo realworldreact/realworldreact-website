@@ -1,17 +1,27 @@
 [
   {
     "id": "reactathon-2018-kickoff",
-    "url": "/talks/2018-03-reactathon-2018-kickoff.js",
+    "url": "/talks/2018-03-reactathon-2018-kickoff",
     "image": "/images/talks/brian-douglas.png",
     "name": "Reactathon 2018 Kickoff",
-    "description": "React revolutionized the way we build modern user interfaces. But before it took off, it was built to solve a few key problems when building apps for the web. In this short talk, we'll learn what those problems were and how React approached solving them."
+    "description": "React revolutionized the way we build modern user interfaces. But before it took off, it was built to solve a few key problems when building apps for the web. In this short talk, we'll learn what those problems were and how React approached solving them.",
+    "bio": ""
   },
   {
     "id": "why-react",
-    "url": "/talks/2018-03-reactathon-2018-kickoff.js",
-    "image": "/images/talks/ben-ilegbodu.png",
+    "url": "/talks/2018-03-why-react",
+    "image": "/images/talks/ben-ilegbodu@3x.png",
     "name": "Why React?",
-    "description": "As the Frontend Platform team at Eventbrite switched from Backbone/Marionette over to React, it had to convince other developers, managers, directors, and non-engineers that React was the right path. And the rationale for moving wasn’t just because React is insanely popular. There are many tangible benefits that make the effort of migrating worthwhile. New to React and want to learn a little about how it works? Seeking ammunition to convince your team to make the change? Come learn about why we made the decision to transition to React, through an introduction of how to build user interactions with React."
+    "description": "As the Frontend Platform team at Eventbrite switched from Backbone/Marionette over to React, it had to convince other developers, managers, directors, and non-engineers that React was the right path. And the rationale for moving wasn’t just because React is insanely popular. There are many tangible benefits that make the effort of migrating worthwhile. New to React and want to learn a little about how it works? Seeking ammunition to convince your team to make the change? Come learn about why we made the decision to transition to React, through an introduction of how to build user interactions with React.",
+    "bio": "Ben is a Christian, a husband and a father of 2 with 10+ years of experience developing user interfaces for the Web. He currently leads and manages Eventbrite’s Frontend Platform team. On the side, Ben also enjoys playing basketball, DIY, watching movies, and blogging. He blogs at (benmvp.com) and tweets (@benmvp) about his experiences with new web technologies."
+  },
+  {
+    "id": "why-i-love-jsx",
+    "url": "/talks/2018-03-why-i-love-jsx",
+    "image": "/images/talks/jay-phelps@3x.png",
+    "name": "Why I Love JSX!",
+    "description": "JSX is an XML-like syntax extension to JavaScript, popularized by React. When seen for the first time it can often elicit bad memories of intermixing HTML and code, but JSX is *very* different! Let's learn exactly what it is, how it works, and even how you can use it outside of React.",
+    "bio": "Reactive programming nut and compiler enthusiast. Jay is a Senior Software Engineer at Netflix. Lover of all things open source, his contributions span numerous ecosystems. Former RxJS core team member and author of core-decorators, git-blame-someone-else, and co-author of redux-observable."
   },
   {
     "id": "building-static-sites-with-react",
