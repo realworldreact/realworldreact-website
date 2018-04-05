@@ -40,6 +40,14 @@
     "bio": "Joe Seifi is a senior software engineer at Eventbrite in San Francisco. Previously he worked at Trulia, Apple, and Disney on various web projects."
   },
   {
+    "id": "dataviz-with-react-and-d3",
+    "url": "/talks/2018-03-dataviz-with-react-and-d3",
+    "image": "/images/talks/swizec-teller@3x.png",
+    "name": "Dataviz with React + D3",
+    "description": "React can make your D3 amazing. Want to animate 20,000 elements with React? I'll show you. Want to build a complex dataviz? You'll know how. Want to write maintainable dataviz components that you can reuse in any project? I gotchu, fam. This talk shows you everything I've learned about creating reusable and maintainable graphical components over 3 years of hammering away at the question: 'Jeez D3 sure is hard to learn, how do we make this easier?'",
+    "bio": "Hi I'm Swizec, a geek with a hat. Rumor has it my bird is more popular these days than my hat 🤔 I’ve made some books and courses on web development and working on more. Been doing JavaScript since before jQuery was cool and building my first React component back in 2015 blew my mind."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
