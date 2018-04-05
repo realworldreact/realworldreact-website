@@ -91,7 +91,7 @@
   },
   {
     "id": "obj-c",
-    "name": "Objetive C",
+    "name": "Objective-C",
     "logo": "/images/technologies/obj-c.jpg",
     "route": ""
   }
