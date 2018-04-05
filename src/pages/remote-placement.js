@@ -129,7 +129,15 @@ const RemotePlacementPage = ({ classes }) => (
               </div>
             </div>
             <div className="col-sm-4">
-              <Quote />
+              <Quote author="Jobsity is the remote dev partner of Real World React">
+                {'"'}
+                <a href="https://jobsity.com" target="jobsity">
+                  Jobsity
+                </a>{' '}
+                full of talented, enthusiastic and passionate employees who
+                truly care about the product they are delivering.
+                {'"'}
+              </Quote>
             </div>
           </div>
         </div>
