@@ -192,6 +192,14 @@
     "bio": "Christina works on the dashboard team at Pepperdata, building apps to help users get a handle on what's going on with their complex distributed systems. This is her third career after biotech and animation. She likes elegant puzzle solutions, pretty and intuitive UI, and data visualizations that make complex things simple."
   },
   {
+    "id": "a-postgres-backed-graphql-baas",
+    "url": "/talks/2018-03-a-postgres-backed-graphql-baas",
+    "image": "/images/talks/tanmai-gopal@3x.png",
+    "name": "A Postgres-backed GraphQL BAAS",
+    "description": "A review of how we created a GraphQL backend backed by Postgres. The key challenges faced by real-world apps and our solution approach, specifically around expressive query arguments, access control, schema iteration, sharing auth between multiple API backends. We will also review some quick tips to make the most out of Postgres and reveal some early performance benchmarks. We will end with a demo how you can create complex data models and make intuitive graphql queries from your app without requiring in-depth knowledge of graphql schemas.",
+    "bio": "Tanmai is the co-founder of hasura.io - a Postgres BaaS + Kubernetes PaaS. He is a StackOverflow powered fullstack, polyglot developer whose areas of interest and work span react, nodejs, python, haskell, docker, postgres, kubernetes. He is passionate about making the power of building things accessible to everyone and is the instructor of India's largest MOOC imad.tech with over 200,000 students. You will occasionally see him speaking, or more often being quietly awkward, at conferences and meetups. He has recently moved to spend time in the Bay Area, just like everyone else."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",

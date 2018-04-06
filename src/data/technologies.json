@@ -106,5 +106,11 @@
     "name": "Ethereum",
     "logo": "/images/technologies/ethereum.png",
     "route": ""
+  },
+  {
+    "id": "postgres",
+    "name": "PostgreSQL",
+    "logo": "/images/technologies/postgres.png",
+    "route": ""
   }
 ]
