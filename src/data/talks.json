@@ -120,6 +120,14 @@
     "bio": "After working for large companies including Amazon and WalmartLabs, Erica joined Eaze as the first Android engineer. She is excited about building Eaze's mobile technology from the ground up! Erica lives in San Jose and spends most of her free time training and competing in powerlifting and Brazilian jiu jitsu."
   },
   {
+    "id": "serverless-graphql",
+    "url": "/talks/2018-03-serverless-graphql",
+    "image": "/images/talks/johannes-schickling@3x.png",
+    "name": "The Future of Backend Development: Serverless GraphQL",
+    "description": "Using GraphQL APIs is by now the default for most React developers. But how does a GraphQL backend actually work? This talk gives an overview over modern backend development using GraphQL and the benefits of serverless deployment workflow.",
+    "bio": "Johannes is CEO and co-founder of Graphcool/Prisma (GraphQL database proxy) and is currently based in SF & Berlin. He previously built and sold the VR company “Optonaut”. Johannes loves cutting-edge technologies and was one of the first adopters of Docker, React & GraphQL.."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
