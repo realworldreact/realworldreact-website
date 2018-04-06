@@ -200,6 +200,14 @@
     "bio": "Tanmai is the co-founder of hasura.io - a Postgres BaaS + Kubernetes PaaS. He is a StackOverflow powered fullstack, polyglot developer whose areas of interest and work span react, nodejs, python, haskell, docker, postgres, kubernetes. He is passionate about making the power of building things accessible to everyone and is the instructor of India's largest MOOC imad.tech with over 200,000 students. You will occasionally see him speaking, or more often being quietly awkward, at conferences and meetups. He has recently moved to spend time in the Bay Area, just like everyone else."
   },
   {
+    "id": "type-safe-react-with-reasonml",
+    "url": "/talks/2018-03-type-safe-react-with-reasonml",
+    "image": "/images/talks/jared-forsyth@3x.png",
+    "name": "Type-safe React with ReasonML",
+    "description": "Types can be invaluable when working on a large project, by making refactoring less error-prone, enabling better coordinating between teammates, and improving readability. Reason gives you a powerful, battle-tested type system with cross-file inference, macros, and excellent JavaScript interop. Come learn what differentiates it from added-on type systems like Flow and TypeScript, what it looks like to build React UIs in Reason, and what makes it easy to start into and integrate with your current JavaScript app.",
+    "bio": "Jared interned on the React Native team, rewrote the React devtools, and has given several talks on React & related technologies. He works at Khan Academy on the mobile team, using React Native along side native Java and Swift. He loves type systems and learning new languages, and is deeply invested in improving the experience of programming for everyone."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",

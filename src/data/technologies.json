@@ -112,5 +112,11 @@
     "name": "PostgreSQL",
     "logo": "/images/technologies/postgres.png",
     "route": ""
+  },
+  {
+    "id": "reasonml",
+    "name": "Reason",
+    "logo": "/images/technologies/reasonml.jpg",
+    "route": ""
   }
 ]
