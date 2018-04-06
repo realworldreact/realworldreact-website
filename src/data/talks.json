@@ -168,6 +168,14 @@
     "bio": "Tyler is an engineer at Docker working on UI applications. When not writing code you can find him at a beach near his home in San Francisco."
   },
   {
+    "id": "connecting-a-react-front-end-to-an-ethereum-smart-contract",
+    "url": "/talks/2018-03-connecting-a-react-front-end-to-an-ethereum-smart-contract",
+    "image": "/images/talks/zubair-ahmed@3x.png",
+    "name": "Connecting a React Front-end to an Ethereum Smart Contract",
+    "description": "Learn how to leverage the front-end skills you already know to connect to a smart contract and deploy to the Ethereum blockchain. We'll cover a brief introduction to Solidity, the Ethereum smart contract programming language (similar to JavaScript), and discuss the tools you need create a smart contract on the Ethereum blockchain. We'll also learn how to use web-based blockchain intermediaries such as Metamask.",
+    "bio": "Zubair is a software engineer with Oakland Blockchain Developers and the CTO of GIVE. He specializes in Solidity, Web3.js, Remix, Truffle, IPFS, geth, and smart contract security. He also loves building the front-end of his dApps with React, and is excited to share his insight on building for Ethereum."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",

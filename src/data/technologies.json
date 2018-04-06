@@ -100,5 +100,11 @@
     "name": "WebAssembly",
     "logo": "/images/technologies/wasm.png",
     "route": ""
+  },
+  {
+    "id": "ethereum",
+    "name": "Ethereum",
+    "logo": "/images/technologies/ethereum.png",
+    "route": ""
   }
 ]
