@@ -248,6 +248,14 @@
     "bio": "Matt is regarded as one of the driving forces behind the resurgence of static websites and is a founder at Netlify, the fastest growing automation platform for modern websites. Matt has lead the development of all of 3 commercial CMS (swears he won’t do a fourth), has written production code in more than a dozen programming languages, is trilingual and enjoys listening to beer and drinking modern jazz."
   },
   {
+    "id": "front-end-happy-hour-podcast-live-recording",
+    "url": "/talks/2018-03-front-end-happy-hour-podcast-live-recording",
+    "image": "/images/talks/fehh@3x.png",
+    "name": "Front-end Happy Hour Podcast Live Recording",
+    "description": "Join senior front-end engineers Ryan Burgess, Mars Jullian, Jem Young, Stacy London, and Derrick Showers as they discuss strategies for scaling React applications",
+    "bio": "A podcast featuring panelists of engineers from Netflix, Evernote, Atlassian & LinkedIn talking over drinks about all things Front End development."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
