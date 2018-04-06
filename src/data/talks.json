@@ -144,6 +144,14 @@
     "bio": "Kaylie is a frontend engineer at Eventbrite from San Francisco, who loves all things related to devtools and open source."
   },
   {
+    "id": "serverless-side-rendering-with-aws-and-parceljs",
+    "url": "/talks/2018-03-serverless-side-rendering-with-aws-and-parceljs",
+    "image": "/images/talks/brian-leroux@3x.png",
+    "name": "Serverless-Side Rendering with AWS and Parcel.js",
+    "description": "",
+    "bio": "Brian is a former member of the Adobe PhoneGap team and helped to foster the Apache Cordova project. He is also responsible for wtfjs. Lately he has been botbuilding on the cloud with begin.com and hacking on Architect (https://arc.codes), a project of the JavaScript Foundation (JSF)."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
