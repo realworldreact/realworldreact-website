@@ -115,8 +115,14 @@
   },
   {
     "id": "reasonml",
-    "name": "Reason",
-    "logo": "/images/technologies/reasonml.jpg",
+    "name": "Progressive WebApps",
+    "logo": "/images/technologies/pwa.png",
+    "route": ""
+  },
+  {
+    "id": "pwa",
+    "name": "PWAs",
+    "logo": "/images/technologies/pwa.png",
     "route": ""
   }
 ]
