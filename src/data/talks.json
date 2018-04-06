@@ -136,6 +136,14 @@
     "bio": "Berkeley is a San Francisco native and the CTO of freeCodeCamp.org, where students learn full-stack web development for free. He is also the author of Redux-Epic, a library built to do better async and server-side rendering in React with RxJS Observables. Previously, Berkeley worked as a professional consultant and instructor with Real World Reacton and over two years trained engineers from Twilio, Amazon, OpenTable, Pinterest, Netflix, and more."
   },
   {
+    "id": "motion-in-javascript",
+    "url": "/talks/2018-03-motion-in-javascript",
+    "image": "/images/talks/kaylie-kwon@3x.png",
+    "name": "Motion in JavaSCript",
+    "description": "You may have heard of CSS in JS, but what alternatives are there for implementing interactive motions in JS? This talk will be a comparison of several approaches from using vanilla Javascript to libraries like Anime.js and Popmotion, as well as ones in React ecosystem like React Transition Group and React Motion.",
+    "bio": "Kaylie is a frontend engineer at Eventbrite from San Francisco, who loves all things related to devtools and open source."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
