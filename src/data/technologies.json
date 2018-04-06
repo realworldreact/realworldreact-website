@@ -124,5 +124,11 @@
     "name": "PWAs",
     "logo": "/images/technologies/pwa.png",
     "route": ""
+  },
+  {
+    "id": "jest",
+    "name": "Jest",
+    "logo": "/images/technologies/jest.png",
+    "route": ""
   }
 ]

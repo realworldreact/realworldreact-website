@@ -216,6 +216,14 @@
     "bio": "Sophia became addicted to React in 2014. She is a full stack developer but React is her technology of choice. When she isn't cobbling code, she can be found editing the Fullstack React Newsletter, flying in her husband`s Beechcraft Bonanza and playing with her 2 kids. Connect with Sophia on Twitter at @wisecobbler."
   },
   {
+    "id": "jest-as-a-platform",
+    "url": "/talks/2018-03-jest-as-a-platform",
+    "image": "/images/talks/rogelio-guzman@3x.png",
+    "name": "Jest as a Platform",
+    "description": "Jest is a testing framework that has a big emphasize on development experience. We will talk about how Jest can become a platform and how you can leverage it to enhance your existing tooling. Putting your tool on top of Jest, allows you to benefit from its infrastructure, which provides a watch mode, Git integration, etc.",
+    "bio": "Rogelio is an engineer at Docker. He loves to code and is part of the Jest core team."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
