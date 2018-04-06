@@ -125,7 +125,15 @@
     "image": "/images/talks/johannes-schickling@3x.png",
     "name": "The Future of Backend Development: Serverless GraphQL",
     "description": "Using GraphQL APIs is by now the default for most React developers. But how does a GraphQL backend actually work? This talk gives an overview over modern backend development using GraphQL and the benefits of serverless deployment workflow.",
-    "bio": "Johannes is CEO and co-founder of Graphcool/Prisma (GraphQL database proxy) and is currently based in SF & Berlin. He previously built and sold the VR company “Optonaut”. Johannes loves cutting-edge technologies and was one of the first adopters of Docker, React & GraphQL.."
+    "bio": "Johannes is CEO and co-founder of Graphcool/Prisma (GraphQL database proxy) and is currently based in SF & Berlin. He previously built and sold the VR company “Optonaut”. Johannes loves cutting-edge technologies and was one of the first adopters of Docker, React & GraphQL."
+  },
+  {
+    "id": "vertical-redux-architecture",
+    "url": "/talks/2018-03-vertical-redux-architecture",
+    "image": "/images/talks/berkeley-martinez@3x.png",
+    "name": "Vertical Redux Architecture",
+    "description": "At freeCodeCamp, we've built a large Redux app with lots of moving parts. But building large scale Redux apps can get quite frustrating. In this talk we'll cover some rules to mitigate common issues seen in large apps, structural guidelines inspired by Clojure(Script) frameworks, and Redux theory of actions as events that help keep your large app transparent and manageable.",
+    "bio": "Berkeley is a San Francisco native and the CTO of freeCodeCamp.org, where students learn full-stack web development for free. He is also the author of Redux-Epic, a library built to do better async and server-side rendering in React with RxJS Observables. Previously, Berkeley worked as a professional consultant and instructor with Real World Reacton and over two years trained engineers from Twilio, Amazon, OpenTable, Pinterest, Netflix, and more."
   },
   {
     "id": "building-static-sites-with-react",
