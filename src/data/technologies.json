@@ -94,5 +94,41 @@
     "name": "Objective-C",
     "logo": "/images/technologies/obj-c.jpg",
     "route": ""
+  },
+  {
+    "id": "wasm",
+    "name": "WebAssembly",
+    "logo": "/images/technologies/wasm.png",
+    "route": ""
+  },
+  {
+    "id": "ethereum",
+    "name": "Ethereum",
+    "logo": "/images/technologies/ethereum.png",
+    "route": ""
+  },
+  {
+    "id": "postgres",
+    "name": "PostgreSQL",
+    "logo": "/images/technologies/postgres.png",
+    "route": ""
+  },
+  {
+    "id": "reasonml",
+    "name": "Progressive WebApps",
+    "logo": "/images/technologies/pwa.png",
+    "route": ""
+  },
+  {
+    "id": "pwa",
+    "name": "PWAs",
+    "logo": "/images/technologies/pwa.png",
+    "route": ""
+  },
+  {
+    "id": "jest",
+    "name": "Jest",
+    "logo": "/images/technologies/jest.png",
+    "route": ""
   }
 ]

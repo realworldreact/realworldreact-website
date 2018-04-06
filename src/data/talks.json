@@ -96,6 +96,166 @@
     "bio": "Matt is regarded as one of the driving forces behind the resurgence of static websites and is a founder at Netlify, the fastest growing automation platform for modern websites. Matt has lead the development of all of 3 commercial CMS (swears he won’t do a fourth), has written production code in more than a dozen programming languages, is trilingual and enjoys listening to beer and drinking modern jazz."
   },
   {
+    "id": "react-powered-by-webassembly",
+    "url": "/talks/2018-03-react-powered-by-webassembly",
+    "image": "/images/talks/jay-phelps@3x.png",
+    "name": "React, Powered by WebAssembly",
+    "description": "WebAssembly (aka wasm) is a new, standardized compilation target for the web, available in all modern browsers. But since it's so low level it can be difficult to see how it will revolutionize the future generations of React apps and potentially even power React itself. In this talk Jay will reveal what it is, how you can use it today, and the incredible opportunities it will continue to unlock.",
+    "bio": "Reactive programming nut and compiler enthusiast. Jay is a Senior Software Engineer at This Dot Media. Lover of all things open source, his contributions span numerous ecosystems. Former RxJS core team member and author of core-decorators, git-blame-someone-else, and co-author of redux-observable."
+  },
+  {
+    "id": "building-a-self-sustaining-component-library",
+    "url": "/talks/2018-03-building-a-self-sustaining-component-library",
+    "image": "/images/talks/david-wells@3x.png",
+    "name": "Building a Self-Sustaining Component Library",
+    "description": "Design systems are an extremely efficient way to scale out a scalable frontend solution across multiple teams in a large (or growing) organization. Come and learn how to building an internal component library & design system can help your company ship and iterate faster. This talk will cover how David has built multiple design systems and will run through the protips and pitfalls learned along the way. TLDR; It’s easier than you think to create a scalable, maintainable UI library + Design system with React.",
+    "bio": "David Wells is a full stack developer at Serverless, Inc. in San Francisco. He is passionate about developer experience and creating products that are powerful and easy to use. His previous roles include lead UI/UX developer at Mulesoft and founder of Inbound Now, an open source marketing software platform. He specialized in Full stack JavaScript, HTML, CSS, Marketing, & UI/ UX."
+  },
+  {
+    "id": "sharing-code-between-react-and-react-native",
+    "url": "/talks/2018-03-sharing-code-between-react-and-react-native",
+    "image": "/images/talks/erica-cooksey@3x.png",
+    "name": "Sharing Code Between React & React Native",
+    "description": "Many companies use React JS for their website and would like to reuse that code in their mobile apps. This talk will cover identifying the best candidates for shared code, sharing both UI components and UI-less business logic, and using React Native in both greenfield and brownfield apps.",
+    "bio": "After working for large companies including Amazon and WalmartLabs, Erica joined Eaze as the first Android engineer. She is excited about building Eaze's mobile technology from the ground up! Erica lives in San Jose and spends most of her free time training and competing in powerlifting and Brazilian jiu jitsu."
+  },
+  {
+    "id": "serverless-graphql",
+    "url": "/talks/2018-03-serverless-graphql",
+    "image": "/images/talks/johannes-schickling@3x.png",
+    "name": "The Future of Backend Development: Serverless GraphQL",
+    "description": "Using GraphQL APIs is by now the default for most React developers. But how does a GraphQL backend actually work? This talk gives an overview over modern backend development using GraphQL and the benefits of serverless deployment workflow.",
+    "bio": "Johannes is CEO and co-founder of Graphcool/Prisma (GraphQL database proxy) and is currently based in SF & Berlin. He previously built and sold the VR company “Optonaut”. Johannes loves cutting-edge technologies and was one of the first adopters of Docker, React & GraphQL."
+  },
+  {
+    "id": "vertical-redux-architecture",
+    "url": "/talks/2018-03-vertical-redux-architecture",
+    "image": "/images/talks/berkeley-martinez@3x.png",
+    "name": "Vertical Redux Architecture",
+    "description": "At freeCodeCamp, we've built a large Redux app with lots of moving parts. But building large scale Redux apps can get quite frustrating. In this talk we'll cover some rules to mitigate common issues seen in large apps, structural guidelines inspired by Clojure(Script) frameworks, and Redux theory of actions as events that help keep your large app transparent and manageable.",
+    "bio": "Berkeley is a San Francisco native and the CTO of freeCodeCamp.org, where students learn full-stack web development for free. He is also the author of Redux-Epic, a library built to do better async and server-side rendering in React with RxJS Observables. Previously, Berkeley worked as a professional consultant and instructor with Real World Reacton and over two years trained engineers from Twilio, Amazon, OpenTable, Pinterest, Netflix, and more."
+  },
+  {
+    "id": "motion-in-javascript",
+    "url": "/talks/2018-03-motion-in-javascript",
+    "image": "/images/talks/kaylie-kwon@3x.png",
+    "name": "Motion in JavaSCript",
+    "description": "You may have heard of CSS in JS, but what alternatives are there for implementing interactive motions in JS? This talk will be a comparison of several approaches from using vanilla Javascript to libraries like Anime.js and Popmotion, as well as ones in React ecosystem like React Transition Group and React Motion.",
+    "bio": "Kaylie is a frontend engineer at Eventbrite from San Francisco, who loves all things related to devtools and open source."
+  },
+  {
+    "id": "serverless-side-rendering-with-aws-and-parceljs",
+    "url": "/talks/2018-03-serverless-side-rendering-with-aws-and-parceljs",
+    "image": "/images/talks/brian-leroux@3x.png",
+    "name": "Serverless-Side Rendering with AWS and Parcel.js",
+    "description": "",
+    "bio": "Brian is a former member of the Adobe PhoneGap team and helped to foster the Apache Cordova project. He is also responsible for wtfjs. Lately he has been botbuilding on the cloud with begin.com and hacking on Architect (https://arc.codes), a project of the JavaScript Foundation (JSF)."
+  },
+  {
+    "id": "advanced-web-performance-optimizations",
+    "url": "/talks/2018-03-advanced-web-performance-optimizations",
+    "image": "/images/talks/kyle-mathews@3x.png",
+    "name": "Advanced Web Performance Optimizations",
+    "description": "As web developers, we have incredible demands placed upon us. Expectations for the quality of websites are remarkably high, and continue to rise. Not only must websites be feature-rich and robust, they must load and run quickly on a near-infinite variety of devices and browsers all around the world. Oh, and do it with limited team members on an aggressive timeline. Come join Kyle Mathews, founder of Gatsby, as he talks about modern web performance. You'll learn the tools & techniques you can start using today to make your React sites super fast. We’ll discuss code splitting, link preload, greedy prefetching, header optimizations, service workers, and more using Gatsby as a case study for these techniques.",
+    "bio": "Kyle is a tech entrepreneur based in San Francisco, CA. He's founded several startups and is now helping build a next generation open source JavaScript website framework called Gatsby that blends the speed and simplicity of static sites with the rich tooling and client-side capabilities of React.js."
+  },
+  {
+    "id": "graphql-outside-the-box",
+    "url": "/talks/2018-03-graphql-outside-the-box",
+    "image": "/images/talks/tyler-martinez@3x.png",
+    "name": "GraphQL Outside the Box",
+    "description": "At Docker, we are using GraphQL alongside our existing REST APIs and making it work without a GraphQL server. Instead, we use GraphQL client side, where it serves as the interface to our network layer and the glue that binds our components together. We have taken this approach as a progressive solution to the difficult problem of introducing GraphQL to an existing application stack. By breaking the rules a bit we gain many of the benefits that GraphQL provides immediately while spreading out the implementation over many releases. While a novel approach I also envision a future where running GraphQL on the client is not uncommon. With the advent of blockchain technology and the concept of “dapps” we must reconsider the role of the application that runs on the end user’s device. By running GraphQL on the client we can consume remote GraphQL services, interact directly with the blockchain, browser / native APIs, and more through GraphQL.",
+    "bio": "Tyler is an engineer at Docker working on UI applications. When not writing code you can find him at a beach near his home in San Francisco."
+  },
+  {
+    "id": "connecting-a-react-front-end-to-an-ethereum-smart-contract",
+    "url": "/talks/2018-03-connecting-a-react-front-end-to-an-ethereum-smart-contract",
+    "image": "/images/talks/zubair-ahmed@3x.png",
+    "name": "Connecting a React Front-end to an Ethereum Smart Contract",
+    "description": "Learn how to leverage the front-end skills you already know to connect to a smart contract and deploy to the Ethereum blockchain. We'll cover a brief introduction to Solidity, the Ethereum smart contract programming language (similar to JavaScript), and discuss the tools you need create a smart contract on the Ethereum blockchain. We'll also learn how to use web-based blockchain intermediaries such as Metamask.",
+    "bio": "Zubair is a software engineer with Oakland Blockchain Developers and the CTO of GIVE. He specializes in Solidity, Web3.js, Remix, Truffle, IPFS, geth, and smart contract security. He also loves building the front-end of his dApps with React, and is excited to share his insight on building for Ethereum."
+  },
+  {
+    "id": "reactathon-day-2-keynote",
+    "url": "/talks/2018-03-reactathon-day-2-keynote",
+    "image": "/images/talks/parashuram-narasimhan@3x.png",
+    "name": "Reactathon Day 2 Keynote",
+    "description": "Over the last two years, React Native has helped many developers quickly build high quality, mobile applications targeting multiple platforms. The community and the ecosystem of plugins and tooling around the technology has also helped many developers bring in all the functionality previously available only to native developers. In this talk, we will look at the current state of React Native and discuss the common pain points developers have. The talk will also summarize some of the discussions in the React Native core team and new ideas being tried out. We will cover the rationale behind efforts like moving documentation to a separate repo, reducing the surface area of the API, etc. Based on the work done by the contributors, we will map out what it may mean for React Native to hit a symbolic 1.0 release.",
+    "bio": "Parashuram (Ram) is a front end engineer on the React Native Core team. Most of his work has been around organizing the next set of investments that should be made to ensure React Native continues to support its open source work. He has contributed to Maya-kai, a gesture mirroring system for RN, CodePush, Mobile Center (now App Center), and also wrote the VSCode RN debugger, among others."
+  },
+  {
+    "id": "charts-from-scratch-in-react",
+    "url": "/talks/2018-03-charts-from-scratch-in-react",
+    "image": "/images/talks/christina-holland@3x.png",
+    "name": "Charts from Scratch in React",
+    "description": "With all the great charting libraries out there, why would you want to roll your own charts from scratch? Sometimes you want more control, or your use case is so simple you can avoid bringing in an unneeded dependency, or maybe you just want to strip away the magic for a moment and learn how the browser's drawing APIs really work. We'll go over some examples of building charts with basic HTML, SVG and Canvas.",
+    "bio": "Christina works on the dashboard team at Pepperdata, building apps to help users get a handle on what's going on with their complex distributed systems. This is her third career after biotech and animation. She likes elegant puzzle solutions, pretty and intuitive UI, and data visualizations that make complex things simple."
+  },
+  {
+    "id": "a-postgres-backed-graphql-baas",
+    "url": "/talks/2018-03-a-postgres-backed-graphql-baas",
+    "image": "/images/talks/tanmai-gopal@3x.png",
+    "name": "A Postgres-backed GraphQL BAAS",
+    "description": "A review of how we created a GraphQL backend backed by Postgres. The key challenges faced by real-world apps and our solution approach, specifically around expressive query arguments, access control, schema iteration, sharing auth between multiple API backends. We will also review some quick tips to make the most out of Postgres and reveal some early performance benchmarks. We will end with a demo how you can create complex data models and make intuitive graphql queries from your app without requiring in-depth knowledge of graphql schemas.",
+    "bio": "Tanmai is the co-founder of hasura.io - a Postgres BaaS + Kubernetes PaaS. He is a StackOverflow powered fullstack, polyglot developer whose areas of interest and work span react, nodejs, python, haskell, docker, postgres, kubernetes. He is passionate about making the power of building things accessible to everyone and is the instructor of India's largest MOOC imad.tech with over 200,000 students. You will occasionally see him speaking, or more often being quietly awkward, at conferences and meetups. He has recently moved to spend time in the Bay Area, just like everyone else."
+  },
+  {
+    "id": "type-safe-react-with-reasonml",
+    "url": "/talks/2018-03-type-safe-react-with-reasonml",
+    "image": "/images/talks/jared-forsyth@3x.png",
+    "name": "Type-safe React with ReasonML",
+    "description": "Types can be invaluable when working on a large project, by making refactoring less error-prone, enabling better coordinating between teammates, and improving readability. Reason gives you a powerful, battle-tested type system with cross-file inference, macros, and excellent JavaScript interop. Come learn what differentiates it from added-on type systems like Flow and TypeScript, what it looks like to build React UIs in Reason, and what makes it easy to start into and integrate with your current JavaScript app.",
+    "bio": "Jared interned on the React Native team, rewrote the React devtools, and has given several talks on React & related technologies. He works at Khan Academy on the mobile team, using React Native along side native Java and Swift. He loves type systems and learning new languages, and is deeply invested in improving the experience of programming for everyone."
+  },
+  {
+    "id": "react-off-the-grid",
+    "url": "/talks/2018-03-react-off-the-grid",
+    "image": "/images/talks/sophia-shoemaker@3x.png",
+    "name": "React off the Grid",
+    "description": "Creating a React application for orphans in Ghana offered some unique challenges. Progressive Web Apps (PWAs) are more than just cool or hip — they can be really important for applications where the internet is spotty, if available at all. Learn why I chose React + AWS Lambda for a country with poor internet connectivity, and general lessons on the often messy and exciting world of creating offline applications.",
+    "bio": "Sophia became addicted to React in 2014. She is a full stack developer but React is her technology of choice. When she isn't cobbling code, she can be found editing the Fullstack React Newsletter, flying in her husband`s Beechcraft Bonanza and playing with her 2 kids. Connect with Sophia on Twitter at @wisecobbler."
+  },
+  {
+    "id": "jest-as-a-platform",
+    "url": "/talks/2018-03-jest-as-a-platform",
+    "image": "/images/talks/rogelio-guzman@3x.png",
+    "name": "Jest as a Platform",
+    "description": "Jest is a testing framework that has a big emphasize on development experience. We will talk about how Jest can become a platform and how you can leverage it to enhance your existing tooling. Putting your tool on top of Jest, allows you to benefit from its infrastructure, which provides a watch mode, Git integration, etc.",
+    "bio": "Rogelio is an engineer at Docker. He loves to code and is part of the Jest core team."
+  },
+  {
+    "id": "incremental-migration-to-graphql",
+    "url": "/talks/2018-03-incremental-migration-to-graphql",
+    "image": "/images/talks/sashko-stubailo@3x.png",
+    "name": "Incremental Migration to GraphQL",
+    "description": "GraphQL is quickly becoming mainstream as one of the best ways to get data into your React application. When we see people modernize their app architecture and move to React, they often want to migrate their API to GraphQL as part of the same effort. But while React is super easy to adopt in a small part of your app at a time, GraphQL can seem like a much larger investment. In this talk, we’ll go over the fastest and most effective ways for React developers to incrementally migrate their existing APIs and backends to GraphQL, then talk about opportunities for improvement in the space. If you’re using React and are interested in GraphQL, but are looking for an extra push to get it up and running at your company, this is the talk for you!",
+    "bio": "Sashko has been working on open source developer tools for the last 5 years. Most recently he has been leading open source GraphQL tool development at Apollo, after writing the very first versions of Apollo Client. Previously, he has worked on JavaScript build tooling, reactive UI frameworks, and data visualization."
+  },
+  {
+    "id": "how-to-hire-great-developers",
+    "url": "/talks/2018-03-how-to-hire-great-developers",
+    "image": "/images/talks/suhayl-rouag@3x.png",
+    "name": "How to Hire Great Developers",
+    "description": "There is more to hiring great engineers than just looking at their skillset. In this talk, we'll explore some strategies for hiring great engineers by hiring great people.",
+    "bio": "Suhayl Rouag heads business development and sales for Jobsity, a nearshore distributed team software and mobile app development firm based in United States with offices in Ecuador and Colombia and the exclusive partner of Real World React for providing expert remote development services. Before joining Jobsity, Suhayl worked as a contractor for the US Army's General Officer Management Office part of the Office of the Chief of Staff of the US Army. As the senior in house business analyst and developer he helped design and build the talent management processes and applications that the US Army uses to develop, promote and train their senior leaders. After his tenure working with the US Army, he moved with his family to Ecuador where he co-founded a toy company specializing in educational toys for the South American market before joining Jobsity."
+  },
+  {
+    "id": "react-based-content-management-with-netlifycms-and-gatsby",
+    "url": "/talks/2018-03-react-based-content-management-with-netlifycms-and-gatsby",
+    "image": "/images/talks/matt-biilmann@3x.png",
+    "name": "React-based Content Management with Netlify CMS",
+    "description": "React is most often associated with Single Page Applications, but tools like Gatsby, React Static, Phenomic and Cuttlebelle has made React hyper-relevant for content driven websites as well. Netlify CMS is an open-source project with the goal of building a content management UI in React. It works with any static site generator, and makes content editors participate in the modern git-centric workflow that developers are used to. This talk will show how to use Netlify CMS with a Gatsby-based site, to build high-performant and infinitely-scalable sites with git-based content editing, a user friendly UI, and live browser previews - all without a backend.",
+    "bio": "Matt is regarded as one of the driving forces behind the resurgence of static websites and is a founder at Netlify, the fastest growing automation platform for modern websites. Matt has lead the development of all of 3 commercial CMS (swears he won’t do a fourth), has written production code in more than a dozen programming languages, is trilingual and enjoys listening to beer and drinking modern jazz."
+  },
+  {
+    "id": "front-end-happy-hour-podcast-live-recording",
+    "url": "/talks/2018-03-front-end-happy-hour-podcast-live-recording",
+    "image": "/images/talks/fehh@3x.png",
+    "name": "Front-end Happy Hour Podcast Live Recording",
+    "description": "Join senior front-end engineers Ryan Burgess, Mars Jullian, Jem Young, Stacy London, and Derrick Showers as they discuss strategies for scaling React applications",
+    "bio": "A podcast featuring panelists of engineers from Netflix, Evernote, Atlassian & LinkedIn talking over drinks about all things Front End development."
+  },
+  {
     "id": "building-static-sites-with-react",
     "url": "/talks/2016-03-building-static-sites-with-react",
     "image": "/images/talks/2016-03-building-static-sites-with-react.jpg",
