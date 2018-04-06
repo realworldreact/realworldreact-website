@@ -8,7 +8,7 @@ const TalkImplementation = () => (
       id: 'the-fundamentals-of-redux',
       subtitle: (
         <div>
-          <a href="https://www.twitter.com/acemark" target="_blank">
+          <a href="https://www.twitter.com/acemarke" target="_blank">
             Mark Erikson
           </a>{' '}
           from{' '}

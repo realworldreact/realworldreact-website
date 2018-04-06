@@ -8,7 +8,7 @@ const TalkImplementation = () => (
       id: 'an-ios-developers-opinion-of-react-native',
       subtitle: (
         <div>
-          <a href="https://www.twitter.com/acemark" target="_blank">
+          <a href="https://www.twitter.com/htormey" target="_blank">
             Harry Tormey
           </a>{' '}
           from{' '}
