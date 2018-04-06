@@ -94,5 +94,11 @@
     "name": "Objective-C",
     "logo": "/images/technologies/obj-c.jpg",
     "route": ""
+  },
+  {
+    "id": "wasm",
+    "name": "WebAssembly",
+    "logo": "/images/technologies/wasm.png",
+    "route": ""
   }
 ]

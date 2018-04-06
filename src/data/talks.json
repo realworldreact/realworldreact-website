@@ -96,6 +96,14 @@
     "bio": "Matt is regarded as one of the driving forces behind the resurgence of static websites and is a founder at Netlify, the fastest growing automation platform for modern websites. Matt has lead the development of all of 3 commercial CMS (swears he won’t do a fourth), has written production code in more than a dozen programming languages, is trilingual and enjoys listening to beer and drinking modern jazz."
   },
   {
+    "id": "react-powered-by-webassembly",
+    "url": "/talks/2018-03-react-powered-by-webassembly",
+    "image": "/images/talks/jay-phelps@3x.png",
+    "name": "React, Powered by WebAssembly",
+    "description": "WebAssembly (aka wasm) is a new, standardized compilation target for the web, available in all modern browsers. But since it's so low level it can be difficult to see how it will revolutionize the future generations of React apps and potentially even power React itself. In this talk Jay will reveal what it is, how you can use it today, and the incredible opportunities it will continue to unlock.",
+    "bio": "Reactive programming nut and compiler enthusiast. Jay is a Senior Software Engineer at This Dot Media. Lover of all things open source, his contributions span numerous ecosystems. Former RxJS core team member and author of core-decorators, git-blame-someone-else, and co-author of redux-observable."
+  },
+  {
     "id": "building-a-self-sustaining-component-library",
     "url": "/talks/2018-03-building-a-self-sustaining-component-library",
     "image": "/images/talks/david-wells@3x.png",
