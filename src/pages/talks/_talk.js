@@ -229,7 +229,7 @@ const Talk = ({ classes, children }) => {
                   className={classes.button}
                   href={nextTalk.url}
                 >
-                  Up Next: {nextTalk.title}
+                  Up Next: {nextTalk.name}
                 </Button>
               )}
             </div>
