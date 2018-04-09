@@ -12,10 +12,7 @@ const TalkImplementation = () => (
             Kaylie Kwon
           </a>{' '}
           from{' '}
-          <a
-            href="https://www.eventbrite.com/careers/"
-            target="_blank"
-          >
+          <a href="https://www.eventbrite.com/careers/" target="_blank">
             Eventbrite
           </a>
         </div>
@@ -24,11 +21,16 @@ const TalkImplementation = () => (
       content: (
         <div>
           <p>
-            You may have heard of CSS in JS, but what alternatives are there for implementing interactive motions in JS? This talk will be a comparison of several approaches from using vanilla Javascript to libraries like Anime.js and Popmotion, as well as ones in React ecosystem like React Transition Group and React Motion.
+            You may have heard of CSS in JS, but what alternatives are there for
+            implementing interactive motions in JS? This talk will be a
+            comparison of several approaches from using vanilla Javascript to
+            libraries like Anime.js and Popmotion, as well as ones in React
+            ecosystem like React Transition Group and React Motion.
           </p>
           <p>Presented at Reactathon 2018 in San Francisco.</p>
           <p style={{ fontSize: 14 }}>
-            Kaylie is a frontend engineer at Eventbrite from San Francisco, who loves all things related to devtools and open source.
+            Kaylie is a frontend engineer at Eventbrite from San Francisco, who
+            loves all things related to devtools and open source.
           </p>
         </div>
       ),

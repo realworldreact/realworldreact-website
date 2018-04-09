@@ -12,10 +12,7 @@ const TalkImplementation = () => (
             Front-end Happy Hour Podcast
           </a>{' '}
           from{' '}
-          <a
-            href="http://frontendhappyhour.com/"
-            target="_blank"
-          >
+          <a href="http://frontendhappyhour.com/" target="_blank">
             Various Companies
           </a>
         </div>
@@ -24,11 +21,15 @@ const TalkImplementation = () => (
       content: (
         <div>
           <p>
-            Join senior front-end engineers Ryan Burgess, Mars Jullian, Jem Young, Stacy London, and Derrick Showers as they discuss strategies for scaling React applications
+            Join senior front-end engineers Ryan Burgess, Mars Jullian, Jem
+            Young, Stacy London, and Derrick Showers as they discuss strategies
+            for scaling React applications
           </p>
           <p>Presented at Reactathon 2018 in San Francisco.</p>
           <p style={{ fontSize: 14 }}>
-            A podcast featuring panelists of engineers from Netflix, Evernote, Atlassian & LinkedIn talking over drinks about all things Front End development.
+            A podcast featuring panelists of engineers from Netflix, Evernote,
+            Atlassian & LinkedIn talking over drinks about all things Front End
+            development.
           </p>
         </div>
       ),
